@@ -1,0 +1,21 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "genesis"
+	group: ""
+	icon: "minecraft:oak_log"
+	id: "1ACFBB7A083B40F8"
+	order_index: 0
+	quest_links: [ ]
+	quests: [{
+		id: "259813ECC1DB858A"
+		tasks: [{
+			id: "4CDE81A4CEE1A893"
+			title: "Welcome to GT:SA!"
+			type: "checkmark"
+		}]
+		x: 0.0d
+		y: 0.0d
+	}]
+	title: "Genesis"
+}
