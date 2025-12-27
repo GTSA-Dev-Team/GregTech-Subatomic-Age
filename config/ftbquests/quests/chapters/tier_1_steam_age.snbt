@@ -1,0 +1,347 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "tier_1_steam_age"
+	group: "02B1C089968BE9F0"
+	id: "4451EC5CEA45AD7A"
+	order_index: 1
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: [
+				"60F77F390FE14F57"
+				"6BEAE2A923FDF524"
+			]
+			description: ["That was easy, right? Well... It's about to get a lot harder."]
+			id: "35D050365270104D"
+			shape: "gear"
+			size: 2.0d
+			tasks: [{
+				count: 4L
+				id: "4ECCD4B35E0EFB77"
+				item: { Count: 4, id: "gtceu:bronze_machine_casing" }
+				type: "item"
+			}]
+			title: "Enter The Steam Age"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["35D050365270104D"]
+			id: "408EE79FB2CBC0B5"
+			min_required_tasks: 1
+			tasks: [
+				{
+					id: "512357A049EFFA01"
+					item: "gtceu:lp_steam_solid_boiler"
+					type: "item"
+				}
+				{
+					id: "6AD642C40986E9F0"
+					item: "gtceu:lp_steam_liquid_boiler"
+					type: "item"
+				}
+				{
+					id: "6510B91B69A391EB"
+					item: "gtceu:lp_steam_solar_boiler"
+					type: "item"
+				}
+			]
+			title: "Your Main Source of Steam"
+			x: 0.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["408EE79FB2CBC0B5"]
+			id: "6C13695E9CEBC559"
+			tasks: [{
+				id: "4D1AE53064673A82"
+				item: "gtceu:lp_steam_alloy_smelter"
+				type: "item"
+			}]
+			x: -1.5d
+			y: 4.0d
+		}
+		{
+			dependencies: ["408EE79FB2CBC0B5"]
+			id: "542E235F659A78B7"
+			tasks: [{
+				id: "0F8273E0FB66157C"
+				item: "gtceu:lp_steam_forge_hammer"
+				type: "item"
+			}]
+			x: -3.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["408EE79FB2CBC0B5"]
+			id: "6328205D758FFB8D"
+			tasks: [{
+				id: "426B9853B60D4E4B"
+				item: "gtceu:lp_steam_compressor"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["408EE79FB2CBC0B5"]
+			id: "4E5A5D330A2E942B"
+			tasks: [{
+				id: "1B076714CBB1C65C"
+				item: "gtceu:lp_steam_macerator"
+				type: "item"
+			}]
+			x: 1.5d
+			y: 4.0d
+		}
+		{
+			dependencies: ["408EE79FB2CBC0B5"]
+			id: "7566CF1DFA94F049"
+			tasks: [{
+				id: "6A495E73F22B4BB6"
+				item: "gtceu:lp_steam_extractor"
+				type: "item"
+			}]
+			x: 3.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["4E5A5D330A2E942B"]
+			description: ["As you may have noticed, you can't use a mortar to get these. You have to use your steam macerator."]
+			id: "6BBAD7B5F865302F"
+			tasks: [
+				{
+					count: 16L
+					id: "0E1A8FB3E0F57AC1"
+					item: "gtceu:flint_dust"
+					type: "item"
+				}
+				{
+					count: 16L
+					id: "269F8F16CDB9C841"
+					item: { Count: 16, id: "gtceu:clay_dust" }
+					type: "item"
+				}
+				{
+					count: 16L
+					id: "16A028E0A3702F56"
+					item: { Count: 16, id: "gtceu:quartz_sand_dust" }
+					type: "item"
+				}
+			]
+			title: "Getting the Dust Off"
+			x: 1.5d
+			y: 6.0d
+		}
+		{
+			dependencies: ["6BBAD7B5F865302F"]
+			description: ["The first part of the firebricks used for the primitive blast furnace"]
+			id: "61EDC422273A784C"
+			tasks: [{
+				count: 16L
+				id: "1AD5E105F467A503"
+				item: { Count: 16, id: "gtceu:fireclay_dust" }
+				type: "item"
+			}]
+			title: "Firebricks pt.1"
+			x: 3.0d
+			y: 6.0d
+		}
+		{
+			dependencies: [
+				"6BBAD7B5F865302F"
+				"6328205D758FFB8D"
+			]
+			description: ["You will need these for the Fireclay smelting step."]
+			id: "788833C259277544"
+			tasks: [{
+				count: 16L
+				id: "1363D6BCB26C6A05"
+				item: { Count: 16, id: "gtsac:primitive_brick_dust" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["146809173A43F105"]
+			description: ["Your first multiblock!"]
+			icon: "gtceu:primitive_oven"
+			id: "14F0F93CE1B0E1FD"
+			shape: "gear"
+			size: 1.7d
+			tasks: [
+				{
+					id: "4D686F88C503316A"
+					item: "gtceu:primitive_oven"
+					type: "item"
+				}
+				{
+					count: 18L
+					id: "7CCE69741BA7C1B8"
+					item: { Count: 18, id: "gtsac:primitive_oven_bricks" }
+					type: "item"
+				}
+				{
+					id: "57D108A1F0A23C6C"
+					item: "gtceu:steam_input_bus"
+					type: "item"
+				}
+				{
+					id: "4D7F9D793D3B8323"
+					item: "gtceu:steam_output_bus"
+					type: "item"
+				}
+			]
+			title: "Another Furnace!"
+			x: 2.9642857142857224d
+			y: 9.116071428571423d
+		}
+		{
+			dependencies: ["61EDC422273A784C"]
+			id: "3A20E34B654E37BA"
+			tasks: [{
+				count: 16L
+				id: "4C250F310CCB40BD"
+				item: { Count: 16, id: "gtceu:compressed_fireclay" }
+				type: "item"
+			}]
+			title: "Firebricks pt.2"
+			x: 4.5d
+			y: 6.0d
+		}
+		{
+			dependencies: [
+				"14F0F93CE1B0E1FD"
+				"3A20E34B654E37BA"
+				"3C71961A6A450F66"
+			]
+			description: ["Using your fancy new furnace, you can finally smelt Fireclay into Firebricks and obtain the Primitive Blast Furnace."]
+			icon: "gtceu:primitive_blast_furnace"
+			id: "7AECC11BA4317919"
+			shape: "gear"
+			size: 2.0d
+			tasks: [
+				{
+					count: 32L
+					id: "08F17CAE776B36FF"
+					item: "gtceu:firebricks"
+					type: "item"
+				}
+				{
+					id: "0C494C5F1AC170CE"
+					item: "gtceu:primitive_blast_furnace"
+					type: "item"
+				}
+			]
+			title: "Firebricks for days"
+			x: 4.5d
+			y: 11.0d
+		}
+		{
+			dependencies: ["788833C259277544"]
+			id: "3A61BDEF3411911D"
+			tasks: [{
+				count: 16L
+				id: "6C47DAB325D40EB7"
+				item: { Count: 16, id: "gtsac:primitive_oven_brick" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 7.5d
+		}
+		{
+			dependencies: ["3A61BDEF3411911D"]
+			id: "3CD8EFA41C11E957"
+			tasks: [{
+				count: 16L
+				id: "3923C37249F02672"
+				item: { Count: 16, id: "gtceu:coke_oven_bricks" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["3A61BDEF3411911D"]
+			id: "146809173A43F105"
+			tasks: [{
+				count: 16L
+				id: "1EA72EB6693A96C0"
+				item: { Count: 16, id: "gtsac:primitive_oven_bricks" }
+				type: "item"
+			}]
+			x: 3.0d
+			y: 7.5d
+		}
+		{
+			dependencies: ["3CD8EFA41C11E957"]
+			description: ["The oven for making the fuel for the Primitive Oven and the Primitive Baking Oven."]
+			icon: "gtceu:coke_oven"
+			id: "3C71961A6A450F66"
+			shape: "gear"
+			size: 1.7d
+			tasks: [
+				{
+					id: "584913267DB065F9"
+					item: "gtceu:coke_oven"
+					type: "item"
+				}
+				{
+					count: 25L
+					id: "183484CC544A1140"
+					item: { Count: 25, id: "gtceu:coke_oven_bricks" }
+					type: "item"
+				}
+			]
+			x: 2.1316282072803006E-14d
+			y: 11.008928571428577d
+		}
+		{
+			dependencies: ["3A61BDEF3411911D"]
+			id: "6B7A3E097892DBB5"
+			tasks: [{
+				count: 16L
+				id: "5982168E30738A0F"
+				item: { Count: 16, id: "gtsac:primitive_baking_oven_bricks" }
+				type: "item"
+			}]
+			x: -3.0d
+			y: 7.5d
+		}
+		{
+			dependencies: ["6B7A3E097892DBB5"]
+			icon: "gtceu:primitive_baking_oven"
+			id: "55CE1F3F7EF61755"
+			shape: "gear"
+			size: 1.5d
+			tasks: [
+				{
+					id: "52EF0D5676E46D2E"
+					item: "gtceu:primitive_baking_oven"
+					type: "item"
+				}
+				{
+					count: 22L
+					id: "2256F826FB31A40C"
+					item: { Count: 22, id: "gtsac:primitive_baking_oven_bricks" }
+					type: "item"
+				}
+				{
+					id: "56E8ACE132182C0B"
+					item: "gtceu:steam_input_bus"
+					type: "item"
+				}
+				{
+					id: "058EB7398BA45853"
+					item: "gtceu:steam_output_bus"
+					type: "item"
+				}
+			]
+			x: -3.0d
+			y: 9.0d
+		}
+	]
+	title: "Tier 1: Steam Age"
+}
