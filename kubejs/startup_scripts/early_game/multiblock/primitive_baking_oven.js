@@ -1,14 +1,7 @@
-GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
-    event.create('primitive_baking_oven')
-        .category('primitive')
-        .setMaxIOSize(2, 1, 0, 0)
-        .setSound(GTSoundEntries.FURNACE)
-});
-
 GTCEuStartupEvents.registry('gtceu:machine', event => {
     event.create("gtsac:primitive_baking_oven", "primitive")
         .rotationState(RotationState.ALL)
-        .recipeType('primitive_baking_oven')
+        .recipeType('smoker')
         .pattern(definition => FactoryBlockPattern.start()
             .aisle('CCC', 'CCC', 'CCC')
             .aisle('CCC', 'CAC', 'CAC')

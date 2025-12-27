@@ -75,18 +75,6 @@
 		}
 		{
 			dependencies: ["408EE79FB2CBC0B5"]
-			id: "18A6637CCB0D3902"
-			optional: true
-			tasks: [{
-				id: "670802BB6A620855"
-				item: "gtceu:lp_steam_furnace"
-				type: "item"
-			}]
-			x: -4.5d
-			y: 4.0d
-		}
-		{
-			dependencies: ["408EE79FB2CBC0B5"]
 			id: "6328205D758FFB8D"
 			tasks: [{
 				id: "426B9853B60D4E4B"
@@ -116,18 +104,6 @@
 				type: "item"
 			}]
 			x: 3.0d
-			y: 4.0d
-		}
-		{
-			dependencies: ["408EE79FB2CBC0B5"]
-			id: "3422CE7B16CFF535"
-			optional: true
-			tasks: [{
-				id: "6CFEC07B131B9992"
-				item: "gtceu:lp_steam_rock_crusher"
-				type: "item"
-			}]
-			x: 4.5d
 			y: 4.0d
 		}
 		{
@@ -191,6 +167,7 @@
 		{
 			dependencies: ["146809173A43F105"]
 			description: ["Your first multiblock!"]
+			icon: "gtceu:primitive_oven"
 			id: "14F0F93CE1B0E1FD"
 			shape: "gear"
 			size: 1.7d
@@ -240,7 +217,8 @@
 				"3A20E34B654E37BA"
 				"3C71961A6A450F66"
 			]
-			description: ["Using your fancy new furnace, you can finally smelt Fireclay into Firebricks"]
+			description: ["Using your fancy new furnace, you can finally smelt Fireclay into Firebricks and obtain the Primitive Blast Furnace."]
+			icon: "gtceu:primitive_blast_furnace"
 			id: "7AECC11BA4317919"
 			shape: "gear"
 			size: 2.0d
@@ -299,6 +277,8 @@
 		}
 		{
 			dependencies: ["3CD8EFA41C11E957"]
+			description: ["The oven for making the fuel for the Primitive Oven and the Primitive Baking Oven."]
+			icon: "gtceu:coke_oven"
 			id: "3C71961A6A450F66"
 			shape: "gear"
 			size: 1.7d
@@ -332,6 +312,7 @@
 		}
 		{
 			dependencies: ["6B7A3E097892DBB5"]
+			icon: "gtceu:primitive_baking_oven"
 			id: "55CE1F3F7EF61755"
 			shape: "gear"
 			size: 1.5d
