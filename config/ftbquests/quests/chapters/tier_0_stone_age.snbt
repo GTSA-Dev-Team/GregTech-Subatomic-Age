@@ -7,6 +7,240 @@
 	id: "79AE78A1B48C7AD2"
 	order_index: 0
 	quest_links: [ ]
-	quests: [ ]
+	quests: [
+		{
+			hide_dependency_lines: false
+			id: "792B18A3905BEE7D"
+			shape: "hexagon"
+			tasks: [{
+				id: "05BDDF73F54E75C5"
+				item: {
+					Count: 1
+					id: "itemfilters:tag"
+					tag: {
+						value: "minecraft:logs"
+					}
+				}
+				title: "Any Log Block"
+				type: "item"
+			}]
+			title: "Getting Wood"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["792B18A3905BEE7D"]
+			description: ["To obtain your Flint Hammer, you must first gather grass fibres by breaking the grass around you"]
+			id: "1C4F782681C48261"
+			shape: "hexagon"
+			size: 1.2d
+			tasks: [{
+				id: "54FB1A7341644CD6"
+				item: {
+					Count: 1
+					id: "gtceu:flint_hammer"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			title: "Your First Tool"
+			x: 2.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1C4F782681C48261"]
+			id: "291FA83592B4DB37"
+			tasks: [{
+				count: 4L
+				id: "1A7A2E1DEB6DC009"
+				item: "minecraft:cobblestone"
+				type: "item"
+			}]
+			x: 5.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["291FA83592B4DB37"]
+			id: "676924D4DED8CDC9"
+			tasks: [{
+				id: "5D7D5CCB8EDCF00C"
+				item: "minecraft:furnace"
+				type: "item"
+			}]
+			title: "Your First Furnace"
+			x: 7.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["676924D4DED8CDC9"]
+			description: ["You will need a lot of this for the Steam Age."]
+			id: "3A099E4CD4A2AA79"
+			tasks: [
+				{
+					id: "5EF0C4819423217E"
+					item: "minecraft:iron_ingot"
+					type: "item"
+				}
+				{
+					id: "410A482CB790069F"
+					item: "minecraft:copper_ingot"
+					type: "item"
+				}
+				{
+					id: "0405A958F096BFF3"
+					item: "gtceu:tin_ingot"
+					type: "item"
+				}
+			]
+			title: "Resources For Days!"
+			x: 10.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["3A099E4CD4A2AA79"]
+			description: ["Tools are used for crafting, repairing machines and gathering materials. They make life a lot easier so you should probably craft them."]
+			id: "60F77F390FE14F57"
+			size: 1.3d
+			tasks: [
+				{
+					id: "6D629F47AF3A6FF3"
+					item: {
+						Count: 1
+						id: "itemfilters:tag"
+						tag: {
+							value: "gtceu:tools/crafting_wrenches"
+						}
+					}
+					title: "Your First Wrench"
+					type: "item"
+				}
+				{
+					id: "5CACA614B183C2DF"
+					item: {
+						Count: 1
+						id: "itemfilters:tag"
+						tag: {
+							value: "gtceu:tools/crafting_wire_cutters"
+						}
+					}
+					title: "Your First Wire Cutters"
+					type: "item"
+				}
+				{
+					id: "6607ED42B6D15D15"
+					item: {
+						Count: 1
+						id: "itemfilters:tag"
+						tag: {
+							value: "gtceu:tools/crafting_crowbars"
+						}
+					}
+					title: "Your First Crowbar"
+					type: "item"
+				}
+				{
+					id: "438CA07AF6394E06"
+					item: {
+						Count: 1
+						id: "itemfilters:tag"
+						tag: {
+							value: "gtceu:tools/crafting_files"
+						}
+					}
+					title: "Your First File"
+					type: "item"
+				}
+				{
+					id: "7AB403D76B3AD9CF"
+					item: {
+						Count: 1
+						id: "itemfilters:tag"
+						tag: {
+							value: "gtceu:tools/crafting_screwdrivers"
+						}
+					}
+					title: "Your First Screwdriver"
+					type: "item"
+				}
+				{
+					id: "24C3F9C8DFAB539A"
+					item: {
+						Count: 1
+						id: "itemfilters:tag"
+						tag: {
+							value: "gtceu:tools/crafting_hammers"
+						}
+					}
+					title: "Your First ACTUAL Hammer"
+					type: "item"
+				}
+				{
+					id: "2587C6001BA1E808"
+					item: {
+						Count: 1
+						id: "itemfilters:tag"
+						tag: {
+							value: "forge:tools/mining_hammers"
+						}
+					}
+					title: "A Hammer for Mining!"
+					type: "item"
+				}
+				{
+					id: "41D3270A246EFE3B"
+					item: {
+						Count: 1
+						id: "itemfilters:tag"
+						tag: {
+							value: "gtceu:tools/crafting_mortars"
+						}
+					}
+					title: "A Mortar"
+					type: "item"
+				}
+			]
+			title: "Tools For Days!"
+			x: 10.0d
+			y: 2.5d
+		}
+		{
+			dependencies: ["3A099E4CD4A2AA79"]
+			description: ["This is the alloy you're going to be using most of for the Steam Age. I suggest you get a lot."]
+			id: "6BEAE2A923FDF524"
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [{
+				count: 16L
+				id: "4924B47AEC6DC00E"
+				item: "gtceu:bronze_ingot"
+				type: "item"
+			}]
+			title: "The Most Primitive Alloy"
+			x: 12.5d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"60F77F390FE14F57"
+				"6BEAE2A923FDF524"
+			]
+			description: ["That was easy, right? Well... It's about to get a lot harder."]
+			disable_toast: true
+			id: "67D549E89D282E9B"
+			shape: "gear"
+			size: 2.0d
+			tasks: [{
+				count: 4L
+				id: "50C972A831C4A744"
+				item: { Count: 4, id: "gtceu:bronze_machine_casing" }
+				type: "item"
+			}]
+			title: "Enter The Steam Age"
+			x: 12.5d
+			y: 2.5d
+		}
+	]
 	title: "Tier 0: Stone Age"
 }
