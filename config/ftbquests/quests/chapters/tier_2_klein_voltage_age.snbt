@@ -1,0 +1,372 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "tier_2_klein_voltage_age"
+	group: "02B1C089968BE9F0"
+	icon: "gtceu:lv_machine_casing"
+	id: "3022E9027184688C"
+	order_index: 2
+	quest_links: [ ]
+	quests: [
+		{
+			id: "604C85939C21D3C0"
+			shape: "gear"
+			size: 2.0d
+			tasks: [{
+				id: "3DC1926F86B6500E"
+				item: "gtceu:basic_electronic_circuit"
+				type: "item"
+			}]
+			x: -2.0d
+			y: -1.0d
+		}
+		{
+			id: "08BFA1C9F03178C9"
+			tasks: [{
+				id: "5D13615752390A3C"
+				item: "gtceu:lv_electric_motor"
+				type: "item"
+			}]
+			x: 2.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["08BFA1C9F03178C9"]
+			id: "3AEFDB5EF41AEC81"
+			tasks: [{
+				id: "29A26DC521CB8C85"
+				item: "gtceu:lv_electric_piston"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 1.5d
+		}
+		{
+			dependencies: [
+				"604C85939C21D3C0"
+				"08BFA1C9F03178C9"
+			]
+			id: "5AF84F16F595EB4E"
+			tasks: [{
+				id: "403EE2175CE071F6"
+				item: "gtceu:lv_robot_arm"
+				type: "item"
+			}]
+			x: -2.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["08BFA1C9F03178C9"]
+			id: "3F30BE746FCAD66E"
+			tasks: [{
+				id: "2574A603CCA4BE19"
+				item: "gtceu:lv_electric_pump"
+				type: "item"
+			}]
+			x: 2.0d
+			y: 3.5d
+		}
+		{
+			dependencies: ["08BFA1C9F03178C9"]
+			id: "010998E68AB228B1"
+			tasks: [{
+				id: "3E57900932E731B6"
+				item: "gtceu:lv_conveyor_module"
+				type: "item"
+			}]
+			x: 4.0d
+			y: 3.5d
+		}
+		{
+			dependencies: [
+				"604C85939C21D3C0"
+				"2084ACFEEFC31EE4"
+			]
+			id: "6C0052DE9C9A0540"
+			tasks: [{
+				id: "3136353F5CE67B09"
+				item: "gtceu:lv_emitter"
+				type: "item"
+			}]
+			x: -4.0d
+			y: 1.5d
+		}
+		{
+			dependencies: [
+				"604C85939C21D3C0"
+				"2084ACFEEFC31EE4"
+			]
+			id: "51F4E5BACE1A3645"
+			tasks: [{
+				id: "792DDE9CAFF6C683"
+				item: "gtceu:lv_sensor"
+				type: "item"
+			}]
+			x: -6.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["08BFA1C9F03178C9"]
+			id: "5B17FA58C05566DD"
+			tasks: [{
+				id: "50B3FC9C172AC61E"
+				item: "gtceu:lv_wiremill"
+				type: "item"
+			}]
+			x: -2.0d
+			y: 5.5d
+		}
+		{
+			dependencies: [
+				"08BFA1C9F03178C9"
+				"3AEFDB5EF41AEC81"
+			]
+			id: "3EB574341C29DF63"
+			tasks: [{
+				id: "091F25A5B986A969"
+				item: "gtceu:lv_bender"
+				type: "item"
+			}]
+			x: -0.5d
+			y: 5.5d
+		}
+		{
+			dependencies: [
+				"08BFA1C9F03178C9"
+				"3AEFDB5EF41AEC81"
+			]
+			id: "2027A64A21630C9A"
+			tasks: [{
+				id: "0DDFA58F2415B137"
+				item: "gtceu:lv_lathe"
+				type: "item"
+			}]
+			x: 1.0d
+			y: 5.5d
+		}
+		{
+			dependencies: [
+				"010998E68AB228B1"
+				"5AF84F16F595EB4E"
+			]
+			id: "467477D79560DB4C"
+			tasks: [{
+				id: "25C8C1CB9CC5878F"
+				item: "gtceu:lv_assembler"
+				type: "item"
+			}]
+			x: 2.5d
+			y: 5.5d
+		}
+		{
+			id: "6BC19AC52896D0BE"
+			tasks: [{
+				id: "2A4917F36C99E281"
+				item: "gtceu:lv_arc_furnace"
+				type: "item"
+			}]
+			x: -3.5d
+			y: 5.5d
+		}
+		{
+			dependencies: ["08BFA1C9F03178C9"]
+			id: "0304E4F8CB0B5B15"
+			tasks: [{
+				id: "0177180C3A6BF857"
+				item: "gtceu:lv_centrifuge"
+				type: "item"
+			}]
+			x: -5.0d
+			y: 5.5d
+		}
+		{
+			dependencies: [
+				"08BFA1C9F03178C9"
+				"010998E68AB228B1"
+			]
+			id: "5752BF8753257BC4"
+			tasks: [{
+				id: "23B6B9E75F0C837C"
+				item: "gtceu:lv_cutter"
+				type: "item"
+			}]
+			x: -6.5d
+			y: 5.5d
+		}
+		{
+			id: "4ACFFE8027ECC458"
+			tasks: [{
+				id: "026D0F40DC02108A"
+				item: "gtceu:lv_electrolyzer"
+				type: "item"
+			}]
+			x: 4.0d
+			y: 5.5d
+		}
+		{
+			dependencies: ["08BFA1C9F03178C9"]
+			id: "136F0B55F3A36E29"
+			tasks: [{
+				id: "1D0CBA2EDD2EDA69"
+				item: "gtceu:lv_mixer"
+				type: "item"
+			}]
+			x: 5.5d
+			y: 5.5d
+		}
+		{
+			id: "0F4AD722471137A6"
+			tasks: [{
+				id: "71F194096AA27941"
+				item: "gtceu:lv_polarizer"
+				type: "item"
+			}]
+			x: -8.0d
+			y: 5.5d
+		}
+		{
+			dependencies: ["3AEFDB5EF41AEC81"]
+			id: "2084ACFEEFC31EE4"
+			tasks: [{
+				id: "5E4EC3E613FC355A"
+				item: "gtceu:lv_sifter"
+				type: "item"
+			}]
+			x: -9.5d
+			y: 5.5d
+		}
+		{
+			dependencies: ["08BFA1C9F03178C9"]
+			id: "2FDB99EB0B001021"
+			tasks: [{
+				id: "09BAEB943D3E269F"
+				item: "gtceu:lv_thermal_centrifuge"
+				type: "item"
+			}]
+			x: 7.0d
+			y: 5.5d
+		}
+		{
+			id: "1F5F2004D96949CC"
+			tasks: [{
+				id: "2E1D679EC1C9123B"
+				item: "gtceu:gallium_dust"
+				type: "item"
+			}]
+			x: 7.0d
+			y: 7.5d
+		}
+		{
+			id: "2FD7E907CFBD7C7C"
+			tasks: [{
+				id: "6A34A542CC9A0C45"
+				item: "gtceu:glue_bucket"
+				type: "item"
+			}]
+			x: -5.5d
+			y: 7.5d
+		}
+		{
+			id: "1BB08253D16A4773"
+			tasks: [{
+				id: "5C66D9C1B3DA410D"
+				item: "gtceu:phenolic_circuit_board"
+				type: "item"
+			}]
+			x: 2.5d
+			y: 8.5d
+		}
+		{
+			id: "7C518F4BD38B20EF"
+			tasks: [{
+				id: "1500018BF1DC413D"
+				item: "gtceu:arsenic_dust"
+				type: "item"
+			}]
+			x: -4.5d
+			y: 7.5d
+		}
+		{
+			id: "30C5B7C86284773A"
+			tasks: [{
+				id: "325986822BDC9808"
+				item: "gtceu:gallium_arsenide_dust"
+				type: "item"
+			}]
+			x: 5.5d
+			y: 8.5d
+		}
+		{
+			id: "03CAD3AC2A47D504"
+			tasks: [{
+				id: "211DAF59DD891A9D"
+				item: "gtceu:diode"
+				type: "item"
+			}]
+			x: 2.0d
+			y: 9.5d
+		}
+		{
+			id: "2EEB5A914C5E2676"
+			tasks: [{
+				id: "1BB22BD9279EBEB5"
+				item: "gtceu:phenolic_printed_circuit_board"
+				type: "item"
+			}]
+			x: 3.0d
+			y: 9.5d
+		}
+		{
+			id: "716BA63D54E4C5E3"
+			tasks: [{
+				id: "1450D76AC6B50C4B"
+				item: "gtceu:good_electronic_circuit"
+				type: "item"
+			}]
+			x: -0.5d
+			y: 10.5d
+		}
+		{
+			id: "3C2EF522FA7679FD"
+			tasks: [{
+				id: "5B85BC9DBDC23CA7"
+				item: "gtceu:electric_blast_furnace"
+				type: "item"
+			}]
+			x: 8.5d
+			y: 9.5d
+		}
+		{
+			dependencies: ["604C85939C21D3C0"]
+			id: "63D6924F668DA1EB"
+			tasks: [{
+				id: "7E6321E3D49E1ABC"
+				item: "gtceu:lv_alloy_smelter"
+				type: "item"
+			}]
+			x: 8.5d
+			y: 5.5d
+		}
+		{
+			id: "35A411FE866C071C"
+			tasks: [{
+				id: "0419FB98DC0A26E3"
+				item: "gtceu:cupronickel_ingot"
+				type: "item"
+			}]
+			x: 8.5d
+			y: 7.5d
+		}
+		{
+			id: "228F8D02DB1F90B0"
+			tasks: [{
+				id: "1AFF5A119EFA45C2"
+				item: "gtceu:electric_winding_machine"
+				type: "item"
+			}]
+			x: 8.5d
+			y: 8.5d
+		}
+	]
+	title: "Tier 2: Klein Voltage Age"
+}

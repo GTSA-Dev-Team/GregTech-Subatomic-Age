@@ -1,5 +1,9 @@
 {
     "block.gtceu.component_assembler": "Component Assembler",
+    "block.gtceu.electric_winding_machine": "Electric Winding Machine",
+    "block.gtceu.heavy_drilling_rig": "Heavy Drilling Rig",
 
-    "gtceu.component_assembler": "Component Assembly"
+    "gtceu.component_assembler": "Component Assembly",
+    "gtceu.electric_winding_machine": "Coil Winding",
+    "gtceu.heavy_drilling_rig": "Crust Drilling"
 }

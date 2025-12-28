@@ -3,7 +3,7 @@ ServerEvents.recipes(event => {
          'RCR',
          'VHP',
          'RCR',
-     ], { R: "gtceu:lv_robot_arm", C: "#gtceu:circuits/lv", V: "gtceu:lv_conveyor_module", H: "gtceu:lv_machine_hull", P: "gtceu:lv_electric_piston"})
+     ], { R: "gtceu:lv_robot_arm", C: "#gtceu:circuits/lv", V: "gtceu:lv_conveyor_module", H: "gtceu:lv_assembler", P: "gtceu:lv_electric_piston"})
     
     
     
@@ -98,6 +98,16 @@ ServerEvents.recipes(event => {
             .duration(15*20)
             .EUt(120)
     }   
+
+    const voltages = ['mv', 'hv', 'ev', 'iv']
+    const components = ['electric_motor', 'electric_piston', 'electric_pump', 'conveyor_module', 'robot_arm', 'emitter', 'sensor', 'field_generator']
+    voltages.forEach((tier) => {
+        components.forEach((component) => {
+            event.remove({
+                output: `gtceu:${tier}_${component}`
+            })
+        })
+    })
 
     
     Motor('copper', 'aluminium', 'steel', 'cupronickel', 'mv')
