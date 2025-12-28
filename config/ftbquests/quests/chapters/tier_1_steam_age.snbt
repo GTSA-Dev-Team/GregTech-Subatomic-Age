@@ -3,6 +3,7 @@
 	default_quest_shape: ""
 	filename: "tier_1_steam_age"
 	group: "02B1C089968BE9F0"
+	icon: "gtceu:bronze_machine_casing"
 	id: "4451EC5CEA45AD7A"
 	order_index: 1
 	quest_links: [ ]
