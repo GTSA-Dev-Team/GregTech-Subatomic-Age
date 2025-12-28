@@ -10,14 +10,18 @@ ServerEvents.recipes(event => {
     event.recipes.gtceu.compressor('primitive_bricks_compression')
             .itemInputs('gtsac:primitive_brick_dust')
             .itemOutputs('gtsac:compressed_primitive_brick')
-            .duration(200)
+            .duration(100)
             .EUt(8)
 
 
     event.recipes.gtceu.primitive_oven('firebrick_smelting')
             .itemInputs([ 'gtceu:compressed_fireclay', '2x gtceu:coke_gem' ])
             .itemOutputs('gtceu:firebrick')
-            .duration(20 * 30)
+            .duration(20 * 5);
 
-    // TODO: Add controller block recipe
+        event.shaped('gtceu:primitive_oven', [
+                'BPB',
+                'PHP',
+                'BPB'
+        ], { B: "gtsac:primitive_oven_brick", P: "gtceu:bronze_plate", H: "gtceu:bronze_machine_casing" })
 });

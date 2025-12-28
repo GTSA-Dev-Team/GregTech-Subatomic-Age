@@ -3,7 +3,7 @@
 	default_quest_shape: ""
 	filename: "tier_1_steam_age"
 	group: "02B1C089968BE9F0"
-	icon: "gtceu:bronze_machine_casing"
+	icon: "gtceu:hp_steam_alloy_smelter"
 	id: "4451EC5CEA45AD7A"
 	order_index: 1
 	quest_links: [ ]
@@ -54,25 +54,32 @@
 		}
 		{
 			dependencies: ["408EE79FB2CBC0B5"]
+			description: [
+				"You should probably look into glass making."
+				"Tip: You can use steel to make molds for smelting dusts into blocks"
+			]
 			id: "6C13695E9CEBC559"
 			tasks: [{
 				id: "4D1AE53064673A82"
 				item: "gtceu:lp_steam_alloy_smelter"
 				type: "item"
 			}]
-			x: -1.5d
-			y: 4.0d
+			title: "Alloying 201"
+			x: 3.0d
+			y: 2.0d
 		}
 		{
 			dependencies: ["408EE79FB2CBC0B5"]
 			id: "542E235F659A78B7"
+			optional: true
 			tasks: [{
 				id: "0F8273E0FB66157C"
 				item: "gtceu:lp_steam_forge_hammer"
 				type: "item"
 			}]
-			x: -3.0d
-			y: 4.0d
+			title: "Cheaper Plates"
+			x: -2.0d
+			y: 2.0d
 		}
 		{
 			dependencies: ["408EE79FB2CBC0B5"]
@@ -342,6 +349,749 @@
 			]
 			x: -3.0d
 			y: 9.0d
+		}
+		{
+			dependencies: ["7AECC11BA4317919"]
+			description: ["You will need a lot of these for LV and higher tiers."]
+			id: "119D22411012B682"
+			tasks: [{
+				count: 16L
+				id: "427784DFC754DB9B"
+				item: { Count: 16, id: "gtceu:steel_ingot" }
+				type: "item"
+			}]
+			title: "Steel Ingots"
+			x: 7.0d
+			y: 11.0d
+		}
+		{
+			dependencies: ["119D22411012B682"]
+			description: ["These aren't technically needed but they make processing faster and you will need that speed boost."]
+			id: "0E5AC14D1E34F89F"
+			size: 1.3d
+			tasks: [
+				{
+					id: "59D1C543052CAF34"
+					item: "gtceu:hp_steam_macerator"
+					type: "item"
+				}
+				{
+					id: "73B4EEDD5E569E93"
+					item: "gtceu:hp_steam_compressor"
+					type: "item"
+				}
+				{
+					id: "5FDFB9E56242F9E0"
+					item: "gtceu:hp_steam_forge_hammer"
+					type: "item"
+				}
+				{
+					id: "60CE9403754AA78E"
+					item: "gtceu:hp_steam_alloy_smelter"
+					type: "item"
+				}
+			]
+			title: "High Pressure Machines"
+			x: 6.982142857142861d
+			y: 8.30357142857143d
+		}
+		{
+			dependencies: ["4E5A5D330A2E942B"]
+			description: ["A material used for potin among other things."]
+			hide_dependency_lines: true
+			id: "1691C8BCA1555462"
+			tasks: [
+				{
+					count: 16L
+					id: "039ADA3831089F56"
+					item: { Count: 16, id: "gtceu:lead_ingot" }
+					type: "item"
+				}
+				{
+					count: 16L
+					id: "3E87A317CC44EEE7"
+					item: { Count: 16, id: "gtceu:lead_dust" }
+					type: "item"
+				}
+			]
+			title: "Lead it go"
+			x: 7.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["1691C8BCA1555462"]
+			description: ["The material used for core parts of steam multiblocks."]
+			id: "03923027CFDC438D"
+			tasks: [{
+				count: 10L
+				id: "7D94BFD8CF1255C3"
+				item: { Count: 10, id: "gtceu:potin_ingot" }
+				type: "item"
+			}]
+			title: "Potin Ingots"
+			x: 9.0d
+			y: 6.0d
+		}
+		{
+			dependencies: [
+				"03923027CFDC438D"
+				"0E5AC14D1E34F89F"
+			]
+			description: ["Steam multiblocks. They use Steam Parallels which lets you process up to 8 recipes at ones"]
+			id: "24D56FD8F67C4D7B"
+			size: 1.4d
+			tasks: [
+				{
+					id: "792C5B9CEBEEADCB"
+					item: "gtceu:steam_grinder"
+					type: "item"
+				}
+				{
+					id: "10BCCE551245C783"
+					item: "gtceu:steam_oven"
+					type: "item"
+				}
+			]
+			title: "Steam Multiblocks"
+			x: 8.982142857142861d
+			y: 8.267857142857146d
+		}
+		{
+			dependencies: [
+				"74BC8F5D377DEDAB"
+				"053A6349F4CBB3B2"
+			]
+			description: ["The main building block of LV machines."]
+			id: "4F9ED142382D59A8"
+			shape: "gear"
+			size: 2.0d
+			tasks: [{
+				id: "543B3C2799B303D5"
+				item: "gtceu:lv_machine_hull"
+				type: "item"
+			}]
+			x: 12.0d
+			y: 11.0d
+		}
+		{
+			dependencies: ["119D22411012B682"]
+			hide_dependency_lines: false
+			id: "74BC8F5D377DEDAB"
+			size: 1.2d
+			tasks: [{
+				id: "6E0728D72B034605"
+				item: "gtceu:lv_machine_casing"
+				type: "item"
+			}]
+			x: 9.0d
+			y: 11.0d
+		}
+		{
+			dependencies: ["7566CF1DFA94F049"]
+			icon: "gtceu:latex_bucket"
+			id: "509025668CAF8CC6"
+			tasks: [
+				{
+					id: "0F818418A6FF91BF"
+					item: "gtceu:latex_bucket"
+					type: "item"
+				}
+				{
+					id: "34A55C5AE3C6266E"
+					type: "checkmark"
+				}
+			]
+			title: "The Wonders of Rubber Processing"
+			x: 4.5d
+			y: 4.0d
+		}
+		{
+			dependencies: ["08104F4D67465C8A"]
+			description: ["These allow you to input and output items and fluids from machines."]
+			id: "7E9246644180B854"
+			tasks: [
+				{
+					id: "17D0BA6960574233"
+					item: "gtceu:ulv_input_bus"
+					type: "item"
+				}
+				{
+					id: "2EDBC38BD9131DAC"
+					item: "gtceu:ulv_output_bus"
+					type: "item"
+				}
+				{
+					id: "59291A7272715F00"
+					item: "gtceu:ulv_input_hatch"
+					type: "item"
+				}
+				{
+					id: "762D00B5026B033C"
+					item: "gtceu:ulv_output_hatch"
+					type: "item"
+				}
+			]
+			title: "Your First Real Hatches"
+			x: 5.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["7E9246644180B854"]
+			description: ["Used for transforming liquid latex into it's dust form."]
+			icon: "gtceu:coagulation_tank"
+			id: "051B301DA7522977"
+			shape: "gear"
+			size: 1.3d
+			tasks: [
+				{
+					id: "34F9E348C87E8602"
+					item: "gtceu:coagulation_tank"
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "7694F20A4D383BE3"
+					item: { Count: 4, id: "gtceu:treated_wood_frame" }
+					type: "item"
+				}
+				{
+					count: 29L
+					id: "30B50E13FE94DD60"
+					item: { Count: 32, id: "gtceu:wood_wall" }
+					type: "item"
+				}
+				{
+					id: "3FF1F52CCAAF2E9A"
+					item: "gtceu:ulv_input_bus"
+					type: "item"
+				}
+				{
+					id: "349DB75FBEB8F4DC"
+					item: "gtceu:ulv_input_hatch"
+					type: "item"
+				}
+				{
+					id: "00EBF48ED884C33E"
+					item: "gtceu:ulv_output_bus"
+					type: "item"
+				}
+			]
+			title: "The Coagulation Tank"
+			x: 7.0d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"051B301DA7522977"
+				"509025668CAF8CC6"
+				"732D2C902AE9D91C"
+			]
+			description: ["Yet another item you will need large quantities of."]
+			id: "10FB06EB419007AA"
+			shape: "gear"
+			size: 1.6d
+			tasks: [{
+				count: 16L
+				id: "518AFFED5BD829CA"
+				item: { Count: 16, id: "gtceu:rubber_ingot" }
+				type: "item"
+			}]
+			title: "Rubber Ingots"
+			x: 7.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["10FB06EB419007AA"]
+			id: "5FB159D3471A736E"
+			tasks: [{
+				count: 16L
+				id: "65F24944D74B5874"
+				item: { Count: 16, id: "gtceu:rubber_plate" }
+				type: "item"
+			}]
+			title: "Rubber Sheets"
+			x: 9.0d
+			y: 4.0d
+		}
+		{
+			dependencies: [
+				"3A099E4CD4A2AA79"
+				"5FB159D3471A736E"
+			]
+			description: ["You will need a lot of these for the LV age."]
+			id: "053A6349F4CBB3B2"
+			tasks: [{
+				count: 16L
+				id: "4C9DA1DCFB7C293B"
+				item: { Count: 16, id: "gtceu:tin_single_cable" }
+				type: "item"
+			}]
+			title: "Cable Insulation"
+			x: 12.0d
+			y: 4.0d
+		}
+		{
+			dependencies: [
+				"6C13695E9CEBC559"
+				"119D22411012B682"
+			]
+			description: ["These molds (and a few others) can be put in an Alloy Smelter along with a material and it will be transformed into the shape that is on the mold."]
+			hide_dependency_lines: true
+			id: "368481663E3D448E"
+			min_required_tasks: 1
+			tasks: [
+				{
+					id: "0055D248744DD622"
+					item: "gtceu:block_casting_mold"
+					type: "item"
+				}
+				{
+					id: "06FEF0DF5066779B"
+					item: "gtceu:plate_casting_mold"
+					type: "item"
+				}
+				{
+					id: "0766D64C092D2145"
+					item: "gtceu:ingot_casting_mold"
+					type: "item"
+				}
+				{
+					id: "3E3E8213A72AB032"
+					item: "gtceu:ball_casting_mold"
+					type: "item"
+				}
+			]
+			title: "Alloy Smelter Molds"
+			x: 3.0d
+			y: 0.5d
+		}
+		{
+			dependencies: ["368481663E3D448E"]
+			description: ["Using your earlier aquired molds, smelt glass dust into it's block form."]
+			id: "08104F4D67465C8A"
+			tasks: [{
+				count: 8L
+				id: "6188616924FADB7F"
+				item: "minecraft:glass"
+				type: "item"
+			}]
+			title: "Glass Blocks"
+			x: 5.0d
+			y: 0.5d
+		}
+		{
+			dependencies: ["73CA63F323747577"]
+			icon: "gtceu:sulfur_dust"
+			id: "2144F38570BB93A8"
+			tasks: [
+				{
+					count: 8L
+					id: "566250E1AAD85FCF"
+					item: "gtceu:iron_iii_sulfate_dust"
+					type: "item"
+				}
+				{
+					count: 16L
+					id: "5F792D22D23C0DB6"
+					item: "gtceu:sulfur_dust"
+					type: "item"
+				}
+			]
+			title: "Pyrite Processing"
+			x: 5.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["2144F38570BB93A8"]
+			id: "3C82191F85E0845F"
+			tasks: [{
+				id: "7396FD1468A8FE97"
+				item: "gtceu:sulfur_trioxide_bucket"
+				type: "item"
+			}]
+			title: "Sulfur Trioxide"
+			x: 7.0d
+			y: -1.5d
+		}
+		{
+			dependencies: [
+				"3C82191F85E0845F"
+				"44157F3ACAD1E5D0"
+			]
+			id: "7099217EC1D8FF44"
+			tasks: [{
+				id: "110AC3ABBEFE868A"
+				item: "gtceu:sulfuric_acid_bucket"
+				type: "item"
+			}]
+			title: "Sulfuric Acid"
+			x: 9.0d
+			y: -1.5d
+		}
+		{
+			dependencies: [
+				"08104F4D67465C8A"
+				"5FB159D3471A736E"
+				"5AB1F58CFCE5E0DB"
+				"1691C8BCA1555462"
+			]
+			hide_dependency_lines: true
+			id: "44157F3ACAD1E5D0"
+			min_required_tasks: 1
+			tasks: [
+				{
+					id: "6D0D03F36273BFE3"
+					item: "gtceu:lp_steam_mixer"
+					type: "item"
+				}
+				{
+					id: "2519938B73682078"
+					item: "gtceu:hp_steam_mixer"
+					type: "item"
+				}
+			]
+			title: "Steam Mixer"
+			x: 9.0d
+			y: 0.5d
+		}
+		{
+			dependencies: ["6C13695E9CEBC559"]
+			id: "6543B88DDF3775D7"
+			tasks: [
+				{
+					id: "652AB4A141B2223A"
+					item: "gtceu:block_casting_mold"
+					type: "item"
+				}
+				{
+					id: "19779C8F6A70BF80"
+					item: "gtceu:plate_casting_mold"
+					type: "item"
+				}
+				{
+					id: "7C970412D7120E77"
+					item: "gtceu:ingot_casting_mold"
+					type: "item"
+				}
+				{
+					id: "5EF7314CF73317BB"
+					item: "gtceu:ball_casting_mold"
+					type: "item"
+				}
+			]
+			title: "Alloy Smelter Molds"
+			x: 3.0d
+			y: 0.5d
+		}
+		{
+			hide_dependent_lines: true
+			icon: "gtceu:sulfur_dust"
+			id: "732D2C902AE9D91C"
+			tasks: [
+				{
+					count: 8L
+					id: "659C275562B3D632"
+					item: "gtceu:iron_iii_sulfate_dust"
+					type: "item"
+				}
+				{
+					count: 16L
+					id: "5A75275082C75A11"
+					item: { Count: 16, id: "gtceu:sulfur_dust" }
+					type: "item"
+				}
+			]
+			title: "Pyrite Processing"
+			x: 5.0d
+			y: -1.5d
+		}
+		{
+			dependencies: [
+				"7099217EC1D8FF44"
+				"1691C8BCA1555462"
+				"053A6349F4CBB3B2"
+			]
+			description: ["The Cathode and Anode are used in crafting Lead Acid Batteries."]
+			hide_dependency_lines: true
+			id: "1523A87CDFB04137"
+			tasks: [
+				{
+					id: "284D5A25878299AF"
+					item: "gtsac:lead_battery_cathode"
+					type: "item"
+				}
+				{
+					id: "7F8795757FA595B4"
+					item: "gtsac:lead_batter_anode"
+					type: "item"
+				}
+			]
+			title: "Lead Acid Battery Parts"
+			x: 12.0d
+			y: -1.5d
+		}
+		{
+			dependencies: [
+				"7099217EC1D8FF44"
+				"053A6349F4CBB3B2"
+			]
+			id: "701D037D368DE243"
+			tasks: [
+				{
+					id: "6587131CB1E88994"
+					item: "gtsac:lead_battery_cathode"
+					type: "item"
+				}
+				{
+					id: "530C100D208A4A1D"
+					item: "gtsac:lead_batter_anode"
+					type: "item"
+				}
+			]
+			title: "Lead Acid Battery Parts"
+			x: 12.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["701D037D368DE243"]
+			id: "19C511702EF97565"
+			tasks: [{
+				id: "30A1DD5BD533ED47"
+				item: "gtceu:lv_lithium_battery"
+				type: "item"
+			}]
+			title: "Lead Acid Batteries"
+			x: 14.0d
+			y: 1.5d
+		}
+		{
+			dependencies: [
+				"4F9ED142382D59A8"
+				"19C511702EF97565"
+			]
+			description: ["Since your power generation at the start will be.. questionable, you can use batteries to store some extra energy in case you start too many machines at once."]
+			id: "23B8CEB893C1AC6D"
+			min_required_tasks: 1
+			shape: "gear"
+			size: 1.5d
+			tasks: [
+				{
+					id: "0381DAAEAF62F1EE"
+					item: "gtceu:lv_battery_buffer_4x"
+					type: "item"
+				}
+				{
+					id: "4C9A4E81639C2F7B"
+					item: "gtceu:lv_battery_buffer_8x"
+					type: "item"
+				}
+				{
+					id: "1DC45F36EF023DCD"
+					item: "gtceu:lv_battery_buffer_16x"
+					type: "item"
+				}
+			]
+			title: "Battery Buffer"
+			x: 14.0d
+			y: 7.0d
+		}
+		{
+			dependencies: [
+				"7288EF0CA67FD5DC"
+				"1A22FC7C0C819C19"
+				"5AB1F58CFCE5E0DB"
+			]
+			description: ["Your first electric circuit."]
+			id: "1DA5BF747B21ECD7"
+			shape: "gear"
+			size: 2.0d
+			tasks: [{
+				count: 8L
+				id: "469236A2A2D5721E"
+				item: { Count: 8, id: "gtceu:basic_electronic_circuit" }
+				type: "item"
+			}]
+			title: "LV Circuits"
+			x: 16.0d
+			y: 11.0d
+		}
+		{
+			dependencies: ["7695BE0F79531A7E"]
+			description: ["The core component of a LV circuit"]
+			id: "7288EF0CA67FD5DC"
+			tasks: [{
+				count: 8L
+				id: "7ECE631C948A6378"
+				item: { Count: 8, id: "gtceu:resin_printed_circuit_board" }
+				type: "item"
+			}]
+			title: "Printed Circuit Boards"
+			x: 16.0d
+			y: 7.0d
+		}
+		{
+			dependencies: ["28090A723FEB4689"]
+			id: "7695BE0F79531A7E"
+			tasks: [{
+				id: "5B4C533CF62C7919"
+				item: "gtceu:resin_circuit_board"
+				type: "item"
+			}]
+			x: 16.0d
+			y: 4.0d
+		}
+		{
+			description: ["You will need a LOT of this."]
+			id: "28090A723FEB4689"
+			tasks: [{
+				count: 32L
+				id: "37898F022F732506"
+				item: { Count: 32, id: "gtceu:sticky_resin" }
+				type: "item"
+			}]
+			title: "Rubber Processing pt.2"
+			x: 18.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["28090A723FEB4689"]
+			id: "1A22FC7C0C819C19"
+			tasks: [{
+				count: 16L
+				id: "16E1738FDE195E55"
+				item: { Count: 16, id: "gtceu:resistor" }
+				type: "item"
+			}]
+			title: "The Most Basic Resistor"
+			x: 18.0d
+			y: 7.0d
+		}
+		{
+			dependencies: [
+				"578D4B10255FC116"
+				"7D1DF9EE4EFED746"
+			]
+			description: ["A ULV circuit."]
+			id: "5AB1F58CFCE5E0DB"
+			tasks: [{
+				count: 10L
+				id: "3DDAC4F1FB202AB7"
+				item: { Count: 10, id: "gtceu:vacuum_tube" }
+				type: "item"
+			}]
+			title: "Vacuum Tubes"
+			x: 20.0d
+			y: 11.0d
+		}
+		{
+			id: "6E9A41C8B4E84A77"
+			min_required_tasks: 1
+			tasks: [
+				{
+					id: "4E7339867D024383"
+					item: "gtceu:lp_steam_vacuum_chamber"
+					type: "item"
+				}
+				{
+					id: "3027363FD0326B09"
+					item: "gtceu:hp_steam_vacuum_chamber"
+					type: "item"
+				}
+			]
+			title: "Vacuum Ejection"
+			x: 20.0d
+			y: 7.0d
+		}
+		{
+			dependencies: ["6E9A41C8B4E84A77"]
+			description: ["The inner part of a Vacuum Tube"]
+			id: "578D4B10255FC116"
+			tasks: [{
+				count: 16L
+				id: "3E1FA7AD342768C5"
+				item: { Count: 16, id: "gtsac:vacuum_tube_components" }
+				type: "item"
+			}]
+			title: "Vacuum Tube Components"
+			x: 20.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["6543B88DDF3775D7"]
+			hide_dependency_lines: true
+			id: "7D1DF9EE4EFED746"
+			tasks: [{
+				count: 16L
+				id: "48675888A57ADD2D"
+				item: { Count: 16, id: "gtceu:glass_tube" }
+				type: "item"
+			}]
+			x: 22.0d
+			y: 11.0d
+		}
+		{
+			dependencies: [
+				"1DA5BF747B21ECD7"
+				"4F9ED142382D59A8"
+			]
+			id: "3842CD647C41AED0"
+			shape: "gear"
+			size: 2.0d
+			tasks: [{
+				id: "492437653F494B12"
+				item: "gtceu:lv_steam_turbine"
+				type: "item"
+			}]
+			title: "Low Voltage, Here I Come!"
+			x: 14.0d
+			y: 13.5d
+		}
+		{
+			dependencies: [
+				"08104F4D67465C8A"
+				"5FB159D3471A736E"
+			]
+			id: "44E122E203E68553"
+			min_required_tasks: 1
+			tasks: [
+				{
+					id: "5B599A23D6276CDB"
+					item: "gtceu:lp_steam_mixer"
+					type: "item"
+				}
+				{
+					id: "69222575A530DC5E"
+					item: "gtceu:hp_steam_mixer"
+					type: "item"
+				}
+			]
+			title: "Steam Mixer"
+			x: 9.0d
+			y: 0.5d
+		}
+		{
+			dependencies: [
+				"35D050365270104D"
+				"08104F4D67465C8A"
+			]
+			description: ["You will need this for making rubber."]
+			id: "73CA63F323747577"
+			min_required_tasks: 1
+			tasks: [
+				{
+					id: "2D67689AB8BE31E5"
+					item: "gtceu:lp_steam_chemical_reactor"
+					type: "item"
+				}
+				{
+					id: "718A8D3EC7C60065"
+					item: "gtceu:hp_steam_chemical_reactor"
+					type: "item"
+				}
+			]
+			title: "Your First Chemical Reactor"
+			x: 3.0d
+			y: -1.5d
 		}
 	]
 	title: "Tier 1: Steam Age"
