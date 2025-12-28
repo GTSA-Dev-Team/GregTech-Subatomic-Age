@@ -3,7 +3,7 @@ GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
             .category('multiblock')
             .setEUIO('in')
             .setMaxIOSize(2, 0, 3, 3)
-            .setProgressBar(GuiTextures.PROGRESS_BAR_MACERATE, FillDirection.LEFT_TO_RIGHT)
+            .setProgressBar($GTSACGuiTextures.PROGRESS_BAR_DRILL, FillDirection.UP_TO_DOWN)
             .setSound(GTSoundEntries.MACERATOR)
 })
 
