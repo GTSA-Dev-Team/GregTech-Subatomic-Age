@@ -7,4 +7,12 @@ StartupEvents.registry('item', event => {
     event.create("gtsac:primitive_oven_brick").texture("gtsac:primitive_oven_brick")
     event.create("gtsac:compressed_primitive_brick").texture("gtsac:compressed_primitive_brick")
     event.create("gtsac:primitive_brick_dust").texture("gtsac:primitive_brick_dust")
+    event.create("gtsac:vacuum_tube_components").texture("gtsac:vacuum_tube_component")
+    event.create('gtsac:lead_battery_cathode').texture('gtsac:lead_battery_cathode')
+    event.create('gtsac:lead_batter_anode').texture('gtsac:lead_batter_anode')
 });
+
+GTCEuStartupEvents.registry('gtceu:material', event => {
+    GTMaterials.Nickel.addFlags(GTMaterialFlags.GENERATE_FOIL)
+    GTMaterials.Nickel.addFlags(GTMaterialFlags.GENERATE_FINE_WIRE)
+})

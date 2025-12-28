@@ -16,4 +16,10 @@ ClientEvents.lang("en_us", event => {
     event.renameItem('gtsac:sub_planckscale_processor_assembly', 'Sub-Planckscale Processor Assembly')
     event.renameItem('gtsac:sub_planckscale_processor_computer', 'Sub-Planckscale Processor Supercomputer')
     event.renameItem('gtsac:sub_planckscale_processor_mainframe', 'Sub-Planckscale Processor Mainframe')
+
+    event.renameItem('gtceu:lv_lithium_battery', 'Lead Acid Battery')
+
+    event.renameBlock('gtceu:primitive_oven', 'Primitive Oven')
+    event.renameBlock('gtceu:primitive_baking_oven', 'Primitive Baking Oven')
+    event.renameBlock('gtceu:coagulation_tank', 'Coagulation Tank')
 })
