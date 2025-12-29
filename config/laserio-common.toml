@@ -31,7 +31,7 @@
 	[card.energy_card]
 		#Maximum FE/operation for Energy Cards (without Energy Overclockers, if they are defined)
 		#Range: > 0
-		max_fe_no_tiers = 1000000
+		max_fe_no_tiers = 4000000
 		#Minimum ticks/operation
 		#Range: > 1
 		min_ticks_energy = 1
