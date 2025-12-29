@@ -9,4 +9,6 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
         .color(0xbf7b24)
         .dust()
         .formula("Fe2(SO4)3")
+    
+    
 })
