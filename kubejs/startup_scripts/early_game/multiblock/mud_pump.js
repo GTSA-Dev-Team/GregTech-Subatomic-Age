@@ -7,7 +7,7 @@ GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
 });
 
 GTCEuStartupEvents.registry('gtceu:machine', event => {
-    event.create("mud_pump", "primitive")
+    event.create("mud_pump", "multiblock")
         .rotationState(RotationState.ALL)
         .recipeType('mud_pumping')
         .pattern(definition => FactoryBlockPattern.start()
