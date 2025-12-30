@@ -2,6 +2,9 @@
 
 const $GTSACFluidSteamMachine = Java.loadClass('pl.epsi.gtsacore.api.machine.steam.FluidSimpleSteamMachine')
 const $GTSACGuiTextures = Java.loadClass('pl.epsi.gtsacore.api.textures.GTSACGuiTextures')
+const $CoilWorkableElectricMultiblockMachine = Java.loadClass("com.gregtechceu.gtceu.api.machine.multiblock.CoilWorkableElectricMultiblockMachine")
+const $GTSACRecipeModifiers = Java.loadClass('pl.epsi.gtsacore.api.recipes.GTSACRecipeModifiers')
+const $FluidBuilder = Java.loadClass('com.gregtechceu.gtceu.api.fluids.FluidBuilder')
 
 const tierToHullMap = {
     0: 'ulv',
@@ -21,7 +24,17 @@ const tierToHullMap = {
     14: 'max'
 }
 
-
+const tierToMagRodMap = {
+    'ulv': 'gtceu:magnetic_iron_rod',
+    'lv': 'gtceu:magnetic_steel_rod',
+    'mv': 'gtceu:magnetic_steel_rod',
+    'hv': 'gtceu:magnetic_steel_rod',
+    'ev': 'gtceu:magnetic_neodymium_rod',
+    'iv': 'gtceu:magnetic_neodymium_rod',
+    'luv': 'gtceu:magnetic_samarium_rod',
+    'zpm': 'gtceu:magnetic_samarium_rod',
+    'uv': 'gtceu:magnetic_samarium_rod',
+}
 
 
 

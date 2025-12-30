@@ -78,6 +78,18 @@ ServerEvents.recipes(event => {
         output: "gtceu:phenolic_circuit_board",
         input: ["gtceu:wood_dust", "gtceu:glue"]
     })
+    event.remove({
+        output: "gtceu:phenolic_printed_circuit_board",
+        type: "crafting_shaped"
+    })
+    event.remove({
+        output: 'gtceu:stainless_steel_dust',
+        type: 'gtceu:mixer'
+    })
+    event.remove({
+        output: 'gtceu:diode',
+        input: Fluid.of('gtceu:glass', 144)
+    })
 
     event.shaped('1x gtceu:long_wood_rod', [
         'AAA',
