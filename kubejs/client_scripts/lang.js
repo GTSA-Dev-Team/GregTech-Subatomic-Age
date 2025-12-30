@@ -22,4 +22,6 @@ ClientEvents.lang("en_us", event => {
     event.renameBlock('gtceu:primitive_oven', 'Primitive Oven')
     event.renameBlock('gtceu:primitive_baking_oven', 'Primitive Baking Oven')
     event.renameBlock('gtceu:coagulation_tank', 'Coagulation Tank')
+
+    // Add lang entries for recipy types!
 })

@@ -24,4 +24,9 @@ ServerEvents.recipes(event => {
                 'PHP',
                 'BPB'
         ], { B: "gtsac:primitive_oven_brick", P: "gtceu:bronze_plate", H: "gtceu:bronze_machine_casing" })
+
+        event.recipes.gtceu.primitive_oven('wrought_iron_smelting')
+                .itemInputs([ 'minecraft:iron_ingot', 'minecraft:coal' ])
+                .itemOutputs('gtceu:wrought_iron_ingot')
+                .duration(20 * 5)
 });

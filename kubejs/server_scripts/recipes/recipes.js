@@ -115,7 +115,7 @@ ServerEvents.recipes(event => {
     event.recipes.gtceu.compressor('fireclay_compression')
             .itemInputs('4x gtceu:fireclay_dust')
             .itemOutputs('gtceu:compressed_fireclay')
-            .duration(20 * 30)
+            .duration(20 * 10)
             .EUt(8)
 
     event.shaped('gtceu:coke_oven_bricks', [
@@ -160,4 +160,28 @@ ServerEvents.recipes(event => {
     }
     steamVacuumEjectorRecipe(true)
     steamVacuumEjectorRecipe(false)
+
+    event.recipes.gtceu.mud_pumping('mud_pumping_recipe')
+            .inputFluids('minecraft:water 4000')
+            .outputFluids('gtceu:red_mud 1500')
+            .itemOutputsRanged('minecraft:clay', 1, 4)
+            .duration(20 * 10)
+
+    event.recipes.gtceu.electric_blast_furnace('fireclay_smelting')
+            .itemInputs("32x gtceu:compressed_fireclay")
+            .itemOutputs("32x gtceu:firebrick")
+            .duration(20 * 30)
+            .EUt(32)
+
+    event.shaped('gtceu:rotary_kiln_bricks', [
+        'FF ',
+        'FFC',
+        '   '
+    ], { F: "gtceu:firebrick", C: "minecraft:clay_ball" })
+
+    event.shaped('gtceu:mud_pump', [
+        'RLR',
+        'STB',
+        'CLC'
+    ], { R: "gtceu:iron_rotor", L: "gtceu:wood_large_fluid_pipe", S: "gtceu:iron_screw", T: "gtceu:treated_wood_planks", B: "gtceu:iron_bolt", C: "minecraft:cobblestone_slab" })
 });
