@@ -36,6 +36,35 @@ ServerEvents.recipes(event => {
         type: "minecraft:crafting_shapeless"
     })
 
+    /////////////////////////////////////////////////
+    ///                                           ///
+    ///       CONTROL BLOCK RECIPES               ///
+    ///                                           ///
+    /////////////////////////////////////////////////
+
+    event.shaped('gtceu:rotary_kiln', [
+        'CRC',
+        'PHP',
+        'CUC'
+    ], { C: "#gtceu:circuits/lv", R: "gtceu:steel_rotor", P: "gtceu:steel_large_fluid_pipe", H: "gtceu:lv_machine_hull", U: "gtceu:lv_electric_pump" })
+
+    event.shaped('gtsac:clarifier', [
+        'GPG',
+        'RHR',
+        'CPC'
+    ], { C: "#gtceu:circuits/lv", R: "gtceu:steel_rotor", H: "gtceu:lv_machine_hull", P: "gtceu:lv_electric_pump", G: "minecraft:glass" })
+
+    event.shaped('gtceu:filtration_unit', [
+        'GRG',
+        'FHF',
+        'CPC'
+    ], { C: "#gtceu:circuits/lv", R: "gtceu:steel_rotor", H: "gtceu:lv_machine_hull", P: "gtceu:lv_electric_pump", G: "minecraft:glass", F: "gtceu:fluid_filter" })
+
+    event.shaped('gtsac:neutralization_tank', [
+        'RFR',
+        'PHP',
+        'RCR'
+    ], { C: "#gtceu:circuits/lv", R: "gtceu:steel_rotor", H: "gtceu:lv_machine_hull", P: "gtceu:lv_electric_pump", F: "gtceu:fluid_filter" })
 
     /////////////////////////////////////////////////
     ///                                           ///

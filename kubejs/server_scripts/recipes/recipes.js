@@ -162,4 +162,22 @@ ServerEvents.recipes(event => {
             .outputFluids('gtceu:red_mud 1500')
             .itemOutputsRanged('minecraft:clay', 1, 4)
             .duration(20 * 10)
+
+    event.recipes.gtceu.electric_blast_furnace('fireclay_smelting')
+            .itemInputs("32x gtceu:compressed_fireclay")
+            .itemOutputs("32x gtceu:firebrick")
+            .duration(20 * 30)
+            .EUt(32)
+
+    event.shaped('gtceu:rotary_kiln_bricks', [
+        'FF ',
+        'FFC',
+        '   '
+    ], { F: "gtceu:firebrick", C: "minecraft:clay_ball" })
+
+    event.shaped('gtceu:mud_pump', [
+        'RLR',
+        'STB',
+        'CLC'
+    ], { R: "gtceu:iron_rotor", L: "gtceu:wood_large_fluid_pipe", S: "gtceu:iron_screw", T: "gtceu:treated_wood_planks", B: "gtceu:iron_bolt", C: "minecraft:cobblestone_slab" })
 });
