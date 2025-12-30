@@ -11,8 +11,3 @@ StartupEvents.registry('item', event => {
     event.create('gtsac:lead_battery_cathode').texture('gtsac:lead_battery_cathode')
     event.create('gtsac:lead_batter_anode').texture('gtsac:lead_batter_anode')
 });
-
-GTCEuStartupEvents.registry('gtceu:material', event => {
-    GTMaterials.Nickel.addFlags(GTMaterialFlags.GENERATE_FOIL)
-    GTMaterials.Nickel.addFlags(GTMaterialFlags.GENERATE_FINE_WIRE)
-})

@@ -4,16 +4,12 @@ ServerEvents.recipes(event => {
          'VHP',
          'RCR',
      ], { R: "gtceu:lv_robot_arm", C: "#gtceu:circuits/lv", V: "gtceu:lv_conveyor_module", H: "gtceu:lv_assembler", P: "gtceu:lv_electric_piston"})
-    
-    
-    
-    const rubbers = new Map([
-    ["rubber", 144],
-    ["silicone_rubber", 72],
-    ["styrene_butadiene_rubber", 36],
-    ]);
 
-    const types = ["rubber", "silicone_rubber", "styrene_butadiene_rubber"];
+    const rubbers = {
+        "rubber": 144,
+        "silicone_rubber": 72,
+        "styrene_butadiene_rubber": 36
+    }
 
     function Motor(input1, input2, input3, input4, tier) {
         event.recipes.gtceu.component_assembler(`${tier}_electric_motor`)
@@ -36,27 +32,27 @@ ServerEvents.recipes(event => {
     }
 
     function Pump(input1, input2, input3, tier) {
-        types.forEach((rubber) => {
+        for (const rubber in rubbers) {
             event.recipes.gtceu.component_assembler(`${tier}_electric_pump_${rubber}`)
                 .itemInputs(`gtceu:${input1}_single_cable`, `gtceu:${input2}_normal_fluid_pipe`, `gtceu:${input3}_screw`, `gtceu:${input3}_rotor`, `gtceu:${tier}_electric_motor`)
-                .inputFluids('gtceu:soldering_alloy 72', `gtceu:${rubber} ${rubbers.get(rubber)}`)
+                .inputFluids('gtceu:soldering_alloy 72', `gtceu:${rubber} ${rubbers[rubber]}`)
                 .itemOutputs(`gtceu:${tier}_electric_pump`)
                 .chancedOutput(`gtceu:${tier}_electric_pump`, 1000, 0)
                 .duration(15*20)
                 .EUt(120)
-        })
+        }
     }
 
     function Conveyor(input1, tier) {
-        types.forEach((rubber) => {
+        for (const rubber in rubbers) {
             event.recipes.gtceu.component_assembler(`${tier}_conveyor_module_${rubber}`)
                 .itemInputs(`gtceu:${input1}_single_cable`, `2x gtceu:${tier}_electric_motor`)
-                .inputFluids('gtceu:soldering_alloy 72', `gtceu:${rubber} ${6 * rubbers.get(rubber)}`)
+                .inputFluids('gtceu:soldering_alloy 72', `gtceu:${rubber} ${6 * rubbers[rubber]}`)
                 .itemOutputs(`gtceu:${tier}_conveyor_module`)
                 .chancedOutput(`gtceu:${tier}_conveyor_module`, 1000, 0)
                 .duration(15*20)
                 .EUt(120)
-        })
+        }
     }
 
     function RobotArm(input1, input2, tier) {

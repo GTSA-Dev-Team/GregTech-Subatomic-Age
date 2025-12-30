@@ -6,6 +6,10 @@ const $CoilWorkableElectricMultiblockMachine = Java.loadClass("com.gregtechceu.g
 const $GTSACRecipeModifiers = Java.loadClass('pl.epsi.gtsacore.api.recipes.GTSACRecipeModifiers')
 const $FluidBuilder = Java.loadClass('com.gregtechceu.gtceu.api.fluids.FluidBuilder')
 
+const $GTCEuFluidProperty = Java.loadClass('com.gregtechceu.gtceu.api.data.chemical.material.properties.FluidProperty');
+const $GTCEuFluidBuilder = Java.loadClass('com.gregtechceu.gtceu.api.fluids.FluidBuilder');
+const $GTCEuFluidStorageKeys = Java.loadClass('com.gregtechceu.gtceu.api.fluids.store.FluidStorageKeys');
+
 const tierToHullMap = {
     0: 'ulv',
     1: 'lv',
