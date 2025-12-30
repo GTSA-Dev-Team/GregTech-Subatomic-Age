@@ -74,6 +74,10 @@ ServerEvents.recipes(event => {
         input: "gtceu:fine_copper_wire",
         type: "crafting_shaped"
     })
+    event.remove({
+        output: "gtceu:phenolic_circuit_board",
+        input: ["gtceu:wood_dust", "gtceu:glue"]
+    })
 
     event.shaped('1x gtceu:long_wood_rod', [
         'AAA',

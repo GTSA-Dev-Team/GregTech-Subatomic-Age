@@ -5,5 +5,13 @@
 
     "gtceu.component_assembler": "Component Assembly",
     "gtceu.electric_winding_machine": "Coil Winding",
-    "gtceu.heavy_drilling_rig": "Crust Drilling"
+    "gtceu.heavy_drilling_rig": "Crust Drilling",
+    "gtceu.dissolution_chamber": "Dissolving",
+
+    "material.gtceu.crude_ore_slurry": "§4Crude §rOre Slurry",
+    "material.gtceu.clean_ore_slurry": "§9Clean §rOre Slurry",
+    "material.gtceu.refined_ore_slurry": "§bRefined §rOre Slurry",
+    "material.gtceu.low_density_crust_sludge": "§5Low Density §rCrust Sludge",
+    "material.gtceu.high_density_crust_sludge": "§dHigh Density §rCrust Sludge",
+    "material.gtceu.crust_waste": "§7Crust §1Waste"
 }
