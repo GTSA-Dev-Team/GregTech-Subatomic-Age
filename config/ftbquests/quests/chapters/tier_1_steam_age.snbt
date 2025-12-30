@@ -174,7 +174,10 @@
 		}
 		{
 			dependencies: ["146809173A43F105"]
-			description: ["Your first multiblock!"]
+			description: [
+				"Your first multiblock!"
+				"You can also use it to turn iron into wrought iron, which you will need a LOT of."
+			]
 			icon: "gtceu:primitive_oven"
 			id: "14F0F93CE1B0E1FD"
 			shape: "gear"
@@ -1092,6 +1095,115 @@
 			title: "Your First Chemical Reactor"
 			x: 3.0d
 			y: -1.5d
+		}
+		{
+			description: ["You should probably look into this mod, you're going to need a lot of iron later."]
+			id: "4CA83843B691FC74"
+			tasks: [{
+				id: "22418084C0633D19"
+				item: "ironfurnaces:iron_furnace"
+				type: "item"
+			}]
+			title: "Iron Furnaces"
+			x: -2.0d
+			y: 4.0d
+		}
+		{
+			description: ["You can use this machine to get basically infinite water."]
+			icon: "gtceu:primitive_pump"
+			id: "1EB8C6F0707BC2B9"
+			tasks: [
+				{
+					id: "165A9172FD421857"
+					item: "gtceu:primitive_pump"
+					type: "item"
+				}
+				{
+					id: "4370371DF8E28E16"
+					item: "gtceu:pump_hatch"
+					type: "item"
+				}
+				{
+					count: 10L
+					id: "06495E7149978631"
+					item: { Count: 10, id: "gtceu:treated_wood_frame" }
+					type: "item"
+				}
+				{
+					count: 10L
+					id: "175C4A74B13E18EE"
+					item: { Count: 10, id: "gtceu:pump_deck" }
+					type: "item"
+				}
+			]
+			title: "Infinite Water"
+			x: -4.0d
+			y: 0.0d
+		}
+		{
+			id: "4E81C1D384041060"
+			optional: true
+			tasks: [
+				{
+					id: "56D0DD65FF8BE183"
+					item: "gtceu:wooden_multiblock_tank"
+					type: "item"
+				}
+				{
+					count: 24L
+					id: "3EBB1A6C7104620F"
+					item: { Count: 24, id: "gtceu:wood_wall" }
+					type: "item"
+				}
+				{
+					id: "4D315BDDA9DC99B1"
+					item: "gtceu:wooden_tank_valve"
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1EB8C6F0707BC2B9"]
+			description: ["You WILL need this."]
+			icon: "gtceu:mud_pump"
+			id: "31BA6FF92EA27877"
+			tasks: [
+				{
+					id: "569B6141CC190756"
+					item: "gtceu:mud_pump"
+					type: "item"
+				}
+				{
+					count: 137L
+					id: "576668BBACD8EAC5"
+					item: { Count: 137, id: "gtceu:wood_wall" }
+					type: "item"
+				}
+				{
+					count: 36L
+					id: "17B61A318C4021C4"
+					item: { Count: 36, id: "gtceu:treated_wood_frame" }
+					type: "item"
+				}
+			]
+			title: "Infinite Clay"
+			x: -4.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["31BA6FF92EA27877"]
+			description: ["You can use this as an early game source of iron in LV so i suggest you don't void this."]
+			id: "0BB1AEA0331C53CE"
+			tasks: [{
+				id: "49D8BF1678DC70FA"
+				item: "gtceu:red_mud_bucket"
+				type: "item"
+			}]
+			title: "Red Mud"
+			x: -4.0d
+			y: 4.0d
 		}
 	]
 	title: "Tier 1: Steam Age"

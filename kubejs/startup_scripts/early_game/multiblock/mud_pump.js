@@ -1,0 +1,30 @@
+GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
+    event.create('mud_pumping')
+        .category('primitive')
+        .setMaxIOSize(0, 1, 1, 1)
+        .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, FillDirection.LEFT_TO_RIGHT)
+        .setSound(GTSoundEntries.BATH)
+});
+
+GTCEuStartupEvents.registry('gtceu:machine', event => {
+    event.create("mud_pump", "primitive")
+        .rotationState(RotationState.ALL)
+        .recipeType('mud_pumping')
+        .pattern(definition => FactoryBlockPattern.start()
+                .aisle("BAAAAAB", "BBAAABB", "BCCCCCB", "BAAAAAB", "BAAAAAB", "BAAAAAB", "BCCCCCB")
+                .aisle("AAAAAAA", "BAAAAAB", "CCCCCCC", "ACCCCCA", "ACCCCCA", "ACCCCCA", "CCCCCCC")
+                .aisle("AAAAAAA", "AAAAAAA", "CCCCCCC", "ACAAACA", "ACAAACA", "ACAAACA", "CCCCCCC")
+                .aisle("AAAAAAA", "AAAAAAA", "CCCCCCC", "ACAAACA", "ACAAACA", "ACAAACA", "CCCCCCC")
+                .aisle("AAAAAAA", "AAAAAAA", "CCCCCCC", "ACAAACA", "ACAAACA", "ACAAACA", "CCCCCCC")
+                .aisle("AAAAAAA", "BAAAAAB", "CCCCCCC", "ACCCCCA", "ACC@CCA", "ACCCCCA", "CCCCCCC")
+                .aisle("BAAAAAB", "BBAAABB", "BCCCCCB", "BAAAAAB", "BAAAAAB", "BAAAAAB", "BCCCCCB")
+            .where("A", Predicates.any())
+            .where("B", Predicates.blocks("gtceu:treated_wood_frame"))
+            .where("C", Predicates.blocks("gtceu:wood_wall")
+                .or(Predicates.abilities(PartAbility.IMPORT_FLUIDS))
+                .or(Predicates.abilities(PartAbility.EXPORT_ITEMS))
+                .or(Predicates.abilities(PartAbility.EXPORT_FLUIDS)))
+            .where('@', Predicates.controller(Predicates.blocks(definition.get())))
+        .build())
+        .workableCasingModel('gtceu:block/casings/wood_wall/top', 'gtceu:block/machines/macerator');
+})
