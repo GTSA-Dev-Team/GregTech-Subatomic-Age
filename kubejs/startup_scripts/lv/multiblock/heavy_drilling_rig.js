@@ -36,7 +36,7 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
            .where("C", Predicates.blocks("gtceu:steel_machine_casing"))
            .where("D", Predicates.blocks("gtceu:steel_frame"))
            .where("E", Predicates.blocks("gtceu:steel_gearbox"))
-           .where("F", Predicates.blocks("gtceu:solid_machine_casing")
+           .where("F", Predicates.blocks("gtceu:solid_machine_casing").setMinGlobalLimited(116)
                 .or(Predicates.abilities(PartAbility.IMPORT_FLUIDS))
                 .or(Predicates.abilities(PartAbility.IMPORT_ITEMS))
                 .or(Predicates.abilities(PartAbility.EXPORT_FLUIDS))

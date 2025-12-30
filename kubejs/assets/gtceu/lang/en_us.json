@@ -2,16 +2,29 @@
     "block.gtceu.component_assembler": "Component Assembler",
     "block.gtceu.electric_winding_machine": "Electric Winding Machine",
     "block.gtceu.heavy_drilling_rig": "Heavy Drilling Rig",
+    "block.gtceu.electric_arc_furnace": "Electric Arc Furnace",
+    "block.gtceu.vacuum_pressure_vessel": "Vacuum Pressure Vessel",
 
     "gtceu.component_assembler": "Component Assembly",
     "gtceu.electric_winding_machine": "Coil Winding",
     "gtceu.heavy_drilling_rig": "Crust Drilling",
     "gtceu.dissolution_chamber": "Dissolving",
+    "gtceu.electric_arc_furnace": "Arc Melting",
+    "gtceu.vod": "Vacuum Oxygen Decarburization",
 
     "material.gtceu.crude_ore_slurry": "§4Crude §rOre Slurry",
     "material.gtceu.clean_ore_slurry": "§9Clean §rOre Slurry",
     "material.gtceu.refined_ore_slurry": "§bRefined §rOre Slurry",
     "material.gtceu.low_density_crust_sludge": "§5Low Density §rCrust Sludge",
     "material.gtceu.high_density_crust_sludge": "§dHigh Density §rCrust Sludge",
-    "material.gtceu.crust_waste": "§7Crust §1Waste"
+    "material.gtceu.crust_waste": "§7Crust §1Waste",
+    "material.gtceu.ferrochromium": "Ferrochromium",
+    "material.gtceu.ferromanganese": "Ferromanganese",
+    "material.gtceu.manganese_oxide": "Manganese Oxide",
+    "material.gtceu.iron_oxide": "Iron Oxide",
+    "material.gtceu.oxide_slag": "Oxide §8Slag",
+    "material.gtceu.high_carbon_stainless_steel": "§cHigh Carbon§r Stainless Steel",
+    "material.gtceu.clean_stainless_steel": "§9Clean§r Stainless Steel",
+    "material.gtceu.ultra_low_carbon_stainless_steel": "§bUltra Low Carbon§r Stainless Steel",
+    "material.gtceu.chemically_final_molten_stainless_steel": "§6Chemically Final §4Molten§r Stainless Steel"
 }
