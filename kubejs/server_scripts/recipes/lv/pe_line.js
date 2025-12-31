@@ -55,6 +55,20 @@ ServerEvents.recipes(event => {
         .duration(20 * 60)
         .EUt(128)
 
+    event.recipes.gtceu.polymerization_tank('ethylene_polimerization')
+        .notConsumable("gtceu:dichlorido_bis_n_benzylideneaniline_iron_ii_catalyst_dust")
+        .inputFluids("gtceu:air 1000", "gtceu:ethylene 144")
+        .outputFluids("gtceu:polyethylene 144")
+        .duration(20 * 8)
+        .EUt(32)
+
+    event.recipes.gtceu.polymerization_tank('ethylene_polimerization_oxygen')
+        .notConsumable("gtceu:dichlorido_bis_n_benzylideneaniline_iron_ii_catalyst_dust")
+        .inputFluids("gtceu:oxygen 1000", "gtceu:ethylene 144")
+        .outputFluids("gtceu:polyethylene 216")
+        .duration(20 * 8)
+        .EUt(32)
+
     event.recipes.gtceu.chemical_reactor('iron_ii_chloride_synthesis')
         .inputFluids("gtceu:hydrochloric_acid 2000")
         .itemInputs("gtceu:iron_dust")

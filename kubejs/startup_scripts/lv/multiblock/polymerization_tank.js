@@ -1,5 +1,5 @@
 GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
-    event.create('polymerization')
+    event.create('polymerization_tank')
         .category('multiblock')
         .setEUIO('in')
         .setMaxIOSize(2, 2, 2, 2)
@@ -10,7 +10,7 @@ GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
 GTCEuStartupEvents.registry('gtceu:machine', event => {
     event.create("polymerization_tank", "multiblock")
         .rotationState(RotationState.NON_Y_AXIS)
-        .recipeType('polymerization')
+        .recipeType('polymerization_tank')
         .appearanceBlock(GTBlocks.CASING_STEEL_SOLID)
         .recipeModifiers([GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.NON_PERFECT_OVERCLOCK_SUBTICK), GTRecipeModifiers.BATCH_MODE])
         .pattern(definition => FactoryBlockPattern.start()
