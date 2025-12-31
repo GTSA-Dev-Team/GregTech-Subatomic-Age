@@ -29,4 +29,34 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
         .color(0x6ca9ff)
         .fluid()
         .formula("H3AlF6")
+
+    event.create('benzaldehyde')
+        .color(0xf7ffa1)
+        .fluid()
+        .formula("C7H6O")
+
+    event.create('aniline')
+        .color(0xeefa0e)
+        .fluid()
+        .formula("C6H5NH2")
+
+    event.create('benzylideneimine')
+        .color(0xeef0cf)
+        .fluid()
+        .formula("C13H10N")
+
+    event.create('benzylideneimine_ethanol_solution')
+        .color(0xeb927c)
+        .fluid()
+        .formula("(C13H10N)(C2H5OH)")
+
+    event.create('inactive_dichlorido_bis_n_benzylideneaniline_iron_ii')
+        .color(0x453a37)
+        .fluid()
+        .formula("Fe(C26H20N2Cl2)")
+
+    event.create('dichlorido_bis_n_benzylideneaniline_iron_ii_catalyst')
+        .color(0x948581)
+        .dust()
+        .formula("Fe(C26H20N2Cl2)")
 })
