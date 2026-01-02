@@ -9,6 +9,10 @@ const $FluidBuilder = Java.loadClass('com.gregtechceu.gtceu.api.fluids.FluidBuil
 const $GTCEuFluidProperty = Java.loadClass('com.gregtechceu.gtceu.api.data.chemical.material.properties.FluidProperty');
 const $GTCEuFluidBuilder = Java.loadClass('com.gregtechceu.gtceu.api.fluids.FluidBuilder');
 const $GTCEuFluidStorageKeys = Java.loadClass('com.gregtechceu.gtceu.api.fluids.store.FluidStorageKeys');
+const $GTCEuEnergyHatchPartMachine = Java.loadClass('com.gregtechceu.gtceu.common.machine.multiblock.part.EnergyHatchPartMachine')
+const $IO = Java.loadClass('com.gregtechceu.gtceu.api.capability.recipe.IO')
+const $GTCEuFormattingUtil = Java.loadClass('com.gregtechceu.gtceu.utils.FormattingUtil')
+const $GTMachineModelProperties = Java.loadClass('com.gregtechceu.gtceu.api.machine.property.GTMachineModelProperties')
 
 const tierToHullMap = {
     0: 'ulv',
