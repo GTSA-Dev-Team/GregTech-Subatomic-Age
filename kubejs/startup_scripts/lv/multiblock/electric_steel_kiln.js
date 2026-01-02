@@ -2,8 +2,8 @@ GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
         event.create('electric_steel_kiln')
             .category('multiblock')
             .setEUIO('in')
-            .setMaxIOSize(3, 3, 3, 3)
-            .setProgressBar(GuiTextures.PROGRESS_BAR_MASS_FAB, FillDirection.LEFT_TO_RIGHT)
+            .setMaxIOSize(1, 1, 1, 1)
+            .setProgressBar(GuiTextures.PROGRESS_BAR_BOILER_HEAT, FillDirection.DOWN_TO_UP)
             .setSound(GTSoundEntries.FURNACE)
 })
 
@@ -27,6 +27,7 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
                  .or(Predicates.abilities(PartAbility.IMPORT_FLUIDS))
                  .or(Predicates.abilities(PartAbility.IMPORT_ITEMS))
                  .or(Predicates.abilities(PartAbility.EXPORT_ITEMS))
+                 .or(Predicates.abilities(PartAbility.EXPORT_FLUIDS))
                  .or(Predicates.abilities(PartAbility.INPUT_ENERGY).setMaxGlobalLimited(2)
                  .or(Predicates.abilities(PartAbility.MAINTENANCE).setExactLimit(1))))
                .where("E", Predicates.blocks("gtceu:steel_gearbox"))

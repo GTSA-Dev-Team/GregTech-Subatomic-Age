@@ -1,7 +1,7 @@
 ServerEvents.recipes(event => {
     const id = global.id;
 
-    event.shapeless('gtceu:primitive_brick_dust', [ '3x gtceu:clay_dust', '2x gtceu:flint_dust', '3x gtceu:quartz_sand_dust' ])
+    event.shapeless('4x gtceu:primitive_brick_dust', [ '3x gtceu:clay_dust', '2x gtceu:flint_dust', '3x gtceu:quartz_sand_dust' ])
 
     event.smelting('gtsac:primitive_oven_brick', 'gtsac:compressed_primitive_brick')
 

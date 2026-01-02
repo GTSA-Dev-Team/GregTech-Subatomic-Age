@@ -26,5 +26,5 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
                 .or(Predicates.abilities(PartAbility.EXPORT_FLUIDS)))
             .where('@', Predicates.controller(Predicates.blocks(definition.get())))
         .build())
-        .workableCasingModel('gtceu:block/casings/wood_wall/top', 'gtceu:block/machines/pump');
+        .workableCasingModel('gtceu:block/casings/wood_wall/top', 'gtceu:block/machines/miner');
 })

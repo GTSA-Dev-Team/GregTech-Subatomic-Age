@@ -23,5 +23,5 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
             .where(' ', Predicates.any())
             .where('@', Predicates.controller(Predicates.blocks(definition.get())))
         .build())
-        .workableCasingModel('gtceu:block/casings/wood_wall/top', 'gtceu:block/machines/fermenter');
+        .workableCasingModel('gtceu:block/casings/wood_wall/side', 'gtceu:block/machines/fermenter');
 })
