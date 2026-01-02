@@ -79,11 +79,11 @@ ItemEvents.tooltip(event => {
     tooltipGTMulti('vacuum_pressure_vessel', 'This fancy machine can §aEfficiently§r create a §9Tightly Sealed§f Vacuum inside it, allowing various §4Industrial§r and §5Chemical§r processes to occur.', '', ['subtick', 'batch'])
     tooltipGTMulti('electric_steel_kiln', 'Need more §8Steel§r\? This §4Behemoth§r can alloy §4Mass Amounts§r of it §aQuickly§r and §bEfficiently§r.', '', ['subtick', 'batch'])
     tooltipGTMulti('mud_pump', 'Uses §1Primitive Methods§r to extract §7Clay§r and §cMud§r out of §2The Ground§r.', '', [])
-    tooltipGTMulti('coagulation_tank', '§bRapidly Mixes§r chemicals into §1Water§r, causing them to form §5Small Clumps§r and making their extraction easier in §4Later Processing§r.', '', [])
+    tooltipGTMulti('coagulation_tank', '§bRapidly Mixes§r chemicals into §1Water§r, causing them to form §5Small Clumps §fand making their extraction easier in §4Later Processing§r.', '', [])
     tooltipGTMulti('primitive_oven', 'Your first (and simplest) §bMultiblock!§r Uses §8Burnable Fuel§r to §cFire Bricks§r.', '', [])
     tooltipSAMulti('clarifier', 'Separates §2Solid Particles§r from §1Liquids§r via §4Sedimentation§r.', '', ['subtick', 'batch'])
     tooltipGTMulti('filtration_unit', 'Passes §1Liquids§r through a §bFiltration Medium§r, ridding them of §4Unwanted Particles§r.', '', ['subtick', 'batch'])
     tooltipSAMulti('neutralization_tank', 'Mixes §1Chemicals§r together, resulting in a §bLower pH Solution§r.', '', ['subtick', 'batch'])
     tooltipGTMulti('rotary_kiln', 'Heats materials to §6High Temperatures§r in a §eRotating Cylindrical Furnace§r, causing §1Chemical§r and §2Physical§r §cTransformations§r.', '', ['subtick', 'batch'])
-    
+    tooltipGTMulti('polymerization_tank', 'Provides a §1Controlled Environment§r inside it, allowing for monomer §6Polymerization§r to happen.', '', ['subtick', 'batch'])
 })

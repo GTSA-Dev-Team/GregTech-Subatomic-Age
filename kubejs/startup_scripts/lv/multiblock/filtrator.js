@@ -34,5 +34,5 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
         .where("E", Predicates.blocks("gtceu:steel_pipe_casing"))
         .where("F", Predicates.controller(Predicates.blocks(definition.get())))
         .build())
-        .workableCasingModel('gtceu:block/casings/solid/machine_casing_solid_steel', 'gtceu:block/machines/electric_winding_machine')
+        .workableCasingModel('gtceu:block/casings/solid/machine_casing_solid_steel', 'gtceu:block/machines/autoclave')
 })

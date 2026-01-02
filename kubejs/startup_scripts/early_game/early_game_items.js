@@ -6,7 +6,7 @@ StartupEvents.registry('item', event => {
     event.create("gtsac:stone_pebble").texture("kubejs:item/stone_pebble")
     event.create("gtsac:primitive_oven_brick").texture("kubejs:item/primitive_oven_brick")
     event.create("gtsac:compressed_primitive_brick").texture("kubejs:item/compressed_primitive_brick")
-    event.create("gtsac:vacuum_tube_components").texture("kubejs:item/vacuum_tube_component")
+    event.create("gtsac:vacuum_tube_components").texture("kubejs:item/vacuum_tube_components")
     event.create('gtsac:lead_battery_cathode').texture('kubejs:item/lead_battery_cathode')
     event.create('gtsac:lead_battery_anode').texture('kubejs:item/lead_battery_anode')
 });

@@ -55,6 +55,6 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
                 .or(Predicates.abilities(PartAbility.INPUT_ENERGY).setMaxGlobalLimited(2))
                 .or(Predicates.abilities(PartAbility.MAINTENANCE).setExactLimit(1)))
             .build())
-        .workableCasingModel('gtceu:block/casings/gearbox/machine_casing_gearbox_steel', 'gtceu:block/machines/electric_winding_machine')
+        .workableCasingModel('gtceu:block/casings/gearbox/machine_casing_gearbox_steel', 'gtceu:block/machines/rotary_kiln')
 
 })
