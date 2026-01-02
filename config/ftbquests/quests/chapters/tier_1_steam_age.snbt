@@ -165,11 +165,8 @@
 			id: "788833C259277544"
 			tasks: [{
 				count: 16L
-				id: "1363D6BCB26C6A05"
-				item: {
-					Count: 16
-					id: "gtsac:primitive_brick_dust"
-				}
+				id: "381541E399B04D8E"
+				item: { Count: 16, id: "gtceu:primitive_brick_dust" }
 				type: "item"
 			}]
 			x: 0.0d
@@ -827,8 +824,8 @@
 					type: "item"
 				}
 				{
-					id: "7F8795757FA595B4"
-					item: "gtsac:lead_batter_anode"
+					id: "1BFC48EF0F049814"
+					item: "gtsac:lead_battery_anode"
 					type: "item"
 				}
 			]
@@ -1198,7 +1195,7 @@
 		}
 		{
 			dependencies: ["31BA6FF92EA27877"]
-			description: ["You can use this as an early game source of iron in LV so i suggest you don't void this."]
+			description: ["You can use this as a source of iron in LV so i suggest you don't void this."]
 			id: "0BB1AEA0331C53CE"
 			tasks: [{
 				id: "49D8BF1678DC70FA"

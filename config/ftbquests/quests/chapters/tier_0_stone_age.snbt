@@ -200,6 +200,18 @@
 					title: "A Mortar"
 					type: "item"
 				}
+				{
+					id: "4B9E08A6D1F85DEE"
+					item: {
+						Count: 1
+						id: "itemfilters:tag"
+						tag: {
+							value: "forge:tools/chainsaws"
+						}
+					}
+					title: "Any #forge:tools/chainsaws"
+					type: "item"
+				}
 			]
 			title: "Tools For Days!"
 			x: 10.0d

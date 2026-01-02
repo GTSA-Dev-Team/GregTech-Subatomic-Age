@@ -9,6 +9,19 @@ ServerEvents.recipes(event => {
         output: Fluid.of("gtceu:ammonia", 100)
     })
 
+    event.remove({
+        output: Fluid.of("gtceu:ethanol", 600),
+        input: Fluid.of("gtceu:biomass", 1000)
+    })
+
+    event.recipes.gtceu.distillery('ethanol_biomass_distillation')
+        .inputFluids(Fluid.of("gtceu:biomass", 1000))
+        .circuit(1)
+        .outputFluids(Fluid.of("gtceu:ethanol", 600))
+        .itemOutputs("gtceu:wood_dust")
+        .duration(20 * 10)
+        .EUt(32)
+
     event.shaped('gtceu:polymerization_tank', [
         'RRR',
         'PHP',
