@@ -7,7 +7,7 @@ GTCEuStartupEvents.registry("gtceu:recipe_type", event => {
 })
 
 GTCEuStartupEvents.registry('gtceu:machine', event => {
-    event.create('cstr', 'simple')
+    event.create('continous_stirred_tank_reactor', 'simple')
     .definition((tier, builder) => {
         builder.recipeType('cstr')
         .workableCasingModel(`gtceu:block/casings/voltage/${tierToHullMap[tier]}/side`, 'gtceu:block/machines/chemical_bath')

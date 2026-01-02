@@ -16,25 +16,33 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
     event.create('steam_chemical_reactor', 'steam')
         .machine((holder, isHP) => new $GTSACFluidSteamMachine(holder, isHP))
         .definition((isHP, builder) => {
-        builder.recipeType('chemical_reactor')
-            .tier(isHP ? 1 : 0)
+            let casing = isHP ? "bricked_steel" : "bricked_bronze"
+            builder.recipeType('chemical_reactor')
+                .tier(isHP ? 1 : 0)
+                .workableCasingModel(`gtceu:block/casings/steam/${casing}/side`, 'gtceu:block/machines/chemical_reactor')
     })
 
     event.create('steam_mixer', 'steam')
         .machine((holder, isHP) => new $GTSACFluidSteamMachine(holder, isHP))
         .definition((isHP, builder) => {
-        builder.recipeType('steam_mixer')
-            .tier(isHP ? 1 : 0)
+            let casing = isHP ? "bricked_steel" : "bricked_bronze"
+            builder.recipeType('steam_mixer')
+                .tier(isHP ? 1 : 0)
+                .workableCasingModel(`gtceu:block/casings/steam/${casing}/side`, 'gtceu:block/machines/mixer')
     })
 
     event.create('vacuum_chamber', 'simple')
         .tiers(GTMachineUtils.LOW_TIERS)
         .definition((tier, builder) => {
             builder.recipeType('vacuum_ejection')
+                .tier(tier)
         })
     
     event.create('steam_vacuum_chamber', 'steam')
         .definition((isHP, builder) => {
+            let casing = isHP ? "bricked_steel" : "bricked_bronze"
             builder.recipeType('vacuum_ejection')
+                .tier(isHP ? 1 : 0)
+                .workableCasingModel(`gtceu:block/casings/steam/${casing}/side`, 'gtceu:block/machines/air_scrubber')
         })
 }) 

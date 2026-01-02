@@ -11,6 +11,7 @@ StartupEvents.registry('item', event => {
     }
 
     // Supports
+    // DATAGEN 1 CATALYST_BED [ 0xcfcfcf, 0x1f1f1f ]
     generateCatalystBeds([ 'alumina', 'carbon' ])
 
     // Catalysts
@@ -20,5 +21,6 @@ StartupEvents.registry('item', event => {
         })
     }
 
+    // DATAGEN 1 CATALYST [ 0x6369ff, 0xfcfce1 ]
     generateCatalysts([ 'cobalt', 'platinum' ])
 })
