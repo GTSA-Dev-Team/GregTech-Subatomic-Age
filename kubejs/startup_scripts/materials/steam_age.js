@@ -14,6 +14,11 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
         .color(0x992906)
         .fluid()
         .formula("?")
+
+    event.create('primitive_brick')
+        .color(0x966e56)
+        .dust()
+        .components('3x gtceu:clay', '2x gtceu:flint', '3x gtceu:quartz_sand')
 })
 
 

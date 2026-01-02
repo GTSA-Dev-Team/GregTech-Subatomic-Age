@@ -116,6 +116,12 @@ ServerEvents.recipes(event => {
     registerAluminiumCalcinationRecipes(Fluid.of("gtceu:refinery_gas", 750))
     registerAluminiumCalcinationRecipes(Fluid.of("gtceu:coal_gas", 1000))
 
+    event.recipes.gtceu.electrolyzer('red_mud_electrolysis')
+                .inputFluids('gtceu:red_mud 12000')
+                .itemOutputs('gtceu:hematite_dust', 'gtceu:bauxite_dust', 'gtceu:silicon_dioxide_dust', 'gtceu:rutile_dust', 'gtceu:quicklime_dust', 'gtceu:sodium_dust')
+                .outputFluids('minecraft:water 9000')
+                .duration(15*20)
+                .EUt(30)
     /////////////////////////////////////////////////
     ///                                           ///
     ///       HALL HéROULT PROCESS BEGINS         ///
