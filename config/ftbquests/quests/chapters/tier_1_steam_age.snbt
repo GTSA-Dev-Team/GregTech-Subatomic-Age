@@ -165,8 +165,11 @@
 			id: "788833C259277544"
 			tasks: [{
 				count: 16L
-				id: "085AF012366D980C"
-				item: { Count: 16, id: "gtceu:primitive_brick_dust" }
+				id: "1363D6BCB26C6A05"
+				item: {
+					Count: 16
+					id: "gtsac:primitive_brick_dust"
+				}
 				type: "item"
 			}]
 			x: 0.0d
@@ -824,8 +827,8 @@
 					type: "item"
 				}
 				{
-					id: "27659A6AB9D03E70"
-					item: "gtsac:lead_battery_anode"
+					id: "7F8795757FA595B4"
+					item: "gtsac:lead_batter_anode"
 					type: "item"
 				}
 			]

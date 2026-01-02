@@ -9,147 +9,824 @@
 	quest_links: [ ]
 	quests: [
 		{
-			dependencies: ["71D7577A69EACBD4"]
-			id: "1A5D67B51370F605"
-			tasks: [{
-				id: "38B328DB95C82844"
-				item: "gtceu:lv_electric_motor"
-				type: "item"
-			}]
-			title: "The Core LV Component"
-			x: 0.0d
-			y: 3.5d
-		}
-		{
 			dependencies: [
-				"7288EF0CA67FD5DC"
-				"1A22FC7C0C819C19"
-				"5AB1F58CFCE5E0DB"
+				"1DA5BF747B21ECD7"
+				"4F9ED142382D59A8"
 			]
-			description: ["Your first electric circuit."]
-			id: "71D7577A69EACBD4"
+			description: ["I suggest you make a &ofew &rof these."]
+			disable_toast: true
+			id: "5F9F15D86EDB2F44"
 			shape: "gear"
 			size: 2.0d
 			tasks: [{
-				count: 8L
-				id: "42AD792D0E304250"
-				item: { Count: 8, id: "gtceu:basic_electronic_circuit" }
+				id: "56832947B0994D79"
+				item: "gtceu:lv_steam_turbine"
 				type: "item"
 			}]
-			title: "LV Circuits"
+			title: "Low Voltage, Here I Come!"
 			x: 0.0d
 			y: 0.0d
 		}
 		{
-			dependencies: ["1A5D67B51370F605"]
-			id: "539DEBB4574216AE"
+			dependencies: ["5F9F15D86EDB2F44"]
+			description: [
+				"Energy consists of &aVoltage and &cAmperage."
+				"&rA Low Voltage Generator will produce &a32 EU/t &rat &c1 Amp&r. This does not mean however that &a32 EU/t &rat &c4 Amps &ris &bMV &r(&b128 &rEU/t). &cAmperage &rdetermines the amount of machines you can power, while &aVoltage &rdetermines which tier of machines you can power."
+				""
+				"If a &7LV &rmachine is plugged into a wire transporting &bMV &rit will &cEXPLODE. &rBecause of that you should probably separate your machines by voltage."
+			]
+			id: "13BE20D094CA3E2A"
 			tasks: [{
-				id: "5A29468D8EC706A4"
-				item: "gtceu:lv_conveyor_module"
+				id: "51A62E0BFFFB1F95"
+				item: "chipped:warning_white_concrete"
 				type: "item"
 			}]
-			x: -4.0d
-			y: 4.5d
+			title: "Electrical Engineering 101"
+			x: 0.0d
+			y: 3.0d
 		}
 		{
-			dependencies: ["1A5D67B51370F605"]
-			id: "63D29D96F79D24ED"
+			dependencies: ["13BE20D094CA3E2A"]
+			id: "48A481641DC69314"
+			shape: "gear"
+			size: 1.5d
 			tasks: [{
-				id: "765C0315CDA7B6C3"
+				id: "51D7CE389C4AEA63"
 				item: "gtceu:lv_electric_piston"
 				type: "item"
 			}]
-			x: -4.0d
-			y: 0.5d
+			x: -3.5d
+			y: 3.0d
 		}
 		{
-			dependencies: ["1A5D67B51370F605"]
-			id: "235F6ED3300D10C6"
+			dependencies: ["48A481641DC69314"]
+			id: "71A2B4C1F714462C"
+			shape: "gear"
+			size: 1.5d
 			tasks: [{
-				id: "5660823F91192217"
-				item: "gtceu:lv_electric_pump"
-				type: "item"
-			}]
-			x: -4.0d
-			y: 6.5d
-		}
-		{
-			dependencies: [
-				"1A5D67B51370F605"
-				"63D29D96F79D24ED"
-			]
-			id: "6BADB95378F043C2"
-			tasks: [{
-				id: "24B54D3A4D4B4335"
+				id: "79DC0EBD24A2D92E"
 				item: "gtceu:lv_robot_arm"
 				type: "item"
 			}]
-			x: -4.0d
-			y: 2.5d
+			x: -7.5d
+			y: 3.0d
 		}
 		{
-			dependencies: [
-				"6BADB95378F043C2"
-				"539DEBB4574216AE"
-			]
-			id: "3789680467522DEA"
+			dependencies: ["48A481641DC69314"]
+			id: "6AE296DACFC23142"
 			tasks: [{
-				id: "7A5887989268F886"
-				item: "gtceu:lv_assembler"
-				type: "item"
-			}]
-			title: "NOT a Crafting Table"
-			x: -6.0d
-			y: 3.5d
-		}
-		{
-			dependencies: ["63D29D96F79D24ED"]
-			id: "4B35DCF69AF8F4F5"
-			tasks: [{
-				id: "243B03830D15362F"
+				id: "1AA2F8911B6368CE"
 				item: "gtceu:lv_bender"
 				type: "item"
 			}]
 			title: "Cheaper Plates"
-			x: -6.0d
+			x: -3.5d
+			y: 1.0d
+		}
+		{
+			dependencies: ["48A481641DC69314"]
+			id: "44452B8E8F1B71B4"
+			tasks: [{
+				id: "3F59BB808477E453"
+				item: "gtceu:lv_compressor"
+				type: "item"
+			}]
+			x: -5.0d
 			y: 1.5d
 		}
 		{
-			dependencies: ["63D29D96F79D24ED"]
-			id: "24A5C20616841384"
+			dependencies: ["48A481641DC69314"]
+			id: "31A216F43F94C3B0"
 			tasks: [{
-				id: "334D709332317D82"
+				id: "288B39DBC2556ACF"
+				item: "gtceu:lv_extruder"
+				type: "item"
+			}]
+			x: -2.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["48A481641DC69314"]
+			id: "42EC79F9D5E36EAD"
+			tasks: [{
+				id: "5096D4989B77474E"
+				item: "gtceu:lv_forge_hammer"
+				type: "item"
+			}]
+			x: -3.5d
+			y: 5.0d
+		}
+		{
+			dependencies: ["48A481641DC69314"]
+			id: "6F79F597B134E869"
+			tasks: [{
+				id: "40196F992273F070"
 				item: "gtceu:lv_lathe"
 				type: "item"
 			}]
 			title: "Cheaper Rods"
-			x: -6.0d
-			y: -0.5d
+			x: -2.0d
+			y: 1.5d
 		}
 		{
-			dependencies: [
-				"539DEBB4574216AE"
-				"235F6ED3300D10C6"
-			]
-			id: "6055808D7C198DA2"
+			dependencies: ["48A481641DC69314"]
+			id: "1830CF4BB1D4F82A"
 			tasks: [{
-				id: "7388AAE45A5AC7D7"
+				id: "44D93D1664433A55"
+				item: "gtceu:lv_macerator"
+				type: "item"
+			}]
+			x: -5.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["13BE20D094CA3E2A"]
+			id: "2AEFA279A82AE23F"
+			shape: "gear"
+			size: 1.5d
+			tasks: [{
+				id: "1F424CF36D88150C"
+				item: "gtceu:lv_electric_pump"
+				type: "item"
+			}]
+			x: 3.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["71A2B4C1F714462C"]
+			id: "04D696413C676088"
+			optional: true
+			tasks: [{
+				id: "4CC202573F825D13"
+				item: "gtceu:lv_packer"
+				type: "item"
+			}]
+			x: -7.5d
+			y: 1.0d
+		}
+		{
+			dependencies: ["71A2B4C1F714462C"]
+			id: "5C2C759F2F66B750"
+			shape: "gear"
+			size: 1.3d
+			tasks: [{
+				id: "027629D4AB510009"
+				item: "gtceu:lv_assembler"
+				type: "item"
+			}]
+			title: "NOT a Crafting Table"
+			x: -7.5d
+			y: 6.0d
+		}
+		{
+			can_repeat: false
+			dependencies: ["2AEFA279A82AE23F"]
+			hide_dependent_lines: true
+			id: "2686A7955A6574A2"
+			tasks: [{
+				id: "552CD14B20129309"
+				item: "gtceu:lv_autoclave"
+				type: "item"
+			}]
+			x: 5.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["2AEFA279A82AE23F"]
+			id: "264BF8EE783C3EEA"
+			tasks: [{
+				id: "2D6DA19C848325A4"
 				item: "gtceu:lv_chemical_bath"
 				type: "item"
 			}]
-			x: -6.0d
-			y: 5.5d
+			x: 2.0d
+			y: 1.5d
 		}
 		{
-			dependencies: ["235F6ED3300D10C6"]
-			id: "24165B02D2F70C3E"
+			dependencies: ["2AEFA279A82AE23F"]
+			id: "59B26B664502E6E4"
 			tasks: [{
-				id: "28C16D3521D86651"
+				id: "4F882631B635DEC3"
 				item: "gtceu:lv_distillery"
 				type: "item"
 			}]
-			x: -6.0d
-			y: 7.5d
+			x: 5.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["2AEFA279A82AE23F"]
+			id: "3B3867E1DCC942BB"
+			tasks: [{
+				id: "4DAD71834D450BFB"
+				item: "gtceu:lv_extractor"
+				type: "item"
+			}]
+			x: 3.5d
+			y: 5.0d
+		}
+		{
+			dependencies: ["2AEFA279A82AE23F"]
+			id: "7928E1BB57F3EDD1"
+			tasks: [{
+				id: "0738D402C1EC5454"
+				item: "gtceu:lv_fluid_solidifier"
+				type: "item"
+			}]
+			x: 3.5d
+			y: 1.0d
+		}
+		{
+			dependencies: ["2AEFA279A82AE23F"]
+			id: "250FA032A550753B"
+			tasks: [{
+				id: "014FE540CADD198D"
+				item: "gtceu:lv_gas_collector"
+				type: "item"
+			}]
+			x: 2.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["13BE20D094CA3E2A"]
+			id: "24EBC5064995CD82"
+			tasks: [{
+				id: "5458315F4BBED41E"
+				item: "gtceu:lv_wiremill"
+				type: "item"
+			}]
+			title: "Cheaper Wires"
+			x: 0.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["13BE20D094CA3E2A"]
+			id: "10C30ACFA27C1965"
+			tasks: [{
+				id: "5E5C4087E6BE198D"
+				item: "gtceu:lv_mixer"
+				type: "item"
+			}]
+			x: 1.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["13BE20D094CA3E2A"]
+			id: "79E2006EA0510F14"
+			tasks: [{
+				id: "6980579695E7FAB8"
+				item: "gtceu:lv_polarizer"
+				type: "item"
+			}]
+			x: -1.0d
+			y: 4.5d
+		}
+		{
+			dependencies: [
+				"5C2C759F2F66B750"
+				"6281500032AE4C16"
+				"61E54815FC9BF78D"
+			]
+			id: "5E7E7A57DE15E1A3"
+			tasks: [{
+				id: "5EC74C674B637A29"
+				item: "gtceu:electric_winding_machine"
+				type: "item"
+			}]
+			title: "Coils For Days"
+			x: -7.5d
+			y: 8.0d
+		}
+		{
+			dependencies: ["5E7E7A57DE15E1A3"]
+			description: ["You need 16 of these for the &aElectric Blast Furnace."]
+			id: "784E8F0C7B37FBA6"
+			shape: "gear"
+			size: 1.5d
+			tasks: [{
+				count: 16L
+				id: "502CA030CB34D4C6"
+				item: { Count: 16, id: "gtceu:cupronickel_coil_block" }
+				type: "item"
+			}]
+			title: "Basic Coils"
+			x: -7.5d
+			y: 10.0d
+		}
+		{
+			dependencies: ["5C2C759F2F66B750"]
+			id: "31D83C1958C8FC3D"
+			tasks: [{
+				id: "63A1C226F4F8DC21"
+				item: "gtceu:ulv_voltage_coil"
+				type: "item"
+			}]
+			x: -9.5d
+			y: 6.0d
+		}
+		{
+			dependencies: [
+				"31D83C1958C8FC3D"
+				"06E29F5467311EAD"
+			]
+			id: "6281500032AE4C16"
+			tasks: [{
+				id: "1F5CEDDA252BC42A"
+				item: "gtceu:ulv_energy_input_hatch"
+				type: "item"
+			}]
+			x: -9.5d
+			y: 8.0d
+		}
+		{
+			can_repeat: false
+			dependencies: ["6281500032AE4C16"]
+			description: ["You can &6Overclock &rmost multiblocks by placing 2 energy hatches. For example, if you only have access to ULV energy hatches, you can place 2 of them on a multiblock to unlock the LV recipe tier."]
+			hide_dependent_lines: true
+			id: "61E54815FC9BF78D"
+			tasks: [{
+				id: "22E85B663050F572"
+				title: "Overclocking"
+				type: "checkmark"
+			}]
+			x: -11.5d
+			y: 8.0d
+		}
+		{
+			description: ["You should probably have this since you will need to use ULV energy hatches which will &cEXPLORE &rif given LV."]
+			id: "06E29F5467311EAD"
+			tasks: [{
+				id: "246EF832C08C25A1"
+				item: "gtceu:ulv_transformer_1a"
+				type: "item"
+			}]
+			x: -11.5d
+			y: 6.0d
+		}
+		{
+			dependencies: ["784E8F0C7B37FBA6"]
+			id: "6ABFC62B471CB63D"
+			shape: "gear"
+			size: 1.5d
+			tasks: [{
+				id: "188EE6B2A1A8D53A"
+				item: "gtceu:electric_blast_furnace"
+				type: "item"
+			}]
+			x: -7.5d
+			y: 12.5d
+		}
+		{
+			dependencies: [
+				"6ABFC62B471CB63D"
+				"4F38EE9A7DB21802"
+			]
+			id: "790FDC95C82125A1"
+			shape: "gear"
+			size: 2.0d
+			tasks: [{
+				count: 64L
+				id: "7BBE9CC396A61833"
+				item: { Count: 64, id: "gtceu:aluminium_ingot" }
+				type: "item"
+			}]
+			title: "Aluminium Reserves"
+			x: -7.464285714285722d
+			y: 14.982142857142861d
+		}
+		{
+			dependencies: ["5B4436A283FC26E3"]
+			id: "4F38EE9A7DB21802"
+			shape: "gear"
+			size: 1.5d
+			tasks: [{
+				id: "6D7B0457ACDDD3C8"
+				item: "gtceu:aluminium_dust"
+				type: "item"
+			}]
+			x: -4.964285714285722d
+			y: 14.982142857142868d
+		}
+		{
+			dependencies: [
+				"51673A3C94E2992D"
+				"0AB63B2A5A4BC397"
+			]
+			id: "5B4436A283FC26E3"
+			tasks: [{
+				id: "3A6B07C2E333E7BF"
+				item: "gtceu:alumina_cryolite_mixture_bucket"
+				type: "item"
+			}]
+			title: "Alumina-Cryolite Mixture"
+			x: -2.5d
+			y: 15.0d
+		}
+		{
+			dependencies: ["229BE71C30E0CF9B"]
+			description: ["Not to worry, you only need a bit more than 2 buckets (2 times the recipe for it) since it loops perfectly in the production of aluminium."]
+			id: "51673A3C94E2992D"
+			tasks: [{
+				id: "3C87911CA82806E6"
+				item: "gtceu:cryolite_bucket"
+				type: "item"
+			}]
+			title: "Cryolite About It"
+			x: 0.0d
+			y: 15.0d
+		}
+		{
+			dependencies: [
+				"135A5FA6C47FA6E1"
+				"4A0FAB09F884607F"
+			]
+			icon: "gtceu:hexafluoroaluminic_acid_bucket"
+			id: "229BE71C30E0CF9B"
+			min_required_tasks: 1
+			tasks: [
+				{
+					id: "5A83B8067AA39C99"
+					item: "gtceu:hexafluoroaluminic_acid_bucket"
+					type: "item"
+				}
+				{
+					id: "5FE851EAD6A8F60A"
+					type: "checkmark"
+				}
+			]
+			title: "Hexafluoroaluminic Acid"
+			x: 3.0d
+			y: 15.0d
+		}
+		{
+			dependencies: [
+				"135A5FA6C47FA6E1"
+				"628AED91ADFF6BB3"
+			]
+			description: ["This is a process straight from real life."]
+			hide_dependency_lines: true
+			id: "0AB63B2A5A4BC397"
+			tasks: [{
+				id: "7686DB5716804C37"
+				item: "gtceu:alumina_dust"
+				type: "item"
+			}]
+			title: "Hall-Héroult"
+			x: -2.5d
+			y: 12.5d
+		}
+		{
+			dependencies: [
+				"5421C2ED77EEFA76"
+				"5B29B84D5ADC012C"
+			]
+			id: "135A5FA6C47FA6E1"
+			tasks: [{
+				id: "79CE11E33CC24436"
+				item: "gtceu:aluminium_hydroxide_dust"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 12.5d
+		}
+		{
+			dependencies: ["27DB8B6021255DA4"]
+			icon: "gtceu:hydrofluoric_acid_bucket"
+			id: "4A0FAB09F884607F"
+			tasks: [
+				{
+					id: "57037C93DD80C05E"
+					item: "gtceu:hydrofluoric_acid_bucket"
+					type: "item"
+				}
+				{
+					id: "1EEBF0941930F5F2"
+					type: "checkmark"
+				}
+			]
+			x: 6.0d
+			y: 15.0d
+		}
+		{
+			description: ["The best way to obatin this is electrolysis different gems like &eTopaz"]
+			id: "27DB8B6021255DA4"
+			tasks: [{
+				id: "63237DDD52BEB9A0"
+				item: "gtceu:fluorine_bucket"
+				type: "item"
+			}]
+			x: 9.0d
+			y: 15.0d
+		}
+		{
+			dependencies: ["5E7E7A57DE15E1A3"]
+			hide_dependent_lines: true
+			id: "45323F2432E05F4C"
+			shape: "gear"
+			size: 1.5d
+			tasks: [{
+				id: "29F6EDB5C7F4A406"
+				item: "gtceu:lv_energy_input_hatch"
+				type: "item"
+			}]
+			x: -9.5d
+			y: 10.0d
+		}
+		{
+			dependencies: ["6ABFC62B471CB63D"]
+			description: ["Now that you have an &aEBF &ryou can much more easily smelt firebricks, which you will need a lot of for the &eRotary Kiln"]
+			id: "4B85ABFB1BCF1193"
+			tasks: [{
+				id: "54E3E75FCF4EC580"
+				item: "gtceu:firebrick"
+				type: "item"
+			}]
+			title: "Firebricks pt.3"
+			x: -5.0d
+			y: 12.5d
+		}
+		{
+			dependencies: ["6ABFC62B471CB63D"]
+			description: ["Now that you have an &aEBF &ryou can make steel in large quantities a bit faster."]
+			id: "6821AA3C1C9B178F"
+			tasks: [{
+				id: "4C1C0D9ED911DCDF"
+				item: "gtceu:steel_ingot"
+				type: "item"
+			}]
+			title: "Faster Steel"
+			x: -9.5d
+			y: 12.5d
+		}
+		{
+			dependencies: [
+				"4B85ABFB1BCF1193"
+				"45323F2432E05F4C"
+			]
+			icon: "gtceu:rotary_kiln"
+			id: "628AED91ADFF6BB3"
+			shape: "gear"
+			size: 1.5d
+			tasks: [
+				{
+					id: "34D32C1E06838D3C"
+					item: "gtceu:rotary_kiln"
+					type: "item"
+				}
+				{
+					count: 184L
+					id: "5B38BCB98CD87885"
+					item: { Count: 184, id: "gtceu:rotary_kiln_bricks" }
+					type: "item"
+				}
+				{
+					count: 148L
+					id: "2D14FF5A42EF4861"
+					item: { Count: 148, id: "gtceu:steel_frame" }
+					type: "item"
+				}
+				{
+					count: 80L
+					id: "48EC9974B62FADF7"
+					item: { Count: 84, id: "gtceu:light_concrete" }
+					type: "item"
+				}
+				{
+					count: 12L
+					id: "330EC2ABBD4449A1"
+					item: { Count: 12, id: "gtceu:steel_pipe_casing" }
+					type: "item"
+				}
+				{
+					count: 47L
+					id: "57F1AB8D3F22DDB4"
+					item: { Count: 47, id: "gtceu:steel_gearbox" }
+					type: "item"
+				}
+			]
+			title: "The Rotary Kiln"
+			x: -5.0d
+			y: 10.0d
+		}
+		{
+			dependencies: ["628AED91ADFF6BB3"]
+			description: ["Through a direct reduction reaction, you can obtain the main ingredient of cheaper steel production."]
+			id: "1B29DC0E0BBED4B3"
+			tasks: [{
+				id: "24B2AEB5AA0E1FF9"
+				item: "gtceu:direct_reduced_iron_ingot"
+				type: "item"
+			}]
+			x: -5.0d
+			y: 8.0d
+		}
+		{
+			dependencies: [
+				"71A2B4C1F714462C"
+				"1B29DC0E0BBED4B3"
+			]
+			description: ["This multiblock, while expensive can produce steel in a &91 : 2.25 &rratio of iron to steel"]
+			id: "087C04E99663FB60"
+			shape: "gear"
+			size: 1.3d
+			tasks: [{
+				id: "3F43342C406FB4AF"
+				item: "gtceu:electric_steel_kiln"
+				type: "item"
+			}]
+			x: -5.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["087C04E99663FB60"]
+			id: "4F3338F86D2D64A4"
+			tasks: [{
+				id: "7D79FB9E5829207E"
+				item: "gtceu:steel_ingot"
+				type: "item"
+			}]
+			title: "Even Faster Steel"
+			x: -3.5d
+			y: 8.0d
+		}
+		{
+			dependencies: ["135A5FA6C47FA6E1"]
+			id: "0746FFEC061427DF"
+			tasks: [{
+				id: "7CCB49843048078C"
+				item: "gtceu:alumina_dust"
+				type: "item"
+			}]
+			title: "Hall-Héroult"
+			x: -2.5d
+			y: 12.5d
+		}
+		{
+			icon: "gtsac:clarifier"
+			id: "5421C2ED77EEFA76"
+			tasks: [
+				{
+					id: "7AF026E5A1543111"
+					item: "gtsac:clarifier"
+					type: "item"
+				}
+				{
+					count: 28L
+					id: "41FCFD6892E92FB6"
+					item: { Count: 24, id: "gtceu:steel_firebox_casing" }
+					type: "item"
+				}
+				{
+					count: 25L
+					id: "5780D73F8C5B689A"
+					item: { Count: 25, id: "gtceu:steel_pipe_casing" }
+					type: "item"
+				}
+				{
+					count: 10L
+					id: "284C5E5809A8AD7F"
+					item: { Count: 11, id: "gtceu:steel_gearbox" }
+					type: "item"
+				}
+				{
+					count: 151L
+					id: "1303AC8F8ACF1687"
+					item: { Count: 151, id: "gtceu:solid_machine_casing" }
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 10.0d
+		}
+		{
+			dependencies: [
+				"08652B33CF4496BC"
+				"1A607410AF1F7837"
+			]
+			id: "5B29B84D5ADC012C"
+			tasks: [{
+				id: "0C4384CD4AE98972"
+				item: "gtceu:pure_sodium_alluminate_dust"
+				type: "item"
+			}]
+			x: 3.0d
+			y: 12.5d
+		}
+		{
+			icon: "gtceu:filtration_unit"
+			id: "08652B33CF4496BC"
+			tasks: [
+				{
+					id: "767251FA6D3D6D4D"
+					item: "gtceu:filtration_unit"
+					type: "item"
+				}
+				{
+					count: 37L
+					id: "20B231166099A335"
+					item: { Count: 37, id: "gtceu:steel_frame" }
+					type: "item"
+				}
+				{
+					count: 12L
+					id: "52020AC20842AC2C"
+					item: { Count: 12, id: "gtceu:steel_firebox_casing" }
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "7625ACAF639587F8"
+					item: { Count: 4, id: "gtceu:steel_pipe_casing" }
+					type: "item"
+				}
+				{
+					count: 27L
+					id: "2A012688247C2BEC"
+					item: { Count: 27, id: "gtceu:solid_machine_casing" }
+					type: "item"
+				}
+			]
+			x: 3.0d
+			y: 10.0d
+		}
+		{
+			dependencies: [
+				"2686A7955A6574A2"
+				"2A434020628372DC"
+			]
+			id: "1A607410AF1F7837"
+			tasks: [{
+				id: "2F5054611B3C5FFA"
+				item: "gtceu:sodium_alluminate_dust"
+				type: "item"
+			}]
+			x: 6.0d
+			y: 12.5d
+		}
+		{
+			description: ["You should probably automate this."]
+			id: "2A434020628372DC"
+			tasks: [
+				{
+					id: "6B927CBC47A61065"
+					item: {
+						Count: 1
+						id: "itemfilters:tag"
+						tag: {
+							value: "forge:ores/bauxite"
+						}
+					}
+					title: "Any #forge:ores/bauxite"
+					type: "item"
+				}
+				{
+					id: "4CFD198A5F0AAD11"
+					item: "gtceu:bauxite_dust"
+					type: "item"
+				}
+			]
+			title: "Bauxite Processing"
+			x: 9.0d
+			y: 12.5d
+		}
+		{
+			dependencies: [
+				"0AB63B2A5A4BC397"
+				"31A216F43F94C3B0"
+				"628AED91ADFF6BB3"
+			]
+			description: ["Using the LV extruder with a bottle mold, you can obtain a catalyst bed"]
+			hide_dependency_lines: true
+			id: "3E1A9A6E9FD67167"
+			tasks: [{
+				id: "78EFF87CFF85F7BA"
+				item: "gtceu:alumina_catalyst_bed"
+				type: "item"
+			}]
+			x: -2.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["31A216F43F94C3B0"]
+			id: "3648D8C6A61DE5F3"
+			tasks: [{
+				id: "0ED7E39D44176FED"
+				item: "gtceu:alumina_catalyst_bed"
+				type: "item"
+			}]
+			x: -2.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["3E1A9A6E9FD67167"]
+			description: ["Different Catalysts require different catalyst beds. The &9Cobalt &rcatalyst needs an alumina bed."]
+			id: "07E74CDA0D640198"
+			tasks: [{
+				id: "15B279DDDB8DCE69"
+				item: "gtceu:cobalt_catalyst"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 8.0d
 		}
 	]
 	title: "Tier 2: Low Voltage"
