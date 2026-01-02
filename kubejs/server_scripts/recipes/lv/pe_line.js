@@ -9,6 +9,18 @@ ServerEvents.recipes(event => {
         output: Fluid.of("gtceu:ammonia", 100)
     })
 
+    event.shaped('gtceu:polymerization_tank', [
+        'RRR',
+        'PHP',
+        'ECE'
+    ], {
+        R: 'gtceu:steel_rotor',
+        P: 'gtceu:lv_electric_pump',
+        H: 'gtceu:lv_machine_hull',
+        E: '#gtceu:circuits/lv',
+        C: 'gtceu:tin_single_cable'
+    })
+
     event.recipes.gtceu.distillery('ammonia_synthesis')
         .circuit(5)
         .inputFluids("gtceu:fermented_biomass 1000")

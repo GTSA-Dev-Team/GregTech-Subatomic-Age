@@ -8,9 +8,10 @@
     "block.gtceu.filtration_unit": "Filtration Unit",
     "block.gtceu.rotary_kiln": "Rotary Kiln",
     "block.gtceu.electric_steel_kiln": "Electric Steel Kiln",
+    "block.gtceu.polymerization_tank": "Polymerization Tank",
 
     "gtceu.coagulation": "Coagulation",
-    "gtceu.vacuum_ejection": "Vacuum Ejaculation",
+    "gtceu.vacuum_ejection": "Vacuum Ejection",
     "gtceu.primitive_oven": "Primitive Oven",
     "gtceu.primitive_baking_oven": "Primitive Baking Oven",
     "gtceu.component_assembler": "Component Assembly",
@@ -26,6 +27,9 @@
     "gtceu.neutralization": "Neutralization",
     "gtceu.filtrator": "Filtration",
     "gtceu.electric_steel_kiln": "Bulk Steel Refining",
+    "gtceu.polymerization_tank": "Polymerization",
+    "gtceu.cstr": "CSTR",
+    "gtceu.fixed_bed_reactor": "Fixed Bed Reactor",
 
     "material.gtceu.latex": "Latex",
     "material.gtceu.iron_iii_sulfate": "Iron(III) Sulfate",
@@ -52,5 +56,13 @@
     "material.gtceu.cryolite": "Cryolite",
     "material.gtceu.alumina": "Alumina",
     "material.gtceu.alumina_cryolite_mixture": "Alumina Cryolite Mixture",
-    "material.gtceu.direct_reduced_iron": "Direct Reduced Iron"
+    "material.gtceu.direct_reduced_iron": "Direct Reduced Iron",
+    "material.gtceu.dichlorido_bis_n_benzylideneaneline_iron_ii_catalyst": "Dichlorido Bis n Benzylideneaneline Iron(II) Catalyst",
+    "material.gtceu.inactive_dichlorido_bis_n_benzylideneaneline_iron_ii": "Inactive Dichlorido Bis n Benzylideneaneline Iron(II)",
+    "material.gtceu.benzylideneimine_ethanol_solution": "Benzylideneimine Ethanol Solution",
+    "material.gtceu.benzylideneimine": "Benzylideneimine",
+    "material.gtceu.aniline": "Aniline",
+    "material.gtceu.benzaldehyde": "Benzaldehyde"
+
+
 }

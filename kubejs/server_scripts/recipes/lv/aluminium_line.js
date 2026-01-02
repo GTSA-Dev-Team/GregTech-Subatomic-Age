@@ -118,7 +118,7 @@ ServerEvents.recipes(event => {
 
     event.recipes.gtceu.electrolyzer('red_mud_electrolysis')
                 .inputFluids('gtceu:red_mud 12000')
-                .itemOutputs('gtceu:hematite_dust', 'gtceu:bauxite_dust', 'gtceu:silicon_dioxide_dust', 'gtceu:rutile_dust', 'gtceu:quicklime_dust', 'gtceu:sodium_dust')
+                .itemOutputs('3x gtceu:hematite_dust', 'gtceu:bauxite_dust', '2x gtceu:silicon_dioxide_dust', 'gtceu:rutile_dust', '2x gtceu:quicklime_dust', '2x gtceu:sodium_dust')
                 .outputFluids('minecraft:water 9000')
                 .duration(15*20)
                 .EUt(30)

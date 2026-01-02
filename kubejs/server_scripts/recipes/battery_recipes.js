@@ -13,7 +13,7 @@ ServerEvents.recipes(event => {
         '   '
     ], { C: "gtceu:tin_single_cable", P: "gtceu:battery_alloy_plate" })
 
-    event.shaped('gtsac:lead_batter_anode', [
+    event.shaped('gtsac:lead_battery_anode', [
         '   ',
         ' PC',
         '   '
@@ -42,5 +42,5 @@ ServerEvents.recipes(event => {
         '   ',
         'ASC',
         '   '
-    ], { A: "gtsac:lead_batter_anode", C: "gtsac:lead_battery_cathode", S: "gtceu:sulfuric_acid_bucket" })
+    ], { A: "gtsac:lead_battery_anode", C: "gtsac:lead_battery_cathode", S: "gtceu:sulfuric_acid_bucket" })
 })
