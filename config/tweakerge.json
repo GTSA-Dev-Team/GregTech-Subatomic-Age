@@ -755,7 +755,7 @@
     "tweakPeriodicHoldAttack": false,
     "tweakPeriodicHoldUse": false,
     "tweakPermanentSneak": false,
-    "tweakPermanentSprint": false,
+    "tweakPermanentSprint": true,
     "tweakPlacementGrid": false,
     "tweakPlacementLimit": false,
     "tweakPlacementRestriction": false,

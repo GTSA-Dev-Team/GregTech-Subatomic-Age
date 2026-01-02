@@ -7,6 +7,18 @@ ServerEvents.recipes(event => {
 
     event.remove({ output: "gtceu:lv_lithium_battery" })
 
+    event.shaped('gtsac:lead_battery_cathode', [
+        '   ',
+        'CP ',
+        '   '
+    ], { C: "gtceu:tin_single_cable", P: "gtceu:battery_alloy_plate" })
+
+    event.shaped('gtsac:lead_batter_anode', [
+        '   ',
+        ' PC',
+        '   '
+    ], { C: "gtceu:tin_single_cable", P: "gtceu:battery_alloy_plate" })
+
     event.recipes.gtceu.chemical_reactor('iron_iii_sulfate_dust')
         .itemInputs('2x gtceu:pyrite_dust')
         .itemOutputs([ 'gtceu:iron_iii_sulfate_dust', 'gtceu:sulfur_dust' ])
