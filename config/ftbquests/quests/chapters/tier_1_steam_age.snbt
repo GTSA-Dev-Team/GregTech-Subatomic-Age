@@ -1037,6 +1037,7 @@
 				"1DA5BF747B21ECD7"
 				"4F9ED142382D59A8"
 			]
+			disable_toast: true
 			id: "3842CD647C41AED0"
 			shape: "gear"
 			size: 2.0d
