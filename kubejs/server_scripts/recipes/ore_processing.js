@@ -22,14 +22,14 @@ ServerEvents.recipes(event => {
         .duration(10*20)
         .EUt(120)
     
-    event.recipes.gtceu.electrolyzer('clean_ore_slurry')
+    event.recipes.gtceu.clarifier('clean_ore_slurry')
         .inputFluids('gtceu:clean_ore_slurry 500')
         .outputFluids('gtceu:refined_ore_slurry 750')
         .itemOutputs('3x gtceu:low_density_crust_sludge_dust', '2x gtceu:high_density_crust_sludge_dust')
         .duration(15*20)
         .EUt(120)
     
-    event.recipes.gtceu.ore_washer('refined_ore_slurry')
+    event.recipes.gtceu.filtrator('refined_ore_slurry')
         .inputFluids('gtceu:refined_ore_slurry 1000')
         .itemOutputsRanged('gtceu:low_density_crust_sludge_dust', 4, 11)
         .itemOutputsRanged('gtceu:high_density_crust_sludge_dust', 2, 7)

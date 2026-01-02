@@ -20,5 +20,5 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
             .where('O', Predicates.blocks('gtceu:steam_output_bus'))
             .where('B', Predicates.controller(Predicates.blocks(definition.get())))
         .build())
-        .workableCasingModel('gtceu:block/casings/solid/machine_casing_clean_stainless_steel', 'gtceu:block/machines/macerator');
+        .workableCasingModel('kubejs:block/primitive_oven_bricks', 'gtceu:block/machines/electric_furnace');
 })

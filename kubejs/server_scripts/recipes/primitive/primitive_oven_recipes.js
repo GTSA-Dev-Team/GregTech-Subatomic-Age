@@ -1,14 +1,14 @@
 ServerEvents.recipes(event => {
     const id = global.id;
 
-    event.shapeless('gtsac:primitive_brick_dust', [ '3x gtceu:clay_dust', '2x gtceu:flint_dust', '3x gtceu:quartz_sand_dust' ])
+    event.shapeless('4x gtceu:primitive_brick_dust', [ '3x gtceu:clay_dust', '2x gtceu:flint_dust', '3x gtceu:quartz_sand_dust' ])
 
     event.smelting('gtsac:primitive_oven_brick', 'gtsac:compressed_primitive_brick')
 
     event.shapeless('gtsac:primitive_oven_bricks', [ '9x gtsac:primitive_oven_brick' ])
 
     event.recipes.gtceu.compressor('primitive_bricks_compression')
-            .itemInputs('gtsac:primitive_brick_dust')
+            .itemInputs('gtceu:primitive_brick_dust')
             .itemOutputs('gtsac:compressed_primitive_brick')
             .duration(100)
             .EUt(8)

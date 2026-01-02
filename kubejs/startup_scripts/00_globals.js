@@ -25,20 +25,9 @@ const tierToHullMap = {
     11: 'uiv',
     12: 'uxv',
     13: 'opv',
-    14: 'max'
-}
+    14: 'max',
+};
 
-const tierToMagRodMap = {
-    'ulv': 'gtceu:magnetic_iron_rod',
-    'lv': 'gtceu:magnetic_steel_rod',
-    'mv': 'gtceu:magnetic_steel_rod',
-    'hv': 'gtceu:magnetic_steel_rod',
-    'ev': 'gtceu:magnetic_neodymium_rod',
-    'iv': 'gtceu:magnetic_neodymium_rod',
-    'luv': 'gtceu:magnetic_samarium_rod',
-    'zpm': 'gtceu:magnetic_samarium_rod',
-    'uv': 'gtceu:magnetic_samarium_rod',
-}
 
 
 
