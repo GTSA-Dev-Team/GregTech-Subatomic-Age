@@ -1,0 +1,156 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "tier_2_low_voltage"
+	group: "02B1C089968BE9F0"
+	icon: "gtceu:lv_machine_casing"
+	id: "0CC38FE792234EBB"
+	order_index: 2
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["71D7577A69EACBD4"]
+			id: "1A5D67B51370F605"
+			tasks: [{
+				id: "38B328DB95C82844"
+				item: "gtceu:lv_electric_motor"
+				type: "item"
+			}]
+			title: "The Core LV Component"
+			x: 0.0d
+			y: 3.5d
+		}
+		{
+			dependencies: [
+				"7288EF0CA67FD5DC"
+				"1A22FC7C0C819C19"
+				"5AB1F58CFCE5E0DB"
+			]
+			description: ["Your first electric circuit."]
+			id: "71D7577A69EACBD4"
+			shape: "gear"
+			size: 2.0d
+			tasks: [{
+				count: 8L
+				id: "42AD792D0E304250"
+				item: { Count: 8, id: "gtceu:basic_electronic_circuit" }
+				type: "item"
+			}]
+			title: "LV Circuits"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1A5D67B51370F605"]
+			id: "539DEBB4574216AE"
+			tasks: [{
+				id: "5A29468D8EC706A4"
+				item: "gtceu:lv_conveyor_module"
+				type: "item"
+			}]
+			x: -4.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["1A5D67B51370F605"]
+			id: "63D29D96F79D24ED"
+			tasks: [{
+				id: "765C0315CDA7B6C3"
+				item: "gtceu:lv_electric_piston"
+				type: "item"
+			}]
+			x: -4.0d
+			y: 0.5d
+		}
+		{
+			dependencies: ["1A5D67B51370F605"]
+			id: "235F6ED3300D10C6"
+			tasks: [{
+				id: "5660823F91192217"
+				item: "gtceu:lv_electric_pump"
+				type: "item"
+			}]
+			x: -4.0d
+			y: 6.5d
+		}
+		{
+			dependencies: [
+				"1A5D67B51370F605"
+				"63D29D96F79D24ED"
+			]
+			id: "6BADB95378F043C2"
+			tasks: [{
+				id: "24B54D3A4D4B4335"
+				item: "gtceu:lv_robot_arm"
+				type: "item"
+			}]
+			x: -4.0d
+			y: 2.5d
+		}
+		{
+			dependencies: [
+				"6BADB95378F043C2"
+				"539DEBB4574216AE"
+			]
+			id: "3789680467522DEA"
+			tasks: [{
+				id: "7A5887989268F886"
+				item: "gtceu:lv_assembler"
+				type: "item"
+			}]
+			title: "NOT a Crafting Table"
+			x: -6.0d
+			y: 3.5d
+		}
+		{
+			dependencies: ["63D29D96F79D24ED"]
+			id: "4B35DCF69AF8F4F5"
+			tasks: [{
+				id: "243B03830D15362F"
+				item: "gtceu:lv_bender"
+				type: "item"
+			}]
+			title: "Cheaper Plates"
+			x: -6.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["63D29D96F79D24ED"]
+			id: "24A5C20616841384"
+			tasks: [{
+				id: "334D709332317D82"
+				item: "gtceu:lv_lathe"
+				type: "item"
+			}]
+			title: "Cheaper Rods"
+			x: -6.0d
+			y: -0.5d
+		}
+		{
+			dependencies: [
+				"539DEBB4574216AE"
+				"235F6ED3300D10C6"
+			]
+			id: "6055808D7C198DA2"
+			tasks: [{
+				id: "7388AAE45A5AC7D7"
+				item: "gtceu:lv_chemical_bath"
+				type: "item"
+			}]
+			x: -6.0d
+			y: 5.5d
+		}
+		{
+			dependencies: ["235F6ED3300D10C6"]
+			id: "24165B02D2F70C3E"
+			tasks: [{
+				id: "28C16D3521D86651"
+				item: "gtceu:lv_distillery"
+				type: "item"
+			}]
+			x: -6.0d
+			y: 7.5d
+		}
+	]
+	title: "Tier 2: Low Voltage"
+}
