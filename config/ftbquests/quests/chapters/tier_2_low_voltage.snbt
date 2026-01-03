@@ -386,6 +386,7 @@
 				"6ABFC62B471CB63D"
 				"4F38EE9A7DB21802"
 			]
+			hide_dependent_lines: true
 			id: "790FDC95C82125A1"
 			shape: "gear"
 			size: 2.0d
@@ -872,6 +873,7 @@
 		}
 		{
 			dependencies: ["1ECFE3D00C838B05"]
+			description: ["Different Catalysts require different catalyst beds. The &ePlatinum &rcatalyst needs a carbon bed. They are used in Fixed Bed Reactor recipes and are never consumed"]
 			hide_dependency_lines: true
 			id: "5CA69B80311BB8B4"
 			tasks: [{
@@ -1046,7 +1048,7 @@
 				"23D9975844B13D24"
 				"628AED91ADFF6BB3"
 			]
-			description: ["After all those annoying steps, you can finally polymerize ethylene."]
+			description: ["&cYou DO NOT need to automate this! This is a catalyst which is never consumed"]
 			hide_dependency_lines: true
 			id: "585BEEC785B4D395"
 			tasks: [{
@@ -1088,6 +1090,7 @@
 				"3D2C0B9553BF2515"
 				"4B73C97F0B1DB876"
 				"0A8904E9A2499200"
+				"77C08E750FB72EB5"
 			]
 			id: "1B0D9041A4D9EF4A"
 			tasks: [{
@@ -1107,7 +1110,7 @@
 			}]
 			title: "Some More Oil Processing"
 			x: 11.0d
-			y: 6.5d
+			y: 1.5d
 		}
 		{
 			dependencies: ["1B0D9041A4D9EF4A"]
@@ -1139,6 +1142,149 @@
 			}]
 			x: 5.0d
 			y: 0.0d
+		}
+		{
+			dependencies: [
+				"59681FF4529FCAA9"
+				"1B0D9041A4D9EF4A"
+			]
+			description: ["Diodes are used in higher tier circuits."]
+			id: "48E3FB7A89ECD3DB"
+			tasks: [{
+				count: 16L
+				id: "2E7EF4440080A87A"
+				item: { Count: 16, id: "gtceu:diode" }
+				type: "item"
+			}]
+			title: "Diodes"
+			x: 11.0d
+			y: 8.0d
+		}
+		{
+			description: ["Gallium Arsenide is obtained by mixing gallium and arsenic dust."]
+			id: "59681FF4529FCAA9"
+			tasks: [{
+				id: "1A85721458087EAA"
+				item: "gtceu:gallium_arsenide_dust"
+				type: "item"
+			}]
+			x: 13.5d
+			y: 8.0d
+		}
+		{
+			dependencies: [
+				"1014B9E5778065A0"
+				"0BBC6C2A2BD3705D"
+				"1F1F346FC2F5BBDA"
+			]
+			id: "06A08571CE70F6FD"
+			tasks: [{
+				id: "01D08CB5F53A35F2"
+				item: "gtceu:phenolic_printed_circuit_board"
+				type: "item"
+			}]
+			title: "Circuit Boards pt.2"
+			x: 13.5d
+			y: 10.0d
+		}
+		{
+			dependencies: [
+				"48E3FB7A89ECD3DB"
+				"06A08571CE70F6FD"
+			]
+			id: "62B746EBE258DDC7"
+			shape: "gear"
+			size: 2.0d
+			tasks: [{
+				id: "1FAC36B5A64E781F"
+				item: "gtceu:good_electronic_circuit"
+				type: "item"
+			}]
+			x: 11.0d
+			y: 10.0d
+		}
+		{
+			description: ["Silver is used as a coating for phenolic circuit boards"]
+			id: "1014B9E5778065A0"
+			tasks: [{
+				id: "33C159BB07CB0BB7"
+				item: "gtceu:silver_ingot"
+				type: "item"
+			}]
+			x: 16.0d
+			y: 10.0d
+		}
+		{
+			dependencies: ["762F2E7CDF1511EC"]
+			id: "0BBC6C2A2BD3705D"
+			tasks: [{
+				id: "07B0B670B87413DB"
+				item: "gtceu:phenolic_circuit_board"
+				type: "item"
+			}]
+			x: 13.5d
+			y: 12.5d
+		}
+		{
+			description: ["There is a couple of ways to make this in LV. The main ones are either distilling Heavy Fuel or reacting Dichlorobenzene with Sodium Hydroxide in a Chemical Reactor"]
+			id: "762F2E7CDF1511EC"
+			tasks: [{
+				id: "10435D64DF31B6A6"
+				item: "gtceu:phenol_bucket"
+				type: "item"
+			}]
+			x: 16.0d
+			y: 12.5d
+		}
+		{
+			description: ["The Iron (III) Chloride route uses less Iron (III) Chloride and may be in general easier since you are already making Iron (II) Chloride for PE."]
+			id: "1F1F346FC2F5BBDA"
+			min_required_tasks: 1
+			tasks: [
+				{
+					id: "317F577F6DA9138B"
+					item: "gtceu:iron_iii_chloride_bucket"
+					type: "item"
+				}
+				{
+					id: "1B2D711F501E8793"
+					item: "gtceu:sodium_persulfate_bucket"
+					type: "item"
+				}
+			]
+			title: "Etchants"
+			x: 16.0d
+			y: 8.0d
+		}
+		{
+			description: ["&cYou DO NOT have to automate the catalyst. It is never consumed and automating it is useless"]
+			icon: "chipped:warning_white_concrete"
+			id: "77C08E750FB72EB5"
+			size: 1.3d
+			tasks: [{
+				id: "57AAC46C448B68B5"
+				type: "checkmark"
+			}]
+			title: "Catalysts"
+			x: 7.5d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"62B746EBE258DDC7"
+				"790FDC95C82125A1"
+			]
+			id: "6BEF3EA35ADE4706"
+			shape: "gear"
+			size: 2.5d
+			tasks: [{
+				id: "0D54536BD4CF1154"
+				item: "gtceu:mv_machine_hull"
+				type: "item"
+			}]
+			title: "Enter The Medium Voltage Age"
+			x: 10.982142857142847d
+			y: 13.830357142857146d
 		}
 	]
 	title: "Tier 2: Low Voltage"
