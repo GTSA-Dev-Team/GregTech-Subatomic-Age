@@ -42,7 +42,7 @@ ServerEvents.recipes(event => {
             P: `gtceu:${volt.tier}_electric_pump`,
             H: `gtceu:${volt.tier}_machine_hull`,
             M: `gtceu:${volt.tier}_electric_motor`,
-            E: `#gtceu:circuits/${volt.tier}`,
+            //E: `#gtceu:circuits/${volt.tier}`,
             L: `gtceu:${volt.plate}_plate`
         })
     });

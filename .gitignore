@@ -28,6 +28,7 @@ config/embeddium++.toml
 config/fml.toml
 config/oculus.properties
 config/emi.css
+config/tweakerge.json
 
 config/jei/*
 config/worldedit/

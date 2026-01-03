@@ -9,7 +9,7 @@
     "clientPlacementRotation": true,
     "fastLeftClickAllowTools": false,
     "fastPlacementRememberOrientation": true,
-    "freeCameraPlayerInputs": false,
+    "freeCameraPlayerInputs": true,
     "freeCameraPlayerMovement": false,
     "handRestockPre": true,
     "hangableEntityBypassInverse": false,
@@ -46,7 +46,7 @@
     "fastRightClickCount": 10,
     "fillCloneLimit": 10000000,
     "flyDecelerationFactor": 0.4,
-    "flySpeedPreset1": 0.01,
+    "flySpeedPreset1": 0.46499999999999997,
     "flySpeedPreset2": 0.064,
     "flySpeedPreset3": 0.128,
     "flySpeedPreset4": 0.32,
@@ -59,7 +59,7 @@
     "itemSwapDurabilityThreshold": 20,
     "mapPreviewSize": 160,
     "periodicAttackInterval": 20,
-    "periodicUseInterval": 20,
+    "periodicUseInterval": 8,
     "periodicHoldAttackDuration": 20,
     "periodicHoldAttackInterval": 20,
     "periodicHoldUseDuration": 20,
@@ -215,7 +215,7 @@
   },
   "Internal": {
     "flySpeedPreset": 0,
-    "gammaValueOriginal": 1.0,
+    "gammaValueOriginal": 0.0,
     "hotbarScrollCurrentRow": 3,
     "slimeBlockSlipperinessOriginal": 0.800000011920929,
     "snapAimLastYaw": 0.0
@@ -331,7 +331,7 @@
       }
     },
     "disableBlockBreakingParticles": {
-      "enabled": false,
+      "enabled": true,
       "hotkey": {
         "keys": ""
       }
@@ -445,7 +445,7 @@
       }
     },
     "disableNetherFog": {
-      "enabled": false,
+      "enabled": true,
       "hotkey": {
         "keys": ""
       }
@@ -734,7 +734,7 @@
     "tweakFastRightClick": false,
     "tweakFillCloneLimit": false,
     "tweakFlySpeed": false,
-    "tweakFlexibleBlockPlacement": false,
+    "tweakFlexibleBlockPlacement": true,
     "tweakFreeCamera": false,
     "tweakGammaOverride": true,
     "tweakHandRestock": false,
@@ -747,7 +747,7 @@
     "tweakHotbarSwap": false,
     "tweakInventoryPreview": false,
     "tweakItemUnstackingProtection": false,
-    "tweakLavaVisibility": false,
+    "tweakLavaVisibility": true,
     "tweakMapPreview": false,
     "tweakMovementKeysLast": false,
     "tweakPeriodicAttack": false,
@@ -755,7 +755,7 @@
     "tweakPeriodicHoldAttack": false,
     "tweakPeriodicHoldUse": false,
     "tweakPermanentSneak": false,
-    "tweakPermanentSprint": false,
+    "tweakPermanentSprint": true,
     "tweakPlacementGrid": false,
     "tweakPlacementLimit": false,
     "tweakPlacementRestriction": false,
@@ -771,7 +771,7 @@
     "tweakRenderLimitEntities": false,
     "tweakRepairMode": false,
     "tweakSculkPulseLength": false,
-    "tweakShulkerBoxDisplay": false,
+    "tweakShulkerBoxDisplay": true,
     "tweakSignCopy": false,
     "tweakSnapAim": false,
     "tweakSnapAimLock": false,
@@ -868,13 +868,13 @@
       "keys": ""
     },
     "tweakFlySpeed": {
-      "keys": ""
+      "keys": "PAGE_UP"
     },
     "tweakFlexibleBlockPlacement": {
       "keys": ""
     },
     "tweakFreeCamera": {
-      "keys": ""
+      "keys": "V"
     },
     "tweakGammaOverride": {
       "keys": ""
