@@ -62,7 +62,14 @@
     "material.gtceu.benzylideneimine_ethanol_solution": "Benzylideneimine Ethanol Solution",
     "material.gtceu.benzylideneimine": "Benzylideneimine",
     "material.gtceu.aniline": "Aniline",
-    "material.gtceu.benzaldehyde": "Benzaldehyde"
-
+    "material.gtceu.benzaldehyde": "Benzaldehyde",
+    "material.gtceu.chlorinated_methane_mixture": "§aChlorinated§r §5Methane§r Mixture",
+    "material.gtceu.hydrogen_chloride": "Hydrogen Chloride",
+    "material.gtceu.hydrogen_fluoride": "Hydrogen Fluoride",
+    "material.gtceu.carbon_tetrachloride": "Carbon Tetrachloride",
+    "material.gtceu.dichloromethane": "Dichloromethane",
+    "material.gtceu.fluorinated_graphite": "Fluorinated Graphite",
+    "material.gtceu.chlorodifluoromethane": "Chlorodifluoromethane",
+    "material.gtceu.hydroxyl_radical": "Hydroxyl Radical"
 
 }

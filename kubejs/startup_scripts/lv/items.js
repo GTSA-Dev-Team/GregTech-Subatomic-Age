@@ -11,8 +11,8 @@ StartupEvents.registry('item', event => {
     }
 
     // Supports
-    // DATAGEN 1 CATALYST_BED [ 0xcfcfcf, 0x1f1f1f ]
-    generateCatalystBeds([ 'alumina', 'carbon' ])
+    // DATAGEN 1 CATALYST_BED [ 0xcfcfcf, 0x1f1f1f, 0x4f4f4f ]
+    generateCatalystBeds([ 'alumina', 'carbon', 'fluorinated_graphite' ])
 
     // Catalysts
     const generateCatalysts = (materials) => {
@@ -21,6 +21,6 @@ StartupEvents.registry('item', event => {
         })
     }
 
-    // DATAGEN 1 CATALYST [ 0x6369ff, 0xfcfce1 ]
-    generateCatalysts([ 'cobalt', 'platinum' ])
+    // DATAGEN 1 CATALYST [ 0x6369ff, 0xfcfce1, 0xE8E8D3 ]
+    generateCatalysts([ 'cobalt', 'platinum', 'antimony_trifluoride' ])
 })
