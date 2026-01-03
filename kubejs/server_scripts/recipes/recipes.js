@@ -91,6 +91,8 @@ ServerEvents.recipes(event => {
         input: Fluid.of('gtceu:glass', 144)
     })
 
+
+
     event.shaped('1x gtceu:long_wood_rod', [
         'AAA',
         'SAS',
