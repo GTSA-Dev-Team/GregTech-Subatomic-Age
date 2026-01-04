@@ -1,16 +1,4 @@
 ServerEvents.recipes(event => {
-    const remove = (array) => {
-        array.forEach(element => {
-            event.remove({
-                output: element
-            })
-        });
-    }
-
-    const removeGtceu = (array) => {
-        remove(array.map(item => "gtceu:" + item))
-    }
-
     const ulvInput = (type) => {
         event.shaped(`gtceu:ulv_input_${type}`, [
             ' G ',
@@ -30,8 +18,8 @@ ServerEvents.recipes(event => {
     ulvOutput("hatch")
     ulvOutput("bus")
 
-    removeGtceu([ "flint_knife", "flint_shovel", "flint_pickaxe", "flint_mortar", "flint_sword", "flint_hoe", "flint_axe", "compressed_fireclay", "coke_oven_bricks" ])
-    remove([ "minecraft:wooden_axe", "minecraft:wooden_hoe", "minecraft:wooden_pickaxe", "minecraft:wooden_shovel", 
+    removeGtceu(event, [ "flint_knife", "flint_shovel", "flint_pickaxe", "flint_mortar", "flint_sword", "flint_hoe", "flint_axe", "compressed_fireclay", "coke_oven_bricks" ])
+    remove(event, [ "minecraft:wooden_axe", "minecraft:wooden_hoe", "minecraft:wooden_pickaxe", "minecraft:wooden_shovel", 
         "minecraft:wooden_sword", "minecraft:blast_furnace", "minecraft:smoker", "minecraft:furnace", "steamadditions:steam_foundry", "steamadditions:steam_separator" ])
     event.remove({
         input: "minecraft:brick",

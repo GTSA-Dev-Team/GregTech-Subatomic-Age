@@ -27,6 +27,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     GTMaterials.Nickel.addFlags(GTMaterialFlags.GENERATE_FINE_WIRE)
 
     addFluid(GTMaterials.SodiumHydroxide, $GTCEuFluidStorageKeys.LIQUID)
+    addFluid(GTMaterials.SiliconDioxide, $GTCEuFluidStorageKeys.LIQUID)
 })
 
 const addFluid = (mat, key) => {
