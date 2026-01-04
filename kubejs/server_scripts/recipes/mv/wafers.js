@@ -90,8 +90,20 @@ ServerEvents.recipes(event => {
     //    })
     //}
 
-    //genCutterRecipes({ fluids: [ "gtceu:distilled_water 2000" ], wafer: "16x gtceu:silicon_wafer", seed: "gtceu:silicon_seed_crystal", boule: "gtceu:silicon_boule" })
+    //genCutterRecipes({ fluids: [ "gtceu:distilled_water 2000" ], wafer: "16x gtceu:raw_silicon_wafer", seed: "gtceu:silicon_seed_crystal", boule: "gtceu:silicon_boule" })
 
-    genCutterRecipes([ { fluid: "distilled_water", amount: 2000 } ], { wafer: "silicon_wafer", amount: 16 }, "silicon_seed_crystal", "silicon_boule")
+    genCutterRecipes([ { fluid: "distilled_water", amount: 2000 } ], { wafer: "raw_silicon_wafer", amount: 16 }, "silicon_seed_crystal", "silicon_boule")
 
+    event.recipes.gtceu.mixer('wafer_treatment_acid')
+        .inputFluids([ "gtceu:hydrofluoric_acid 1000", "gtceu:hydrochloric_acid 1000" ])
+        .outputFluids("gtceu:wafer_treatment_acid 1000")
+
+    event.recipes.gtceu.chemical_bath('treating_wafers')
+        .inputFluids("gtceu:wafer_treatment_acid 50")
+        .itemInputs("gtceu:raw_silicon_wafer")
+        .itemOutputs("gtceu:silicon_wafer")
+        .duration(20 * 15)
+        .EUt(128)
+
+    // fluids.forEach(fluid => { registerUVLightboxRecipe })
 })

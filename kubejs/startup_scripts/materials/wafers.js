@@ -29,4 +29,10 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
         .color(0x3d3d3d)
         .liquid()
         .formula('Si')
+
+    event.create('wafer_treatment_acid')
+        .color(0x00702a)
+        .liquid()
+        .components('1x gtceu:hydrofluoric_acid', '1x gtceu:hydrochloric_acid')
+        .flags(GTMaterialFlags.DECOMPOSITION_BY_ELECTROLYZING)
 })
