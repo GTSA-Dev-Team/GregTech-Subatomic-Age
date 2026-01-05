@@ -84,4 +84,47 @@ ServerEvents.recipes(event => {
         .itemOutputs("gtceu:silicon_wafer")
         .duration(20 * 15)
         .EUt(128)
+
+    event.remove({ input: "gtceu:silicon_wafer", type: "gtceu:laser_engraver" });
+
+    const registerUVLightBoxRecipes = (recipes) => {
+        recipes.forEach(recipe => {
+            event.recipes.gtceu.uv_lithography(`${recipe.output_wafer}_lithography`)
+                .iteminputs(recipe.wafer)
+                .inputFluids(recipe.photoresist)
+                .notConsumable(recipe.lens)
+                .itemOutputs(recipe.output_wafer)
+                .duration(20 * 60)
+                .EUt(128)
+        })
+    };
+
+    registerUVLightBoxRecipes([ 
+        { wafer: "gtceu:silicon_wafer", lens: "#forge:lenses/green",      output_wafer: "gtceu:exposed_ram_wafer",        photoresist: "gtceu:novolacs_photoresist 10" },
+        { wafer: "gtceu:silicon_wafer", lens: "gtceu:cyan_glass_lens",    output_wafer: "gtceu:exposed_simple_soc_wafer", photoresist: "gtceu:novolacs_photoresist 10" },
+        { wafer: "gtceu:silicon_wafer", lens: "gtceu:orange_glass_lens",  output_wafer: "gtceu:exposed_lpic_wafer",       photoresist: "gtceu:novolacs_photoresist 10" },
+        { wafer: "gtceu:silicon_wafer", lens: "#forge:lenses/light_blue", output_wafer: "gtceu:exposed_cpu_wafer",        photoresist: "gtceu:novolacs_photoresist 10" },
+        { wafer: "gtceu:silicon_wafer", lens: "#forge:lenses/blue",       output_wafer: "gtceu:exposed_ulpic_wafer",      photoresist: "gtceu:novolacs_photoresist 10" },
+        { wafer: "gtceu:silicon_wafer", lens: "#forge:lenses/red",        output_wafer: "gtceu:exposed_ilc_wafer",        photoresist: "gtceu:novolacs_photoresist 10" } 
+    ]);
+
+    const registerChemBathRecipes = (recipes) => {
+        recipes.forEach(recipe => {
+            event.recipes.gtceu.chemical_bath(`${recipe.output_wafer}_chembath`)
+                .itemInputs(recipe.wafer)
+                .inputFluids("gtceu:hydrofluoric_acid 100")
+                .itemOutputs(recipe.output_wafer)
+                .duration(20 * 25)
+                .EUt(128)
+        })
+    }
+    
+    registerChemBathRecipes([
+        { wafer: "gtceu:exposed_ram_wafer",         output_wafer: "ram_wafer"        },
+        { wafer: "gtceu:exposed_simple_soc_wafer",  output_wafer: "simple_soc_wafer" },
+        { wafer: "gtceu:exposed_lpic_wafer",        output_wafer: "lpic_wafer"       },
+        { wafer: "gtceu:exposed_cpu_wafer",         output_wafer: "cpu_wafer"        },
+        { wafer: "gtceu:exposed_ulpic_wafer",       output_wafer: "ulpic_wafer"      },
+        { wafer: "gtceu:exposed_ilc_wafer",         output_wafer: "ilc_wafer"        }
+    ])
 })
