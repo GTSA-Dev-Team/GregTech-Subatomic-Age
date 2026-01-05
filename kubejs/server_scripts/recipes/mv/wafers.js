@@ -61,13 +61,6 @@ ServerEvents.recipes(event => {
         .duration(20 * 450)
         .EUt(128)
 
-    //interface WaferCuttingData {
-    //    fluids: SAFluid[],
-    //    wafer: SAItemOut,
-    //    seed: SAItemOut,
-    //    boule: SAItem
-    //}
-
     const genCutterRecipes = (fluidsToAmountMap, wafer, seed, boule) => {
         fluidsToAmountMap.forEach(holder => {
             event.recipes.gtceu.cutter(`${wafer.wafer}_${boule}_${holder.fluid}_${seed}_cutting`)
@@ -78,19 +71,6 @@ ServerEvents.recipes(event => {
                 .EUt(128)
         })
     }
-
-    //const genCutterRecipes = (data: WaferCuttingData) => {
-    //    data.fluids.forEach((fluid) => {
-    //        event.recipes.gtceu.cutter(`${data.wafer}_${data.boule}_${data.seed}_${fluid}_cutting`)
-    //            .itemInputs(data.wafer)
-    //            .inputFluids(fluid)
-    //            .itemOutputs(data.seed, data.wafer)
-    //            .duration(20 * 100)
-    //            .EUt(128)
-    //    })
-    //}
-
-    //genCutterRecipes({ fluids: [ "gtceu:distilled_water 2000" ], wafer: "16x gtceu:raw_silicon_wafer", seed: "gtceu:silicon_seed_crystal", boule: "gtceu:silicon_boule" })
 
     genCutterRecipes([ { fluid: "distilled_water", amount: 2000 } ], { wafer: "raw_silicon_wafer", amount: 16 }, "silicon_seed_crystal", "silicon_boule")
 
@@ -104,6 +84,4 @@ ServerEvents.recipes(event => {
         .itemOutputs("gtceu:silicon_wafer")
         .duration(20 * 15)
         .EUt(128)
-
-    // fluids.forEach(fluid => { registerUVLightboxRecipe })
 })

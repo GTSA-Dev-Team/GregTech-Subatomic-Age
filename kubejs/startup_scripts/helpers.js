@@ -10,6 +10,7 @@ const $GTCEuFluidProperty = Java.loadClass('com.gregtechceu.gtceu.api.data.chemi
 const $GTCEuFluidBuilder = Java.loadClass('com.gregtechceu.gtceu.api.fluids.FluidBuilder');
 const $GTCEuFluidStorageKeys = Java.loadClass('com.gregtechceu.gtceu.api.fluids.store.FluidStorageKeys');
 const $GTCEuEnergyHatchPartMachine = Java.loadClass('com.gregtechceu.gtceu.common.machine.multiblock.part.EnergyHatchPartMachine')
+const $GTCEuRotorHolderPartMachine = Java.loadClass('com.gregtechceu.gtceu.common.machine.multiblock.part.RotorHolderPartMachine')
 const $IO = Java.loadClass('com.gregtechceu.gtceu.api.capability.recipe.IO')
 const $GTCEuFormattingUtil = Java.loadClass('com.gregtechceu.gtceu.utils.FormattingUtil')
 const $GTMachineModelProperties = Java.loadClass('com.gregtechceu.gtceu.api.machine.property.GTMachineModelProperties')
