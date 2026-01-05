@@ -7,36 +7,50 @@ ServerEvents.recipes(event => {
         .itemInputs('gtceu:silicon_dioxide_dust', '2x gtceu:carbon_dust')
         .itemOutputs('gtceu:metallurgical_grade_silicon_dust')
         .outputFluids('gtceu:carbon_monoxide 2000')
+        .duration(20 * 5)
+        .EUt(512)
 
     event.recipes.gtceu.fixed_bed_reactor('hydrochlorination_silicon')
         .notConsumable('gtceu:copper_catalyst')
         .itemInputs('gtceu:metallurgical_grade_silicon_dust')
         .inputFluids('gtceu:hydrochloric_acid 3000')
         .outputFluids('gtceu:hydrogen 1000', 'gtceu:impure_trichlorosilane 1000')
+        .duration(20 * 12)
+        .EUt(128)
 
     event.recipes.gtceu.distillation_tower('trichlorosilane_distillation')
         .inputFluids('gtceu:impure_trichlorosilane 1000')
         .outputFluids('gtceu:silicon_tetrachloride 200', 'gtceu:trichlorosilane 765', 'gtceu:dichlorosilane 30', 'gtceu:hydrochloric_acid 5')
+        .duration(20 * 40)
+        .EUt(120)
 
     event.recipes.gtceu.fixed_bed_reactor('silicon_tetrachloride_reuse')
         .notConsumable('gtceu:copper_catalyst')
         .inputFluids('gtceu:silicon_tetrachloride 1000', 'gtceu:hydrochloric_acid 2000')
         .itemInputs('gtceu:metallurgical_grade_silicon_dust')
         .outputFluids('gtceu:impure_trichlorosilane 2000')
+        .duration(20 * 15)
+        .EUt(120)
 
     event.recipes.gtceu.fixed_bed_reactor('trichlorosilane_cvd')
         .notConsumable('gtceu:silicon_plate')
         .inputFluids('gtceu:trichlorosilane 2000', 'gtceu:hydrogen 4000')
         .itemOutputs('2x gtceu:silicon_rods')
         .outputFluids('gtceu:hydrochloric_acid 6000')
+        .duration(20 * 20)
+        .EUt(128)
 
     event.recipes.gtceu.macerator('silicon_rods_maceration')
         .itemInputs("gtceu:silicon_rods")
         .itemOutputs("2x gtceu:silicon_chunks")
+        .duration(20 * 7)
+        .EUt(32)
 
     event.recipes.gtceu.extractor('polysilicon_extraction')
         .itemInputs('2x gtceu:silicon_chunks')
         .outputFluids('gtceu:polysilicon 144')
+        .duration(20 * 4.9)
+        .EUt(120)
 
     //// BOULE CREATION
 
@@ -44,6 +58,8 @@ ServerEvents.recipes(event => {
         .inputFluids('gtceu:polysilicon 1000')
         .itemInputs("gtceu:small_metallurgical_grade_silicon_dust")
         .chancedOutput('gtceu:silicon_seed_crystal', 1000, 0)
+        .duration(20 * 10)
+        .EUt(120)
 
     event.recipes.gtceu.vacuum_ejection('quartz_crucible')
         .notConsumable("gtceu:cylinder_casting_mold")
@@ -77,6 +93,8 @@ ServerEvents.recipes(event => {
     event.recipes.gtceu.mixer('wafer_treatment_acid')
         .inputFluids([ "gtceu:hydrofluoric_acid 1000", "gtceu:hydrochloric_acid 1000" ])
         .outputFluids("gtceu:wafer_treatment_acid 1000")
+        .duration(20 * 13)
+        .EUt(32)
 
     event.recipes.gtceu.chemical_bath('treating_wafers')
         .inputFluids("gtceu:wafer_treatment_acid 50")
@@ -89,8 +107,8 @@ ServerEvents.recipes(event => {
 
     const registerUVLightBoxRecipes = (recipes) => {
         recipes.forEach(recipe => {
-            event.recipes.gtceu.uv_lithography(`${recipe.output_wafer}_lithography`)
-                .iteminputs(recipe.wafer)
+            event.recipes.gtceu.uv_lithography(`${recipes.indexOf(recipe)}_lithography`)
+                .itemInputs(recipe.wafer)
                 .inputFluids(recipe.photoresist)
                 .notConsumable(recipe.lens)
                 .itemOutputs(recipe.output_wafer)
@@ -113,7 +131,7 @@ ServerEvents.recipes(event => {
             event.recipes.gtceu.chemical_bath(`${recipe.output_wafer}_chembath`)
                 .itemInputs(recipe.wafer)
                 .inputFluids("gtceu:hydrofluoric_acid 100")
-                .itemOutputs(recipe.output_wafer)
+                .itemOutputs("gtceu:" + recipe.output_wafer)
                 .duration(20 * 25)
                 .EUt(128)
         })

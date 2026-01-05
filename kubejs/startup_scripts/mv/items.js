@@ -12,11 +12,11 @@ StartupEvents.registry('item', event => {
     }
 
     createExposedWafers([
-        "gtceu:ram_wafer",
-        "gtceu:simple_soc_wafer",
-        "gtceu:lpic_wafer",
-        "gtceu:cpu_wafer",
-        "gtceu:ulpic_wafer",
-        "gtceu:ilc_wafer"
+        "ram_wafer",
+        "simple_soc_wafer",
+        "lpic_wafer",
+        "cpu_wafer",
+        "ulpic_wafer",
+        "ilc_wafer"
     ])
 })
