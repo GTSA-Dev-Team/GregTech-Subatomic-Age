@@ -49,7 +49,7 @@ ServerEvents.recipes(event => {
 
     [
         { tier: 'lv', rotor: 'steel', cable: 'cupronickel' },
-        { tier: 'mv', rotor: 'aluminium', cable: 'electrum' },
+        { tier: 'mv', rotor: 'bronze', cable: 'electrum' },
         { tier: 'hv', rotor: 'stainless_steel', cable: 'steel' },
         { tier: 'ev', rotor: 'titanium', cable: 'graphene' },
     ].forEach(volt => {

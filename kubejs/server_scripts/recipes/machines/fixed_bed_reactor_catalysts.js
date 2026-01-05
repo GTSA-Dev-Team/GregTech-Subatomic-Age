@@ -16,7 +16,7 @@ ServerEvents.recipes(event => {
         })
     }
 
-    generateCatalystBed([ "alumina", "carbon", "fluorinated_graphite" ])
+    generateCatalystBed([ "alumina", "carbon", "fluorinated_graphite", "silicon" ])
 
     const generateCatalys = (baseToMaterialMap) => {
         baseToMaterialMap.forEach(el => {
@@ -27,6 +27,7 @@ ServerEvents.recipes(event => {
     generateCatalys([
         { material: "cobalt", base: "alumina" },
         { material: "platinum", base: "carbon" },
-        { material: "antimony_trifluoride", base: "fluorinated_graphite"}
+        { material: "antimony_trifluoride", base: "fluorinated_graphite"},
+        { material: "copper", base: "silicon" }
     ])
 })
