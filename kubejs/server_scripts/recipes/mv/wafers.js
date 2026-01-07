@@ -71,8 +71,8 @@ ServerEvents.recipes(event => {
     event.recipes.gtceu.cz_furnace('silicone_boule_growth')
         .notConsumable("gtceu:quartz_crucible")
         .inputFluids('gtceu:polysilicon 4608', 'gtceu:nitrogen 8000')
-        .circuit(1)
         .itemInputs("gtceu:silicon_seed_crystal")
+        .circuit(1)
         .itemOutputs("gtceu:silicon_boule")
         .duration(20 * 450)
         .EUt(128)
@@ -145,4 +145,19 @@ ServerEvents.recipes(event => {
         { wafer: "gtceu:exposed_ulpic_wafer",       output_wafer: "ulpic_wafer"      },
         { wafer: "gtceu:exposed_ilc_wafer",         output_wafer: "ilc_wafer"        }
     ])
+
+    event.recipes.gtceu.cstr('novolacs_mixing')
+        .inputFluids([ "gtceu:phenol 50", "gtceu:formaldehyde 25" ])
+        .outputFluids("gtceu:novolacs_photoresist 75")
+        .duration(5)
+        .EUt(128)
+
+    event.remove({ output: Fluid.of("gtceu:formaldehyde", 1000) })
+
+    event.recipes.gtceu.fixed_bed_reactor('formaldehyde_synthesis')
+        .notConsumable("gtceu:silver_dust")
+        .inputFluids([ "gtceu:methanol 1000", "gtceu:oxygen 1000" ])
+        .outputFluids([ "gtceu:formaldehyde 1000", "minecraft:water 1000" ])
+        .duration(20 * 20)
+        .EUt(32)
 })

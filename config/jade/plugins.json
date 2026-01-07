@@ -65,6 +65,7 @@
     "primitive_pump": true,
     "workable_provider": true,
     "transformer": true,
+    "ldp_endpoint": true,
     "controllable_provider": true,
     "energy_converter_provider": true,
     "exhaust_vent_info": true,

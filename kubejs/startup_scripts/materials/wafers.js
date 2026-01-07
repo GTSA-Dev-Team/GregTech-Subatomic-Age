@@ -35,4 +35,8 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
         .liquid()
         .components('1x gtceu:hydrofluoric_acid', '1x gtceu:hydrochloric_acid')
         .flags(GTMaterialFlags.DECOMPOSITION_BY_ELECTROLYZING)
+
+    event.create('novolacs_photoresist')
+        .color(0xbf6845)
+        .liquid()
 })
