@@ -43,3 +43,15 @@ const voltageToMaterial = {
     8: "darmstadtium",
     9: "neutronium"
 }
+
+const remove = (event, array) => {
+        array.forEach(element => {
+            event.remove({
+                output: element
+            })
+        });
+    }
+
+const removeGtceu = (event, array) => {
+    remove(event, array.map(item => "gtceu:" + item))
+}

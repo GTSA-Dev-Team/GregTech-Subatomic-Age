@@ -36,21 +36,3 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
                 .model(GTMachineModels.createOverlayTieredHullMachineModel(new ResourceLocation("gtceu", "block/machine/part/energy_output_hatch_16a")))
         })
 })
-
-//public static final MachineDefinition[] ENERGY_OUTPUT_HATCH = registerTieredMachines("energy_output_hatch",
-//            (holder, tier) -> new EnergyHatchPartMachine(holder, tier, OUT, 2),
-//            (tier, builder) -> builder
-//                    .langValue(VNF[tier] + " Dynamo Hatch")
-//                    .rotationState(RotationState.ALL)
-//                    .abilities(PartAbility.OUTPUT_ENERGY)
-//                    .modelProperty(IS_FORMED, false)
-//                    .tooltips(Component.translatable("gtceu.universal.tooltip.voltage_out",
-//                            FormattingUtil.formatNumbers(V[tier]), VNF[tier]),
-//                            Component.translatable("gtceu.universal.tooltip.amperage_out", 2),
-//                            Component.translatable("gtceu.universal.tooltip.energy_storage_capacity",
-//                                    FormattingUtil
-//                                            .formatNumbers(EnergyHatchPartMachine.getHatchEnergyCapacity(tier, 2))),
-//                            Component.translatable("gtceu.machine.energy_hatch.output.tooltip"))
-//                    .overlayTieredHullModel("energy_output_hatch")
-//                    .register(),
-//            ALL_TIERS);
