@@ -20,7 +20,7 @@ ServerEvents.recipes(event => {
 
     removeGtceu(event, [ "flint_knife", "flint_shovel", "flint_pickaxe", "flint_mortar", "flint_sword", "flint_hoe", "flint_axe", "compressed_fireclay", "coke_oven_bricks" ])
     remove(event, [ "minecraft:wooden_axe", "minecraft:wooden_hoe", "minecraft:wooden_pickaxe", "minecraft:wooden_shovel", 
-        "minecraft:wooden_sword", "minecraft:blast_furnace", "minecraft:smoker", "minecraft:furnace", "steamadditions:steam_foundry", "steamadditions:steam_separator" ])
+        "minecraft:wooden_sword", "minecraft:blast_furnace", "minecraft:smoker", "minecraft:furnace"])
     event.remove({
         input: "minecraft:brick",
         type: "minecraft:crafting_shaped"
