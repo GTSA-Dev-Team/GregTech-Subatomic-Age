@@ -115,15 +115,15 @@ ServerEvents.recipes(event => {
     event.shapeless('minecraft:bricks', ['9x minecraft:brick'])
 
     event.recipes.gtceu.compressor('fireclay_compression')
-            .itemInputs('4x gtceu:fireclay_dust')
+            .itemInputs('gtceu:fireclay_dust')
             .itemOutputs('gtceu:compressed_fireclay')
-            .duration(20 * 10)
+            .duration(20 * 6)
             .EUt(8)
 
     event.shaped('gtceu:coke_oven_bricks', [
-        'PPP',
+        ' P ',
         'PWP',
-        'PPP'
+        ' P '
     ], { P: "gtsac:primitive_oven_brick", W: "#forge:tools/wrenches" })
 
     const steamReactorRecipe = (isHP) => {
@@ -186,4 +186,20 @@ ServerEvents.recipes(event => {
         'STB',
         'CLC'
     ], { R: "gtceu:iron_rotor", L: "gtceu:wood_large_fluid_pipe", S: "gtceu:iron_screw", T: "gtceu:treated_wood_planks", B: "gtceu:iron_bolt", C: "minecraft:cobblestone_slab" })
+
+    event.shaped('gtceu:large_steam_compressor', [
+        'PGP',
+        'PCP',
+        'PGP'
+    ], {
+        P: 'gtceu:bronze_plate',
+        G: 'gtceu:potin_gear',
+        C: 'gtceu:hp_steam_compressor'
+    })
+    
+    event.replaceInput(
+        {output: 'steamadditions:steam_foundry'},
+        'gtceu:lp_steam_alloy_smelter',
+        'gtceu:hp_steam_alloy_smelter'
+    )
 });

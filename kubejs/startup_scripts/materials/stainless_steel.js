@@ -1,3 +1,4 @@
+// priority: 10
 GTCEuStartupEvents.registry('gtceu:material', event => {
     event.create('Ferrochromium')
         .color(0xFFE8E8)
@@ -47,5 +48,9 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
         .color(0x6B6B6B)
         .dust()
         .components('1x gtceu:iron_oxide', '1x gtceu:silicon_dioxide', '1x gtceu:manganese_oxide')
+
+  
+  
+  
     
 })

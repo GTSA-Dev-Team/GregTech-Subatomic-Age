@@ -5,7 +5,12 @@ ServerEvents.recipes(event => {
 
     event.smelting('gtsac:primitive_oven_brick', 'gtsac:compressed_primitive_brick')
 
-    event.shapeless('gtsac:primitive_oven_bricks', [ '9x gtsac:primitive_oven_brick' ])
+    event.shaped('gtsac:primitive_oven_brick', [
+        'AA',
+        'AA'
+    ], {
+        A: 'gtsac:primitive_brick'
+    })
 
     event.recipes.gtceu.compressor('primitive_bricks_compression')
             .itemInputs('gtceu:primitive_brick_dust')
@@ -15,9 +20,10 @@ ServerEvents.recipes(event => {
 
 
     event.recipes.gtceu.primitive_oven('firebrick_smelting')
-            .itemInputs([ 'gtceu:compressed_fireclay', '1x gtceu:coke_gem' ])
+            .itemInputs('gtceu:compressed_fireclay')
             .itemOutputs('gtceu:firebrick')
-            .duration(20 * 5);
+            .duration(20 * 5)
+            .EUt(4)
 
         event.shaped('gtceu:primitive_oven', [
                 'BPB',
@@ -26,7 +32,8 @@ ServerEvents.recipes(event => {
         ], { B: "gtsac:primitive_oven_brick", P: "gtceu:bronze_plate", H: "gtceu:bronze_machine_casing" })
 
         event.recipes.gtceu.primitive_oven('wrought_iron_smelting')
-                .itemInputs([ 'minecraft:iron_ingot', 'minecraft:coal' ])
+                .itemInputs('minecraft:iron_ingot')
                 .itemOutputs('gtceu:wrought_iron_ingot')
                 .duration(20 * 5)
+                .EUt(8)
 });

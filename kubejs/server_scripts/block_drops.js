@@ -1,4 +1,5 @@
 ServerEvents.blockLootTables(event => {
+    
     event.modify("minecraft:grass", table => {
         table.addPool(pool => {
             pool.setUniformRolls(1, 1);

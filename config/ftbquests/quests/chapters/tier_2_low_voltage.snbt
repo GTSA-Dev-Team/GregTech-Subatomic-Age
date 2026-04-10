@@ -358,7 +358,7 @@
 			y: 8.0d
 		}
 		{
-			description: ["You should probably have this since you will need to use ULV energy hatches which will &cEXPLORE &rif given LV."]
+			description: ["You should probably have this since you will need to use ULV energy hatches which will &cEXPLODE &rif given LV."]
 			id: "06E29F5467311EAD"
 			tasks: [{
 				id: "246EF832C08C25A1"
@@ -762,20 +762,13 @@
 			id: "2A434020628372DC"
 			tasks: [
 				{
-					id: "6B927CBC47A61065"
-					item: {
-						Count: 1
-						id: "itemfilters:tag"
-						tag: {
-							value: "forge:ores/bauxite"
-						}
-					}
-					title: "Any #forge:ores/bauxite"
+					id: "4CFD198A5F0AAD11"
+					item: "gtceu:bauxite_dust"
 					type: "item"
 				}
 				{
-					id: "4CFD198A5F0AAD11"
-					item: "gtceu:bauxite_dust"
+					id: "31E1281F6407236B"
+					item: "gtceu:raw_bauxite"
 					type: "item"
 				}
 			]

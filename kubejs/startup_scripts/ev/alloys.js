@@ -1,0 +1,10 @@
+GTCEuStartupEvents.registry('gtceu:material', event => {
+    event.create('hy_100')
+        .ingot()
+        .liquid()
+        .color(0x3C688C)
+        .components('7x gtceu:iron', '3x gtceu:chromium', '5x gtceu:molybdenum', '2x gtceu:vanadium', 'gtceu:titanium')
+        .iconSet(GTMaterialIconSet.FINE)
+        .blastTemp(4293, 'mid', GTValues.VA[GTValues.EV], 500)
+        .flags(GTMaterialFlags.GENERATE_PLATE, GTMaterialFlags.GENERATE_FRAME)
+})

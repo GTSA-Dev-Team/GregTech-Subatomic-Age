@@ -1,7 +1,7 @@
 ServerEvents.recipes(event => {
     event.recipes.gtceu.extractor('latex_extraction')
             .itemInputs('#gtceu:rubber_logs')
-            .outputFluids('gtceu:latex 250')
+            .itemOutputs('2x gtceu:raw_latex_dust')
             .EUt(8)
             .duration(20 * 10)
 

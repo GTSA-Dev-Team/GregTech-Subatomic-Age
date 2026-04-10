@@ -1,3 +1,5 @@
+// priority: 9999
+
 GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
     event.create('steam_mixer')
         .category('primitive')

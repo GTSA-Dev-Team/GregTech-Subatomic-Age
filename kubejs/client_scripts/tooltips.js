@@ -86,4 +86,5 @@ ItemEvents.tooltip(event => {
     tooltipSAMulti('neutralization_tank', 'Mixes §1Chemicals§r together, resulting in a §bLower pH Solution§r.', '', ['subtick', 'batch'])
     tooltipGTMulti('rotary_kiln', 'Heats materials to §6High Temperatures§r in a §eRotating Cylindrical Furnace§r, causing §1Chemical§r and §2Physical§r §cTransformations§r.', '', ['subtick', 'batch'])
     tooltipGTMulti('polymerization_tank', 'Provides a §1Controlled Environment§r inside it, allowing for monomer §6Polymerization§r to happen.', '', ['subtick', 'batch'])
+    tooltipGTMulti('large_steam_generator', 'A §bLarger§r, more §aEfficient§r version of §7The Steam Turbine§r, capable of generating §cLots of Power§r.', '§63x more Efficient§r than it\'s singleblock counterparts.', [])
 })
