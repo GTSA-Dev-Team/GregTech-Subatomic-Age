@@ -55,35 +55,35 @@ StartupEvents.registry('item', event => {
     }
 
     Unit('quantum_wetware', 'Quantum Neuro CPU', '7')
-    Circuit('quantum_wetware', '_processor', "zpm", 'Wetware... but quantum!', '6')
-    Circuit('quantum_wetware', '_processor_assembly', "uv", 'Wetware... but quantum!', '6')
-    Circuit('quantum_wetware', '_processor_computer', "uhv", 'Wetware... but quantum!', '6')
-    Mainframe('quantum_wetware', "uev", 'Wetware... but quantum!', '6')
+    Circuit('quantum_wetware', '_processor', "zpm", 'Heisenberg would be Proud!', '6')
+    Circuit('quantum_wetware', '_processor_assembly', "uv", 'Heisenberg would be Proud!', '6')
+    Circuit('quantum_wetware', '_processor_computer', "uhv", 'Heisenberg would be Proud!', '6')
+    Mainframe('quantum_wetware', "uev", 'Heisenberg would be Proud!', '6')
  
 
     Unit('exaprocessor', 'Massive CPU', '7')
-    Circuit('exaprocessor', '', "uv", 'Larger density = More computing power', 'c')
-    Circuit('exaprocessor', '_assembly', "uhv", 'Larger density = More computing power', 'c')
-    Circuit('exaprocessor', '_computer', "uev", 'Larger density = More computing power', 'c')
-    Mainframe('exaprocessor', "uiv", 'Larger density = More computing power', 'c')
+    Circuit('exaprocessor', '', "uv", 'And You know what else is MASSIVE?', 'c')
+    Circuit('exaprocessor', '_assembly', "uhv", 'And You know what else is MASSIVE?', 'c')
+    Circuit('exaprocessor', '_computer', "uev", 'And You know what else is MASSIVE?', 'c')
+    Mainframe('exaprocessor', "uiv", 'And You know what else is MASSIVE?', 'c')
 
-    Unit('quark_gluon_stabilized', 'Subatomic CPU', '7')
-    Circuit('quark_gluon_stabilized', '_processor', "uhv", 'Quite... §oElementary...', '9')
-    Circuit('quark_gluon_stabilized', '_processor_assembly', "uev", 'Quite... §oElementary...', '9')
-    Circuit('quark_gluon_stabilized', '_processor_computer', "uiv", 'Quite... §oElementary...', '9')
-    Mainframe('quark_gluon_stabilized', "uxv", 'Quite... §oElementary...', '9')
+    Unit('sub_planck_scale', 'Really Small CPU', '7')
+    Circuit('sub_planck_scale', '_processor', "uhv", 'Let me get my glasses...', 'd')
+    Circuit('sub_planck_scale', '_processor_assembly', "uev", 'Let me get my glasses...', 'd')
+    Circuit('sub_planck_scale', '_processor_computer', "uiv", 'Let me get my glasses...', 'd')
+    Mainframe('sub_planck_scale', "uxv", 'Let me get my glasses...', 'd')
 
-    Unit('sub_planckscale', 'Really Small CPU', '7')
-    Circuit('sub_planckscale', '_processor', "uev", 'Wait, you can do that?', 'd')
-    Circuit('sub_planckscale', '_processor_assembly', "uiv", 'Wait, you can do that?', 'd')
-    Circuit('sub_planckscale', '_processor_computer', "uxv", 'Wait, you can do that?', 'd')
-    Mainframe('sub_planckscale', "opv", 'Wait, you can do that?', 'd')
+    Unit('temporally_paradoxical', 'Temporal CPU', '7')
+    Circuit('temporally_paradoxical', '_processor', "uev", 'Was, Is, and Will Be.', 'd')
+    Circuit('temporally_paradoxical', '_processor_assembly', "uiv", 'Was, Is, and Will Be.', 'd')
+    Circuit('temporally_paradoxical', '_processor_computer', "uxv", 'Was, Is, and Will Be.', 'd')
+    Mainframe('temporally_paradoxical', "opv", 'Was, Is, and Will Be.', 'd')
 
     Unit('technologically_superior', 'The Best CPU', '7')
     Circuit('technologically_superior', '_processor', "uiv", '§lThe Best Processor', '8')
     Circuit('technologically_superior', '_processor_assembly', "uxv", '§lThe Best Processor Assembly', '8')
     Circuit('technologically_superior', '_processor_computer', "opv", '§lThe Best Supercomputer', '8')
-    Mainframe('technologically_superior', "max", '§lCan run Vanilla Minecraft at 60 FPS!', '8')
+    Mainframe('technologically_superior', "max", '§lThe Definition of Perfection', '8')
 
    
    

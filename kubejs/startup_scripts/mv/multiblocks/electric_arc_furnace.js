@@ -2,7 +2,7 @@ GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
         event.create('electric_arc_furnace')
             .category('multiblock')
             .setEUIO('in')
-            .setMaxIOSize(6, 3, 0, 2)
+            .setMaxIOSize(6, 3, 2, 2)
             .setProgressBar(GuiTextures.PROGRESS_BAR_ARC_FURNACE, FillDirection.LEFT_TO_RIGHT)
             .setSound(GTSoundEntries.ARC)
 })

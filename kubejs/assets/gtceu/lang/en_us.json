@@ -9,11 +9,14 @@
     "block.gtceu.rotary_kiln": "Rotary Kiln",
     "block.gtceu.electric_steel_kiln": "Electric Steel Kiln",
     "block.gtceu.polymerization_tank": "Polymerization Tank",
+    "block.gtceu.large_steam_generator": "Large Steam Generator",
+    "block.gtceu.large_steam_compressor": "Large Steam Compressor",
 
     "gtceu.coagulation": "Coagulation",
     "gtceu.vacuum_ejection": "Vacuum Ejection",
     "gtceu.primitive_oven": "Primitive Oven",
     "gtceu.primitive_baking_oven": "Primitive Baking Oven",
+    "gtceu.advanced_steam_mining_rig": "Advanced Steam Mining Rig",
     "gtceu.component_assembler": "Component Assembly",
     "gtceu.electric_winding_machine": "Coil Winding",
     "gtceu.heavy_drilling_rig": "Crust Drilling",
@@ -30,8 +33,11 @@
     "gtceu.polymerization_tank": "Polymerization",
     "gtceu.cstr": "CSTR",
     "gtceu.fixed_bed_reactor": "Fixed Bed Reactor",
+    "gtceu.large_steam_generator": "Large Steam Generator",
+    "gtceu.extreme_pressure_drilling_rig": "Mantle Drilling",
 
     "material.gtceu.latex": "Latex",
+    "material.gtceu.raw_latex": "Raw Latex",
     "material.gtceu.iron_iii_sulfate": "Iron(III) Sulfate",
     "material.gtceu.primitive_brick": "Primitive Brick",
     "material.gtceu.crude_ore_slurry": "§4Crude §rOre Slurry",
@@ -70,6 +76,8 @@
     "material.gtceu.dichloromethane": "Dichloromethane",
     "material.gtceu.fluorinated_graphite": "Fluorinated Graphite",
     "material.gtceu.chlorodifluoromethane": "Chlorodifluoromethane",
-    "material.gtceu.hydroxyl_radical": "Hydroxyl Radical"
+    "material.gtceu.hydroxyl_radical": "Hydroxyl Radical",
+    "material.gtceu.hy_100": "HY-100",
+    "material.gtceu.inchoate_mantle_slurry": "§4Inchoate§r Mantle Slurry"
 
 }

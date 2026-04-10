@@ -2,8 +2,12 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     event.create('latex')
         .color(0xfcdf6c)
         .dust()         
-        .fluid()        
-        .formula("(C5H8)n")
+        .components('5x carbon', '8x hydrogen')
+
+    event.create('raw_latex')
+        .color(0xFAE689)
+        .dust()         
+        .components('gtceu:latex')
 
     event.create('iron_iii_sulfate')
         .color(0xbf7b24)

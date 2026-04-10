@@ -6,19 +6,22 @@ GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
 });
 
 GTCEuStartupEvents.registry('gtceu:machine', event => {
-    event.create("gtsac:primitive_oven", "primitive")
+    event.create("primitive_oven", "multiblock")
+        .machine((holder) => new $SteamMulti(holder, 1))    
         .rotationState(RotationState.ALL)
         .recipeType('primitive_oven')
         .pattern(definition => FactoryBlockPattern.start()
             .aisle('CCC', 'CCC', '#C#')
             .aisle('CCC', 'CAC', 'CAC')
-            .aisle('ICO', 'CBC', "#C#")
-            .where('C', Predicates.blocks('gtsac:primitive_oven_bricks'))
-            .where('A', Predicates.blocks('air').or(Predicates.blocks('cave_air')))
+            .aisle('CCC', 'CBC', "#C#")
+            .where('C', Predicates.blocks('gtsac:primitive_oven_bricks').setMinGlobalLimited(16)
+                .or(Predicates.abilities(PartAbility.STEAM_IMPORT_ITEMS).setMaxGlobalLimited(1))
+                .or(Predicates.abilities(PartAbility.STEAM).setMaxGlobalLimited(1))
+                .or(Predicates.abilities(PartAbility.STEAM_EXPORT_ITEMS).setMaxGlobalLimited(1)))
+            .where('A', Predicates.any())
             .where('#', Predicates.any())
-            .where('I', Predicates.blocks('gtceu:steam_input_bus'))
-            .where('O', Predicates.blocks('gtceu:steam_output_bus'))
             .where('B', Predicates.controller(Predicates.blocks(definition.get())))
         .build())
         .workableCasingModel('kubejs:block/primitive_oven_bricks', 'gtceu:block/machines/electric_furnace');
 })
+

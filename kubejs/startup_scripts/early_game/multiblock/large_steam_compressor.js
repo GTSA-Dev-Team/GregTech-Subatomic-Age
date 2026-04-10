@@ -1,0 +1,22 @@
+GTCEuStartupEvents.registry('gtceu:machine', event => {
+    event.create("large_steam_compressor", "multiblock")
+        .machine((holder) => new $SteamMulti(holder, 8))    
+        .rotationState(RotationState.ALL)
+        .appearanceBlock(GTBlocks.CASING_BRONZE_BRICKS)
+        .recipeType('compressor')
+        .recipeModifier((machine, recipe) => $SteamMulti.recipeModifier(machine, recipe), true)
+        .pattern(definition => FactoryBlockPattern.start()
+            .aisle('CCC', 'CCC', 'CCC')
+            .aisle('CCC', 'CGC', 'CCC')
+            .aisle('CCC', 'CBC', "CCC")
+            .where('C', Predicates.blocks('gtceu:steam_machine_casing').setMinGlobalLimited(22)
+                .or(Predicates.abilities(PartAbility.STEAM_IMPORT_ITEMS))
+                .or(Predicates.abilities(PartAbility.STEAM).setMaxGlobalLimited(1))
+                .or(Predicates.abilities(PartAbility.STEAM_EXPORT_ITEMS)))
+            .where('G', Predicates.blocks('gtceu:bronze_gearbox'))
+            .where('#', Predicates.any())
+            .where('B', Predicates.controller(Predicates.blocks(definition.get())))
+        .build())
+        .workableCasingModel('gtceu:block/casings/solid/machine_casing_bronze_plated_bricks', 'gtceu:block/machines/compressor');
+})
+
