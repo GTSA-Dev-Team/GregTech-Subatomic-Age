@@ -1,5 +1,5 @@
-ServerEvents.recipes(event => {
-    event.shaped('gtceu:electric_arc_furnace', [
+ServerEvents.recipes(gtsa => {
+    gtsa.shaped('gtceu:electric_arc_furnace', [
         'HGH',
         'PAP',
         'CMC'
@@ -12,7 +12,7 @@ ServerEvents.recipes(event => {
         M: 'gtceu:mv_electric_motor'
     })
 
-    event.shaped('gtceu:vacuum_pressure_vessel', [
+    gtsa.shaped('gtceu:vacuum_pressure_vessel', [
         'DMD',
         'MVP',
         'CSC'

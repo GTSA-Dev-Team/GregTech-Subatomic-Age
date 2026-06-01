@@ -1,4 +1,4 @@
-ItemEvents.tooltip(event => {
+ItemEvents.tooltip(gtsa => {
 
     const modsMap = {
         'subtick': ' §aSubtick Parallels§r',
@@ -11,12 +11,12 @@ ItemEvents.tooltip(event => {
        
         if(addInfo == '') {
             if(modifiers.length == 0) {
-                event.addAdvanced(`gtceu:${item}`, (item, advanced, text) => {
+                gtsa.addAdvanced(`gtceu:${item}`, (item, advanced, text) => {
                     text.add(1, Text.of(desc))
                 })
             }
             else {
-                event.addAdvanced(`gtceu:${item}`, (item, advanced, text) => {
+                gtsa.addAdvanced(`gtceu:${item}`, (item, advanced, text) => {
                     text.add(1, Text.of(desc))
                     text.add(2, Text.of(`Modifiers:${mappedMods}`))
                 })
@@ -24,13 +24,13 @@ ItemEvents.tooltip(event => {
         }
         else {
             if(modifiers.length == 0) {
-                event.addAdvanced(`gtceu:${item}`, (item, advanced, text) => {
+                gtsa.addAdvanced(`gtceu:${item}`, (item, advanced, text) => {
                     text.add(1, Text.of(desc))
                     text.add(2, Text.of(addInfo))
                 })
             }
             else {
-                event.addAdvanced(`gtceu:${item}`, (item, advanced, text) => {
+                gtsa.addAdvanced(`gtceu:${item}`, (item, advanced, text) => {
                     text.add(1, Text.of(desc))
                     text.add(2, Text.of(addInfo))
                     text.add(3, Text.of(`Modifiers:${mappedMods}`))
@@ -44,12 +44,12 @@ ItemEvents.tooltip(event => {
    
     if(addInfo == '') {
         if(modifiers.length == 0) {
-            event.addAdvanced(`gtsac:${item}`, (item, advanced, text) => {
+            gtsa.addAdvanced(`gtsac:${item}`, (item, advanced, text) => {
                 text.add(1, Text.of(desc))
             })
         }
         else {
-            event.addAdvanced(`gtsac:${item}`, (item, advanced, text) => {
+            gtsa.addAdvanced(`gtsac:${item}`, (item, advanced, text) => {
                 text.add(1, Text.of(desc))
                 text.add(2, Text.of(`Modifiers:${mappedMods}`))
             })
@@ -57,13 +57,13 @@ ItemEvents.tooltip(event => {
     }
     else {
         if(modifiers.length == 0) {
-            event.addAdvanced(`gtsac:${item}`, (item, advanced, text) => {
+            gtsa.addAdvanced(`gtsac:${item}`, (item, advanced, text) => {
                 text.add(1, Text.of(desc))
                 text.add(2, Text.of(addInfo))
             })
         }
         else {
-            event.addAdvanced(`gtsac:${item}`, (item, advanced, text) => {
+            gtsa.addAdvanced(`gtsac:${item}`, (item, advanced, text) => {
                 text.add(1, Text.of(desc))
                 text.add(2, Text.of(addInfo))
                 text.add(3, Text.of(`Modifiers:${mappedMods}`))

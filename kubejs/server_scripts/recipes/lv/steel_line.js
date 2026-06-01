@@ -1,5 +1,5 @@
-ServerEvents.recipes(event => {
-    event.shaped('gtceu:electric_steel_kiln', [
+ServerEvents.recipes(gtsa => {
+    gtsa.shaped('gtceu:electric_steel_kiln', [
         'BCB',
         'PHR',
         'BCB',
@@ -11,14 +11,14 @@ ServerEvents.recipes(event => {
         R: 'gtceu:lv_robot_arm'
     })
     
-    event.recipes.gtceu.rotary_kiln('direct_reduced_iron')
+    gtsa.recipes.gtceu.rotary_kiln('direct_reduced_iron')
         .itemInputs('8x minecraft:iron_ingot')
         .inputFluids('gtceu:oxygen 1000', 'gtceu:carbon_monoxide 2000')
         .itemOutputs('12x gtceu:direct_reduced_iron_ingot')
         .duration(10*20)
         .EUt(64)
 
-    event.recipes.gtceu.electric_steel_kiln('dri_to_steel')
+    gtsa.recipes.gtceu.electric_steel_kiln('dri_to_steel')
         .inputFluids('gtceu:direct_reduced_iron 2304')
         .itemInputs('gtceu:carbon_dust')
         .outputFluids('gtceu:steel 3456')

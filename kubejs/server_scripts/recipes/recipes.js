@@ -1,13 +1,13 @@
-ServerEvents.recipes(event => {
+ServerEvents.recipes(gtsa => {
     const ulvInput = (type) => {
-        event.shaped(`gtceu:ulv_input_${type}`, [
+        gtsa.shaped(`gtceu:ulv_input_${type}`, [
             ' G ',
             ' H ',
             '   '
         ], { H: "gtceu:ulv_machine_casing", G: type === "hatch" ? "minecraft:glass" : "minecraft:chest" } )
     };
     const ulvOutput = (type) => {
-        event.shaped(`gtceu:ulv_output_${type}`, [
+        gtsa.shaped(`gtceu:ulv_output_${type}`, [
             '   ',
             ' H ',
             ' G '
@@ -18,70 +18,70 @@ ServerEvents.recipes(event => {
     ulvOutput("hatch")
     ulvOutput("bus")
 
-    removeGtceu(event, [ "flint_knife", "flint_shovel", "flint_pickaxe", "flint_mortar", "flint_sword", "flint_hoe", "flint_axe", "compressed_fireclay", "coke_oven_bricks" ])
-    remove(event, [ "minecraft:wooden_axe", "minecraft:wooden_hoe", "minecraft:wooden_pickaxe", "minecraft:wooden_shovel", 
+    removeGtceu(gtsa, [ "flint_knife", "flint_shovel", "flint_pickaxe", "flint_mortar", "flint_sword", "flint_hoe", "flint_axe", "compressed_fireclay", "coke_oven_bricks" ])
+    remove(gtsa, [ "minecraft:wooden_axe", "minecraft:wooden_hoe", "minecraft:wooden_pickaxe", "minecraft:wooden_shovel", 
         "minecraft:wooden_sword", "minecraft:blast_furnace", "minecraft:smoker", "minecraft:furnace"])
-    event.remove({
+    gtsa.remove({
         input: "minecraft:brick",
         type: "minecraft:crafting_shaped"
     })
-    event.remove({
+    gtsa.remove({
         output: "gtceu:firebrick",
         type: "minecraft:smelting"
     })
-    event.remove({
+    gtsa.remove({
         input: "minecraft:clay",
         type: "minecraft:crafting_shapeless"
     })
-    event.remove({
+    gtsa.remove({
         input: "minecraft:flint",
         type: "minecraft:crafting_shaped"
     })
-    event.remove({
+    gtsa.remove({
         input: "minecraft:sand",
         type: "minecraft:crafting_shaped"
     })
-    event.remove({
+    gtsa.remove({
         output: "gtceu:steam_oven",
         input: "gtceu:lp_steam_furnace"
     })
-    event.remove({
+    gtsa.remove({
         output: "gtceu:steam_grinder",
         input: "gtceu:lp_steam_macerator"
     })
-    event.remove({
+    gtsa.remove({
         output: "gtceu:lead_dust",
         input: "#forge:tools/mortars"
     })
-    event.remove({
+    gtsa.remove({
         output: "gtceu:raw_rubber_dust",
         type: "gtceu:extractor"
     })
-    event.remove({
+    gtsa.remove({
         output: "gtceu:resistor",
         input: "gtceu:fine_copper_wire",
         type: "crafting_shaped"
     })
-    event.remove({
+    gtsa.remove({
         output: "gtceu:phenolic_circuit_board",
         input: ["gtceu:wood_dust", "gtceu:glue"]
     })
-    event.remove({
+    gtsa.remove({
         output: "gtceu:phenolic_printed_circuit_board",
         type: "crafting_shaped"
     })
-    event.remove({
+    gtsa.remove({
         output: 'gtceu:stainless_steel_dust',
         type: 'gtceu:mixer'
     })
-    event.remove({
+    gtsa.remove({
         output: 'gtceu:diode',
         input: Fluid.of('gtceu:glass', 144)
     })
 
 
 
-    event.shaped('1x gtceu:long_wood_rod', [
+    gtsa.shaped('1x gtceu:long_wood_rod', [
         'AAA',
         'SAS',
         'AAA'
@@ -90,7 +90,7 @@ ServerEvents.recipes(event => {
         S: 'minecraft:stick'
     })
 
-    event.shaped('1x gtceu:flint_hammer', [
+    gtsa.shaped('1x gtceu:flint_hammer', [
         'FFG',
         'FFL',
         'FFG'
@@ -100,27 +100,27 @@ ServerEvents.recipes(event => {
         L: "gtceu:long_wood_rod"
     })
 
-    event.shaped('1x minecraft:cobblestone', [
+    gtsa.shaped('1x minecraft:cobblestone', [
         'PP ',
         'PP ',
         '   '
     ], { P: "gtsac:stone_pebble" })
 
-    event.shaped('minecraft:furnace', [
+    gtsa.shaped('minecraft:furnace', [
         'CCC',
         'CFC',
         'CCC'
     ], { C: "#forge:cobblestone", F: "minecraft:flint" })
 
-    event.shapeless('minecraft:bricks', ['9x minecraft:brick'])
+    gtsa.shapeless('minecraft:bricks', ['9x minecraft:brick'])
 
-    event.recipes.gtceu.compressor('fireclay_compression')
+    gtsa.recipes.gtceu.compressor('fireclay_compression')
             .itemInputs('gtceu:fireclay_dust')
             .itemOutputs('gtceu:compressed_fireclay')
             .duration(20 * 6)
             .EUt(8)
 
-    event.shaped('gtceu:coke_oven_bricks', [
+    gtsa.shaped('gtceu:coke_oven_bricks', [
         ' P ',
         'PWP',
         ' P '
@@ -129,7 +129,7 @@ ServerEvents.recipes(event => {
     const steamReactorRecipe = (isHP) => {
         const mat = isHP ? "steel" : "bronze"
         const hull = isHP ? "gtceu:steel_brick_casing" : "gtceu:bronze_machine_casing"
-        event.shaped('gtceu:' + (isHP ? "hp" : "lp") + "_steam_chemical_reactor", [
+        gtsa.shaped('gtceu:' + (isHP ? "hp" : "lp") + "_steam_chemical_reactor", [
             'GRG',
             'SPS',
             'BHB'
@@ -141,7 +141,7 @@ ServerEvents.recipes(event => {
     const steamMixerRecipe = (isHP) => {
         const mat = isHP ? "steel" : "bronze"
         const hull = isHP ? "gtceu:steel_brick_casing" : "gtceu:bronze_machine_casing"
-        event.shaped('gtceu:' + (isHP ? "hp" : "lp") + "_steam_mixer", [
+        gtsa.shaped('gtceu:' + (isHP ? "hp" : "lp") + "_steam_mixer", [
             'GRG',
             'GMG',
             'VHV'
@@ -154,7 +154,7 @@ ServerEvents.recipes(event => {
         const mat = isHP ? "steel" : "bronze"
         const hull = isHP ? "gtceu:steel_brick_casing" : "gtceu:bronze_brick_casing"
         const cable = !isHP ? "gtceu:red_alloy_single_cable" : "gtceu:tin_single_cable"
-        event.shaped('gtceu:' + (isHP ? "hp" : "lp") + "_steam_vacuum_chamber", [
+        gtsa.shaped('gtceu:' + (isHP ? "hp" : "lp") + "_steam_vacuum_chamber", [
             'CRC',
             'GPG',
             'SBS'
@@ -163,31 +163,31 @@ ServerEvents.recipes(event => {
     steamVacuumEjectorRecipe(true)
     steamVacuumEjectorRecipe(false)
 
-    event.recipes.gtceu.mud_pumping('mud_pumping_recipe')
+    gtsa.recipes.gtceu.mud_pumping('mud_pumping_recipe')
             .inputFluids('minecraft:water 4000')
             .outputFluids('gtceu:red_mud 1500')
             .itemOutputsRanged('minecraft:clay', 1, 4)
             .duration(20 * 10)
 
-    event.recipes.gtceu.electric_blast_furnace('fireclay_smelting')
+    gtsa.recipes.gtceu.electric_blast_furnace('fireclay_smelting')
             .itemInputs("32x gtceu:compressed_fireclay")
             .itemOutputs("32x gtceu:firebrick")
             .duration(20 * 30)
             .EUt(32)
 
-    event.shaped('gtceu:rotary_kiln_bricks', [
+    gtsa.shaped('gtceu:rotary_kiln_bricks', [
         'FF ',
         'FFC',
         '   '
     ], { F: "gtceu:firebrick", C: "minecraft:clay_ball" })
 
-    event.shaped('gtceu:mud_pump', [
+    gtsa.shaped('gtceu:mud_pump', [
         'RLR',
         'STB',
         'CLC'
     ], { R: "gtceu:iron_rotor", L: "gtceu:wood_large_fluid_pipe", S: "gtceu:iron_screw", T: "gtceu:treated_wood_planks", B: "gtceu:iron_bolt", C: "minecraft:cobblestone_slab" })
 
-    event.shaped('gtceu:large_steam_compressor', [
+    gtsa.shaped('gtceu:large_steam_compressor', [
         'PGP',
         'PCP',
         'PGP'
@@ -197,7 +197,7 @@ ServerEvents.recipes(event => {
         C: 'gtceu:hp_steam_compressor'
     })
     
-    event.replaceInput(
+    gtsa.replaceInput(
         {output: 'steamadditions:steam_foundry'},
         'gtceu:lp_steam_alloy_smelter',
         'gtceu:hp_steam_alloy_smelter'

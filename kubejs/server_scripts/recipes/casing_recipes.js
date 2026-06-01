@@ -1,6 +1,6 @@
-ServerEvents.recipes(event => {
+ServerEvents.recipes(gtsa => {
     function Casing(casing, plate, frame) {
-        event.recipes.gtceu.assembler(casing)
+        gtsa.recipes.gtceu.assembler(casing)
             .itemInputs(`6x gtceu:${plate}_plate`, `gtceu:${frame}_frame`)
             .itemOutputs(`2x gtsac:${casing}_casing`)
             .circuit(6)
