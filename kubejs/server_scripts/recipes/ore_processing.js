@@ -1,10 +1,10 @@
-ServerEvents.recipes(event => {
-    event.shaped('gtceu:heavy_drilling_rig', [
+ServerEvents.recipes(gtsa => {
+    gtsa.shaped('gtceu:heavy_drilling_rig', [
     'CPC',
     'VHV',
     'MDM',
 ], { P: "gtceu:lv_pump", C: "#gtceu:circuits/lv", V: "gtceu:lv_conveyor_module", H: "gtceu:lv_miner", M: "gtceu:lv_electric_motor", D: "gtceu:steel_drill_head"})
-    event.recipes.gtceu.heavy_drilling_rig('crude_ore_slurry_from_drilling')
+    gtsa.recipes.gtceu.heavy_drilling_rig('crude_ore_slurry_from_drilling')
         .chancedInput('gtceu:steel_drill_head', 2000, 0)
         .inputFluids('gtceu:drilling_fluid 4000')
         .outputFluidsRanged('gtceu:crude_ore_slurry', 500, 1000)
@@ -12,7 +12,7 @@ ServerEvents.recipes(event => {
         .duration(15*20)
         .EUt(64)
 
-    event.recipes.gtceu.electrolyzer('crude_ore_slurry')
+    gtsa.recipes.gtceu.electrolyzer('crude_ore_slurry')
         .inputFluids('gtceu:crude_ore_slurry 2000')
         .outputFluids('gtceu:clean_ore_slurry 1000')
         .itemOutputsRanged('gtceu:raw_magnetite', 2, 4)
@@ -22,14 +22,14 @@ ServerEvents.recipes(event => {
         .duration(17*20)
         .EUt(120)
     
-    event.recipes.gtceu.clarifier('clean_ore_slurry')
+    gtsa.recipes.gtceu.clarifier('clean_ore_slurry')
         .inputFluids('gtceu:clean_ore_slurry 500')
         .outputFluids('gtceu:refined_ore_slurry 750')
         .itemOutputs('3x gtceu:low_density_crust_sludge_dust', '2x gtceu:high_density_crust_sludge_dust')
         .duration(15*20)
         .EUt(120)
     
-    event.recipes.gtceu.filtrator('refined_ore_slurry')
+    gtsa.recipes.gtceu.filtrator('refined_ore_slurry')
         .inputFluids('gtceu:refined_ore_slurry 1000')
         .itemOutputsRanged('gtceu:low_density_crust_sludge_dust', 4, 11)
         .itemOutputsRanged('gtceu:high_density_crust_sludge_dust', 2, 7)
@@ -37,7 +37,7 @@ ServerEvents.recipes(event => {
         .duration(11*20)
         .EUt(480)
 
-    event.recipes.gtceu.dissolution_chamber('low_density_crust_sludge_dust')
+    gtsa.recipes.gtceu.dissolution_chamber('low_density_crust_sludge_dust')
         .itemInputs('7x gtceu:low_density_crust_sludge_dust')
         .inputFluids('gtceu:hydrochloric_acid 3000')
         .itemOutputsRanged('gtceu:raw_vanadium_magnetite', 2, 4)
@@ -47,7 +47,7 @@ ServerEvents.recipes(event => {
         .duration(18*20)
         .EUt(480)
 
-    event.recipes.gtceu.dissolution_chamber('high_density_crust_sludge_dust')
+    gtsa.recipes.gtceu.dissolution_chamber('high_density_crust_sludge_dust')
         .itemInputs('5x gtceu:high_density_crust_sludge_dust')
         .inputFluids('gtceu:hydrochloric_acid 5000')
         .itemOutputsRanged('gtceu:raw_cobaltite', 2, 4)
@@ -57,7 +57,7 @@ ServerEvents.recipes(event => {
         .duration(23*20)
         .EUt(1920)
 
-    event.recipes.gtceu.centrifuge('crust_waste')
+    gtsa.recipes.gtceu.centrifuge('crust_waste')
         .inputFluids('gtceu:crust_waste 2000')
         .outputFluids('minecraft:water 1000')
         .itemOutputsRanged('gtceu:crushed_trona_ore', 4, 7)
@@ -65,7 +65,7 @@ ServerEvents.recipes(event => {
         .duration(9*20)
         .EUt(120)
 
-    event.recipes.gtceu.sifter('geode_cluster')
+    gtsa.recipes.gtceu.sifter('geode_cluster')
         .itemInputs('gtsac:geode_cluster')
         .itemOutputsRanged('gtceu:raw_sapphire', 1, 4)
         .itemOutputsRanged('gtceu:raw_apatite', 1, 4)
@@ -80,7 +80,7 @@ ServerEvents.recipes(event => {
 
     const min = 4
     const max = 9
-    event.recipes.gtceu.extreme_pressure_drilling_rig('mantle_drilling')
+    gtsa.recipes.gtceu.extreme_pressure_drilling_rig('mantle_drilling')
         .chancedInput('gtceu:tungsten_steel_drill_head', 500, 0)
         .inputFluids('gtceu:drilling_fluid 20000', 'gtceu:liquid_oxygen 16000')
         .outputFluidsRanged('gtceu:inchoate_mantle_slurry', 16000, 26000)
@@ -90,20 +90,20 @@ ServerEvents.recipes(event => {
 
     //MAGNESIUM OXIDE MIXTURE
 
-    event.recipes.gtceu.neutralization('neutralized_inane_oxide_mixture')
+    gtsa.recipes.gtceu.neutralization('neutralized_inane_oxide_mixture')
         .inputFluids('gtceu:aqua_regia 2000', 'gtceu:magnesium_rich_oxide_mixture 4000')
         .outputFluids('gtceu:diluted_hydrochloric_acid 1000', 'gtceu:neutralized_inane_oxide_mixture 5000')
         .itemOutputsRanged('gtceu:crushed_olivine_ore', 4, 9)
         .duration(23*20)
         .EUt(1920)
 
-    event.recipes.gtceu.leaching_plant('dissolved_inane_oxide_mixture')
+    gtsa.recipes.gtceu.leaching_plant('dissolved_inane_oxide_mixture')
         .inputFluids('gtceu:neutralized_inane_oxide_mixture 30000', 'gtceu:nitric_acid 10000')
         .outputFluids('gtceu:dissolved_inane_oxide_mixture 30000', 'gtceu:crust_waste 15000')
         .duration(237*20)
         .EUt(1230)
 
-    event.recipes.gtceu.electrolyzer('dissolved_inane_oxide_mixture_electrolyzer')
+    gtsa.recipes.gtceu.electrolyzer('dissolved_inane_oxide_mixture_electrolyzer')
         .inputFluids('gtceu:dissolved_inane_oxide_mixture 4000')
         .itemOutputsRanged('gtceu:magnesia_dust', 8, 14)
         .itemOutputsRanged('gtceu:bauxite_dust', 6, 9)
@@ -114,13 +114,13 @@ ServerEvents.recipes(event => {
 
     //MANTLE SLURRY PROCESSING
 
-    event.recipes.gtceu.centrifuge('purified_mantle_slurry')
+    gtsa.recipes.gtceu.centrifuge('purified_mantle_slurry')
         .inputFluids('gtceu:inchoate_mantle_slurry 6000')
         .outputFluids('gtceu:purified_mantle_slurry 5000', 'gtceu:magnesium_rich_oxide_mixture 1000')
         .duration(14*20)
         .EUt(1920)
 
-    event.recipes.gtceu.distillation_tower('mantle_slurries_distillation')
+    gtsa.recipes.gtceu.distillation_tower('mantle_slurries_distillation')
         .inputFluids('gtceu:purified_mantle_slurry 18000')
         .outputFluids('gtceu:strongly_bonded_carbide_fluoride_slurry 4500')
         .outputFluids('gtceu:native_element_slurry 4500')
@@ -131,7 +131,7 @@ ServerEvents.recipes(event => {
 
     //VALUABLE OXIDES PROCESSING
 
-    event.recipes.gtceu.leaching_plant('leached_valuable_oxide_slurry')
+    gtsa.recipes.gtceu.leaching_plant('leached_valuable_oxide_slurry')
         .inputFluids('gtceu:impurity_bristled_valuable_oxide_slurry 28000')
         .inputFluids('gtceu:sulfuric_acid 4000', 'gtceu:hydrochloric_acid 3000')
         .outputFluids('gtceu:leached_valuable_oxide_slurry 22000')
@@ -139,7 +139,7 @@ ServerEvents.recipes(event => {
         .duration(124*20)
         .EUt(1920)
 
-    event.recipes.gtceu.electric_arc_furnace('crvos_prvos')
+    gtsa.recipes.gtceu.electric_arc_furnace('crvos_prvos')
         .inputFluids('gtceu:leached_valuable_oxide_slurry 4000')
         .inputFluids('gtceu:carbon_monoxide 1000')
         .outputFluids('gtceu:carbon_reduced_valuable_oxide_slurry 2000')
@@ -148,7 +148,7 @@ ServerEvents.recipes(event => {
         .duration(11*20)
         .EUt(480)
 
-    event.recipes.gtceu.centrifuge('carbon_reduced_valuable_oxide_slurry_centrifuging')
+    gtsa.recipes.gtceu.centrifuge('carbon_reduced_valuable_oxide_slurry_centrifuging')
         .inputFluids('gtceu:carbon_reduced_valuable_oxide_slurry 2000')
         .itemOutputsRanged('gtceu:raw_tantalite', min, max)
         .itemOutputsRanged('gtceu:raw_tricalcium_phosphate', min, max)
@@ -158,7 +158,7 @@ ServerEvents.recipes(event => {
         .duration(15*20)
         .EUt(1920)
 
-    event.recipes.gtceu.rotary_kiln('hrs_svos')
+    gtsa.recipes.gtceu.rotary_kiln('hrs_svos')
         .inputFluids('gtceu:partially_reduced_valuable_oxide_slurry 4000')
         .inputFluids('gtceu:hydrogen 1500')
         .outputFluids('gtceu:hydrogen_reduced_valuable_oxide_slurry 3000')
@@ -167,7 +167,7 @@ ServerEvents.recipes(event => {
         .duration(12*20)
         .EUt(480)
 
-    event.recipes.gtceu.centrifuge('hydrogen_reduced_valuable_oxide_slurry_centrifuging')
+    gtsa.recipes.gtceu.centrifuge('hydrogen_reduced_valuable_oxide_slurry_centrifuging')
         .inputFluids('gtceu:hydrogen_reduced_valuable_oxide_slurry 2000')
         .itemOutputsRanged('gtceu:raw_scheelite', min, max)
         .itemOutputsRanged('gtceu:raw_pitchblende', min, max)
@@ -177,7 +177,7 @@ ServerEvents.recipes(event => {
         .duration(17*20)
         .EUt(1920)
 
-    event.recipes.gtceu.electrolyzer('sparse_valuable_oxide_slurry_electrolyzing')
+    gtsa.recipes.gtceu.electrolyzer('sparse_valuable_oxide_slurry_electrolyzing')
         .inputFluids('gtceu:sparse_valuable_oxide_slurry 2500')
         .itemOutputsRanged('gtceu:raw_ilmenite', min, max)
         .itemOutputsRanged('gtceu:raw_monazite', min, max)
@@ -187,7 +187,7 @@ ServerEvents.recipes(event => {
 
     //SULFURIC MINERALS PROCESSING
 
-    event.recipes.gtceu.froth_flotation_plant('sulfuric_mineral_froth')
+    gtsa.recipes.gtceu.froth_flotation_plant('sulfuric_mineral_froth')
         .inputFluids('gtceu:unrefined_sulfuric_mineral_slurry 24000')
         .inputFluids('minecraft:water 96000', 'gtceu:air 48000')
         .itemInputs('63x gtceu:sodium_ethyl_xanthate_dust')
@@ -196,7 +196,7 @@ ServerEvents.recipes(event => {
         .duration(157*20)
         .EUt(7680)
 
-    event.recipes.gtceu.rotary_kiln('desulfurized_sulfuric_mineral_froth')
+    gtsa.recipes.gtceu.rotary_kiln('desulfurized_sulfuric_mineral_froth')
         .inputFluids('gtceu:sulfuric_mineral_froth 5000')
         .inputFluids('gtceu:oxygen 8000')
         .outputFluids('gtceu:desulfurized_sulfuric_mineral_froth 3000')
@@ -204,7 +204,7 @@ ServerEvents.recipes(event => {
         .duration(17*20)
         .EUt(1920)
 
-    event.recipes.gtceu.electric_arc_furnace('reduced_sulfuric_mineral_froth')
+    gtsa.recipes.gtceu.electric_arc_furnace('reduced_sulfuric_mineral_froth')
         .inputFluids('gtceu:desulfurized_sulfuric_mineral_froth 6000')
         .inputFluids('gtceu:carbon_monoxide 2000')
         .itemInputs('3x gtceu:calcium_dust')
@@ -214,7 +214,7 @@ ServerEvents.recipes(event => {
         .duration(23*20)
         .EUt(1920)
 
-    event.recipes.gtceu.centrifuge('reduced_sulfuric_mineral_froth_centrifuging')
+    gtsa.recipes.gtceu.centrifuge('reduced_sulfuric_mineral_froth_centrifuging')
         .inputFluids('gtceu:reduced_sulfuric_mineral_froth 2000')
         .itemOutputsRanged('gtceu:raw_pyrite', min, max)
         .itemOutputsRanged('gtceu:raw_cinnabar', min, max)
@@ -225,7 +225,7 @@ ServerEvents.recipes(event => {
         .duration(17*20)
         .EUt(1920)
 
-    event.recipes.gtceu.centrifuge('native_element_slurry_centrifuging')
+    gtsa.recipes.gtceu.centrifuge('native_element_slurry_centrifuging')
         .inputFluids('gtceu:native_element_slurry 5000')
         .outputFluids('gtceu:crust_waste 1000')
         .outputFluids('gtceu:dirty_magnetic_element_slurry 2000')
@@ -233,7 +233,7 @@ ServerEvents.recipes(event => {
         .duration(15*20)
         .EUt(1920)
 
-    event.recipes.gtceu.large_fluid_electromagnet('magnetic_element_slurry_separating')
+    gtsa.recipes.gtceu.large_fluid_electromagnet('magnetic_element_slurry_separating')
         .inputFluids('gtceu:dirty_magnetic_element_slurry 3000')
         .outputFluids('gtceu:mantle_waste 1000')
         .itemOutputs('3x gtceu:low_purity_magnetic_element_concentrate_dust')
@@ -241,13 +241,13 @@ ServerEvents.recipes(event => {
         .duration(17*20)
         .EUt(1920)
 
-    event.recipes.gtceu.electromagnetic_separator('low_purity_magnetic_element_separating')
+    gtsa.recipes.gtceu.electromagnetic_separator('low_purity_magnetic_element_separating')
         .itemInputs('5x gtceu:low_purity_magnetic_element_concentrate_dust')
         .itemOutputs('3x gtceu:high_purity_magnetic_element_concentrate_dust')
         .duration(9*20)
         .EUt(1920)
 
-    event.recipes.gtceu.large_fluid_sifting_funnel('heavy_element_slurry_separating')
+    gtsa.recipes.gtceu.large_fluid_sifting_funnel('heavy_element_slurry_separating')
         .inputFluids('gtceu:dirty_heavy_element_slurry 3000')
         .outputFluids('gtceu:mantle_waste 1000')
         .itemOutputs('3x gtceu:low_purity_heavy_element_concentrate_dust')
@@ -255,13 +255,13 @@ ServerEvents.recipes(event => {
         .duration(17*20)
         .EUt(1920)
 
-    event.recipes.gtceu.sifter('low_purity_heavy_element_separating')
+    gtsa.recipes.gtceu.sifter('low_purity_heavy_element_separating')
         .itemInputs('5x gtceu:low_purity_heavy_element_concentrate_dust')
         .itemOutputs('3x gtceu:high_purity_heavy_element_concentrate_dust')
         .duration(9*20)
         .EUt(1920)
 
-    event.recipes.gtceu.centrifuge('magnetic_element_centrifuging')
+    gtsa.recipes.gtceu.centrifuge('magnetic_element_centrifuging')
         .itemInputs('4x gtceu:high_purity_magnetic_element_concentrate_dust')
         .itemOutputsRanged('gtceu:raw_cobalt', min, max)
         .itemOutputsRanged('gtceu:raw_thorium', min, max)
@@ -270,7 +270,7 @@ ServerEvents.recipes(event => {
         .duration(12*20)
         .EUt(7960)
 
-    event.recipes.gtceu.electrolyzer('heavy_element_centrifuging')
+    gtsa.recipes.gtceu.electrolyzer('heavy_element_centrifuging')
         .itemInputs('4x gtceu:high_purity_heavy_element_concentrate_dust')
         .itemOutputsRanged('gtceu:raw_graphite', min, max)
         .itemOutputsRanged('gtceu:raw_platinum', min, max)

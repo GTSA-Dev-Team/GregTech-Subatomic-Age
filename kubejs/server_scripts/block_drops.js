@@ -1,13 +1,13 @@
-ServerEvents.blockLootTables(event => {
+ServerEvents.blockLootTables(gtsa => {
     
-    event.modify("minecraft:grass", table => {
+    gtsa.modify("minecraft:grass", table => {
         table.addPool(pool => {
             pool.setUniformRolls(1, 1);
             pool.addItem('gtsac:grass_fibre', 1, 1).randomChance(0.3);
         });
     })
 
-    event.modify('minecraft:stone', table => {
+    gtsa.modify('minecraft:stone', table => {
         table.clearPools();
         table.addPool(pool => {
             pool.setUniformRolls(1, 1);

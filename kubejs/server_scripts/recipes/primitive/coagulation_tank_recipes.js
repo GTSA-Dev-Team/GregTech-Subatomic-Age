@@ -1,12 +1,12 @@
-ServerEvents.recipes(event => {
-    event.recipes.gtceu.coagulation('latex_coagulation')
+ServerEvents.recipes(gtsa => {
+    gtsa.recipes.gtceu.coagulation('latex_coagulation')
             .notConsumable('gtceu:iron_rod')
             .itemInputs('gtceu:raw_latex_dust')
             .inputFluids('minecraft:water 250')
             .itemOutputs('2x gtceu:latex_dust')
             .duration(20 * 30)
 
-    event.shaped('gtceu:coagulation_tank', [
+    gtsa.shaped('gtceu:coagulation_tank', [
         'WRW',
         'SCS',
         'WPW'

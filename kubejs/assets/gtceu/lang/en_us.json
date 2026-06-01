@@ -78,6 +78,8 @@
     "material.gtceu.chlorodifluoromethane": "Chlorodifluoromethane",
     "material.gtceu.hydroxyl_radical": "Hydroxyl Radical",
     "material.gtceu.hy_100": "HY-100",
-    "material.gtceu.inchoate_mantle_slurry": "§4Inchoate§r Mantle Slurry"
+    "material.gtceu.inchoate_mantle_slurry": "§4Inchoate§r Mantle Slurry",
+
+    "material.gtceu.ammonium_perfluorooctanoate":"Ammonium Perfluorooctanoate"
 
 }

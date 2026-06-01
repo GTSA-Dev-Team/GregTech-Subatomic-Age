@@ -1,11 +1,11 @@
-ServerEvents.recipes(event => {
+ServerEvents.recipes(gtsa => {
     [
         {tier: 'lv', rotor: 'tin', cable: 'tin', plate: 'steel'},
         {tier: 'mv', rotor: 'bronze', cable: 'copper', plate: 'aluminium'},
         {tier: 'hv', rotor: 'steel', cable: 'gold', plate: 'stainless_steel'},
         {tier: 'ev', rotor: 'stainless_steel', cable: 'aluminium', plate: 'titanium'},
     ].forEach(volt => {
-        event.shaped(`gtceu:${volt.tier}_dissolution_chamber`, [
+        gtsa.shaped(`gtceu:${volt.tier}_dissolution_chamber`, [
             'CRC',
             'PHV',
             'MEM'
@@ -19,7 +19,7 @@ ServerEvents.recipes(event => {
             E: `#gtceu:circuits/${volt.tier}`
         })
 
-        event.shaped(`gtceu:${volt.tier}_continuous_stirred_tank_reactor`, [
+        gtsa.shaped(`gtceu:${volt.tier}_continuous_stirred_tank_reactor`, [
             'CRC',
             'PHP',
             'EME'
@@ -32,7 +32,7 @@ ServerEvents.recipes(event => {
             E: `#gtceu:circuits/${volt.tier}`
         })
 
-        event.shaped(`gtceu:${volt.tier}_fixed_bed_reactor`, [
+        gtsa.shaped(`gtceu:${volt.tier}_fixed_bed_reactor`, [
             'CRC',
             'PHM',
             'LLL'
@@ -53,7 +53,7 @@ ServerEvents.recipes(event => {
         { tier: 'hv', rotor: 'stainless_steel', cable: 'steel' },
         { tier: 'ev', rotor: 'titanium', cable: 'graphene' },
     ].forEach(volt => {
-        event.shaped(`gtceu:${volt.tier}_vacuum_chamber`, [
+        gtsa.shaped(`gtceu:${volt.tier}_vacuum_chamber`, [
             'CRC',
             'GPG',
             'IHI'

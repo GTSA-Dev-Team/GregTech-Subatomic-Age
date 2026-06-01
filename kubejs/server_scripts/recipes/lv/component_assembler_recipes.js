@@ -1,5 +1,5 @@
-ServerEvents.recipes(event => {
-     event.shaped('gtceu:component_assembler', [
+ServerEvents.recipes(gtsa => {
+     gtsa.shaped('gtceu:component_assembler', [
          'RCR',
          'VHP',
          'RCR',
@@ -12,7 +12,7 @@ ServerEvents.recipes(event => {
     }
 
     function Motor(input1, input2, input3, input4, tier) {
-        event.recipes.gtceu.component_assembler(`${tier}_electric_motor`)
+        gtsa.recipes.gtceu.component_assembler(`${tier}_electric_motor`)
             .itemInputs(`2x gtceu:${input1}_double_cable`, `2x gtceu:${input2}_rod`, `gtceu:magnetic_${input3}_rod`, `4x gtceu:${input4}_double_wire`)
             .inputFluids('gtceu:soldering_alloy 72')
             .itemOutputs(`gtceu:${tier}_electric_motor`)
@@ -22,7 +22,7 @@ ServerEvents.recipes(event => {
     }
     
     function Piston(input1, input2, tier) {
-        event.recipes.gtceu.component_assembler(`${tier}_electric_piston`)
+        gtsa.recipes.gtceu.component_assembler(`${tier}_electric_piston`)
             .itemInputs(`2x gtceu:${input1}_rod`, `2x gtceu:${input2}_single_cable`, `3x gtceu:${input1}_plate`, `gtceu:small_${input1}_gear`, `gtceu:${tier}_electric_motor`)
             .inputFluids('gtceu:soldering_alloy 72')
             .itemOutputs(`gtceu:${tier}_electric_piston`)
@@ -33,7 +33,7 @@ ServerEvents.recipes(event => {
 
     function Pump(input1, input2, input3, tier) {
         for (const rubber in rubbers) {
-            event.recipes.gtceu.component_assembler(`${tier}_electric_pump_${rubber}`)
+            gtsa.recipes.gtceu.component_assembler(`${tier}_electric_pump_${rubber}`)
                 .itemInputs(`gtceu:${input1}_single_cable`, `gtceu:${input2}_normal_fluid_pipe`, `gtceu:${input3}_screw`, `gtceu:${input3}_rotor`, `gtceu:${tier}_electric_motor`)
                 .inputFluids('gtceu:soldering_alloy 72', `gtceu:${rubber} ${rubbers[rubber]}`)
                 .itemOutputs(`gtceu:${tier}_electric_pump`)
@@ -45,7 +45,7 @@ ServerEvents.recipes(event => {
 
     function Conveyor(input1, tier) {
         for (const rubber in rubbers) {
-            event.recipes.gtceu.component_assembler(`${tier}_conveyor_module_${rubber}`)
+            gtsa.recipes.gtceu.component_assembler(`${tier}_conveyor_module_${rubber}`)
                 .itemInputs(`gtceu:${input1}_single_cable`, `2x gtceu:${tier}_electric_motor`)
                 .inputFluids('gtceu:soldering_alloy 72', `gtceu:${rubber} ${6 * rubbers[rubber]}`)
                 .itemOutputs(`gtceu:${tier}_conveyor_module`)
@@ -56,7 +56,7 @@ ServerEvents.recipes(event => {
     }
 
     function RobotArm(input1, input2, tier) {
-        event.recipes.gtceu.component_assembler(`${tier}_robot_arm`)
+        gtsa.recipes.gtceu.component_assembler(`${tier}_robot_arm`)
             .itemInputs(`3x gtceu:${input1}_single_cable`, `2x gtceu:${input2}_rod`, `2x gtceu:${tier}_electric_motor`, `gtceu:${tier}_electric_piston`, `#gtceu:circuits/${tier}`)
             .inputFluids('gtceu:soldering_alloy 72')
             .itemOutputs(`gtceu:${tier}_robot_arm`)
@@ -66,7 +66,7 @@ ServerEvents.recipes(event => {
     }
 
     function Emitter(input1, input2, input3, tier) {
-        event.recipes.gtceu.component_assembler(`${tier}_emitter`)
+        gtsa.recipes.gtceu.component_assembler(`${tier}_emitter`)
             .itemInputs(`4x gtceu:${input1}_rod`, `2x gtceu:${input2}_single_cable`, input3, `2x #gtceu:circuits/${tier}`)
             .inputFluids('gtceu:soldering_alloy 72')
             .itemOutputs(`gtceu:${tier}_emitter`)
@@ -76,7 +76,7 @@ ServerEvents.recipes(event => {
     }
 
     function Sensor(input1, input2, input3, tier) {
-        event.recipes.gtceu.component_assembler(`${tier}_sensor`)
+        gtsa.recipes.gtceu.component_assembler(`${tier}_sensor`)
             .itemInputs(`1x gtceu:${input1}_rod`, `4x gtceu:${input2}_plate`, input3, `#gtceu:circuits/${tier}`)
             .inputFluids('gtceu:soldering_alloy 72')
             .itemOutputs(`gtceu:${tier}_sensor`)
@@ -86,7 +86,7 @@ ServerEvents.recipes(event => {
     }   
 
     function FieldGen(input1, input2, input3, tier) {
-        event.recipes.gtceu.component_assembler(`${tier}_field_generator`)
+        gtsa.recipes.gtceu.component_assembler(`${tier}_field_generator`)
             .itemInputs(input1, `2x gtceu:double_${input2}_plate`, `4x gtceu:${input3}_quadruple_wire`, `2x #gtceu:circuits/${tier}`)
             .inputFluids('gtceu:soldering_alloy 72')
             .itemOutputs(`gtceu:${tier}_field_generator`)
@@ -99,7 +99,7 @@ ServerEvents.recipes(event => {
     const components = ['electric_motor', 'electric_piston', 'electric_pump', 'conveyor_module', 'robot_arm', 'emitter', 'sensor', 'field_generator']
     voltages.forEach((tier) => {
         components.forEach((component) => {
-            event.remove({
+            gtsa.remove({
                 output: `gtceu:${tier}_${component}`
             })
         })

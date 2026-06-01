@@ -35,6 +35,30 @@ const tierToHullMap = {
     14: 'max',
 };
 
+function simpleGas(event, name, color, components) {
+    event.create(name)
+    .gas()
+    .color(color)
+    .components(components)
+    .flags(GTMaterialFlags.DISABLE_DECOMPOSITION)
+}
+
+function simpleDust(event, name, color, components) {
+    event.create(name)
+    .dust()
+    .color(color)
+    .components(components)
+    .flags(GTMaterialFlags.DISABLE_DECOMPOSITION)
+}
+
+function simpleFluid(event, name, color, components) {
+    event.create(name)
+    .liquid()
+    .color(color)
+    .components(components)
+    .flags(GTMaterialFlags.DISABLE_DECOMPOSITION)
+}
+
 
 
 

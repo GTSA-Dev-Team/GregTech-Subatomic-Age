@@ -1,5 +1,5 @@
-ServerEvents.recipes(event => {
-     event.shaped('gtceu:electric_winding_machine', [
+ServerEvents.recipes(gtsa => {
+     gtsa.shaped('gtceu:electric_winding_machine', [
      'CRC',
      'VHP',
      'CRC',
@@ -44,7 +44,7 @@ ServerEvents.recipes(event => {
     }
 
    function Coil(wire, foil, frame, fluid, voltage) {
-        event.recipes.gtceu.electric_winding_machine(`${wire}_coil_block`)
+        gtsa.recipes.gtceu.electric_winding_machine(`${wire}_coil_block`)
             .itemInputs(`8x gtceu:${wire}_double_wire`, `8x gtceu:${foil}_foil`, `gtceu:${frame}_frame`)
             .inputFluids(`gtceu:${fluid} 288`)
             .itemOutputs(`gtceu:${wire}_coil_block`)
@@ -54,7 +54,7 @@ ServerEvents.recipes(event => {
 
    
    coil_mats.forEach((mat) => {
-    event.remove({
+    gtsa.remove({
         output: `gtceu:${mat}_coil_block`
     })
    })
@@ -71,10 +71,10 @@ ServerEvents.recipes(event => {
    Coil('tritanium', 'naquadria', 'steel', 'trinium', 'uv')
 
    tierLvToUv.forEach(voltage => {
-    event.remove({
+    gtsa.remove({
         output: `gtceu:${voltage}_voltage_coil`
     })
-    event.recipes.gtceu.electric_winding_machine(`${voltage}_voltage_coil`)
+    gtsa.recipes.gtceu.electric_winding_machine(`${voltage}_voltage_coil`)
         .itemInputs(tierToMagRodMap[voltage])
         .itemInputs(`16x ${voltToFineWire[voltage]}`)
         .inputFluids(`gtceu:soldering_alloy 288`)
