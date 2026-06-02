@@ -7,7 +7,7 @@ color:
 
   useMaterialColors: true
 
-  defaultColor: §e
+  defaultColor: ï¿½e
 
   minimumBrightness: 0.1
 
@@ -15,15 +15,6 @@ molecule:
   showMolecules: true
 
   moleculeScale: 20
-
-  # Allowed values:
-  # - DOUBLE_BONDS
-  # - CIRCLE
-  benzeneCircle: DOUBLE_BONDS
-
-  spinMolecules: true
-
-  spinSpeedMultiplier: 1.0
 
 alloy:
   showAlloys: true
@@ -33,9 +24,6 @@ alloy:
   recursive: true
 
   partsByMass: true
-
-fun:
-  aromanticBenzene: false
 
 debugMode: false
 
