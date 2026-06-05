@@ -170,9 +170,10 @@ ServerEvents.recipes(gtsa => {
             .duration(20 * 10)
 
     gtsa.recipes.gtceu.electric_blast_furnace('fireclay_smelting')
-            .itemInputs("32x gtceu:compressed_fireclay")
-            .itemOutputs("32x gtceu:firebrick")
-            .duration(20 * 30)
+            .itemInputs("gtceu:compressed_fireclay")
+            .itemOutputs("gtceu:firebrick")
+            .duration(20)
+            .blastFurnaceTemp(938)
             .EUt(32)
 
     gtsa.shaped('gtceu:rotary_kiln_bricks', [
