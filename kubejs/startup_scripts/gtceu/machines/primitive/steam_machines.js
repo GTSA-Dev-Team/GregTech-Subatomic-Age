@@ -34,7 +34,7 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
     })
 
     event.create('vacuum_chamber', 'simple')
-        .tiers(GTMachineUtils.LOW_TIERS)
+        .tiers(GTMachineUtils.ELECTRIC_TIERS)
         .definition((tier, builder) => {
             builder.recipeType('vacuum_ejection')
             .workableCasingModel(`gtceu:block/casings/voltage/${tierToHullMap[tier]}/side`, 'gtceu:block/machines/air_scrubber')

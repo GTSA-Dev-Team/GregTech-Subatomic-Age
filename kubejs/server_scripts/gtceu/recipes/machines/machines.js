@@ -1,71 +1,93 @@
 ServerEvents.recipes(gtsa => {
-    [
-        {tier: 'lv', rotor: 'tin', cable: 'tin', plate: 'steel'},
-        {tier: 'mv', rotor: 'bronze', cable: 'copper', plate: 'aluminium'},
-        {tier: 'hv', rotor: 'steel', cable: 'gold', plate: 'stainless_steel'},
-        {tier: 'ev', rotor: 'stainless_steel', cable: 'aluminium', plate: 'titanium'},
-    ].forEach(volt => {
-        gtsa.shaped(`gtceu:${volt.tier}_dissolution_chamber`, [
+
+    GTMachineUtils.ELECTRIC_TIERS.forEach(tier => {
+        registerDC(tier)
+        registerCSTR(tier)
+        registerFBR(tier)
+        registerVC(tier)
+        registerCzochracz(tier)
+
+        //console.log(spring(tier).toString())
+        //console.log(coilBlock(tier).toString())
+
+    })
+
+
+    function registerDC(tier) {
+        gtsa.shaped(`gtceu:${numToTierMap[tier]}_dissolution_chamber`, [
             'CRC',
             'PHV',
-            'MEM'
+            'MEM',
         ], {
-            C: `gtceu:${volt.cable}_single_cable`,
-            R: `gtceu:${volt.rotor}_rotor`,
-            P: `gtceu:${volt.tier}_electric_pump`,
-            H: `gtceu:${volt.tier}_machine_hull`,
-            V: `gtceu:${volt.tier}_conveyor_module`,
-            M: `gtceu:${volt.tier}_electric_motor`,
-            E: `#gtceu:circuits/${volt.tier}`
+            C: cable(tier),
+            R: rotor(tier),
+            P: pump(tier),
+            H: hull(tier),
+            V: conveyor(tier),
+            M: motor(tier),
+            E: circuit(tier)
         })
+    }
 
-        gtsa.shaped(`gtceu:${volt.tier}_continuous_stirred_tank_reactor`, [
+    function registerCSTR(tier) {
+        gtsa.shaped(`gtceu:${numToTierMap[tier]}_continuous_stirred_tank_reactor`, [
             'CRC',
             'PHP',
-            'EME'
+            'EME',
         ], {
-            C: `gtceu:${volt.cable}_single_cable`,
-            R: `gtceu:${volt.rotor}_rotor`,
-            P: `gtceu:${volt.tier}_electric_pump`,
-            H: `gtceu:${volt.tier}_machine_hull`,
-            M: `gtceu:${volt.tier}_electric_motor`,
-            E: `#gtceu:circuits/${volt.tier}`
+            C: cable(tier),
+            R: rotor(tier),
+            P: pump(tier),
+            H: hull(tier),
+            M: motor(tier),
+            E: circuit(tier)
         })
+    }
 
-        gtsa.shaped(`gtceu:${volt.tier}_fixed_bed_reactor`, [
+    function registerFBR(tier) {
+        gtsa.shaped(`gtceu:${numToTierMap[tier]}_fixed_bed_reactor`, [
             'CRC',
             'PHM',
-            'LLL'
+            'LEL',
         ], {
-            C: `gtceu:${volt.cable}_single_cable`,
-            R: `gtceu:${volt.rotor}_rotor`,
-            P: `gtceu:${volt.tier}_electric_pump`,
-            H: `gtceu:${volt.tier}_machine_hull`,
-            M: `gtceu:${volt.tier}_electric_motor`,
-            //E: `#gtceu:circuits/${volt.tier}`,
-            L: `gtceu:${volt.plate}_plate`
+            C: cable(tier),
+            R: rotor(tier),
+            P: pump(tier),
+            H: hull(tier),
+            L: plate(tier),
+            M: motor(tier),
+            E: circuit(tier)
         })
-    });
+    }
 
-    [
-        { tier: 'lv', rotor: 'steel', cable: 'cupronickel' },
-        { tier: 'mv', rotor: 'bronze', cable: 'electrum' },
-        { tier: 'hv', rotor: 'stainless_steel', cable: 'steel' },
-        { tier: 'ev', rotor: 'titanium', cable: 'graphene' },
-    ].forEach(volt => {
-        gtsa.shaped(`gtceu:${volt.tier}_vacuum_chamber`, [
+    function registerCzochracz(tier) {
+        gtsa.shaped(`gtceu:${numToTierMap[tier]}_czochralski_furnace`, [
+            'PCP',
+            'SHS',
+            'EBE',
+        ], {
+            C: coilBlock(tier),
+            P: plate(tier),
+            S: spring(tier),
+            H: hull(tier),
+            E: circuit(tier),
+            B: cable(tier),
+        })
+    }
+
+    function registerVC(tier) {
+        gtsa.shaped(`gtceu:${numToTierMap[tier]}_vacuum_chamber`, [
             'CRC',
             'GPG',
             'IHI'
         ], {
-            C: `gtceu:${volt.cable}_single_cable`,
-            R: `gtceu:${volt.rotor}_rotor`,
-            G: "minecraft:glass",
-            P: `gtceu:${volt.tier}_electric_pump`,
-            I: `#gtceu:circuits/${volt.tier}`,
-            H: `gtceu:${volt.tier}_machine_hull`
+            C: cable(tier),
+            R: rotor(tier),
+            P: pump(tier),
+            H: hull(tier),
+            I: circuit(tier),
+            G: glass(tier)
         })
-    })
-
+    }
 
 })

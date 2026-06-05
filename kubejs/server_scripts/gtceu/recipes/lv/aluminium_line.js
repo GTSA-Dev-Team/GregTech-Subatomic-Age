@@ -77,7 +77,7 @@ ServerEvents.recipes(gtsa => {
             .inputFluids("gtceu:sodium_hydroxide 2000")
             .itemOutputs("2x gtceu:sodium_alluminate_dust")
             .outputFluids("minecraft:water 1000")
-            .duration(20 * 5)
+            .duration(20 * 4.5)
             .EUt(16)
 
     gtsa.recipes.gtceu.filtrator('bauxite_filtration')
@@ -108,7 +108,7 @@ ServerEvents.recipes(gtsa => {
                 .inputFluids(fluid)
                 .itemOutputs("gtceu:alumina_dust")
                 .outputFluids("minecraft:water 3000")
-                .duration(20 * 15 * aluminaCalcinationFluidDurationMultiplierMap[fluidName])
+                .duration(20 * 13 * aluminaCalcinationFluidDurationMultiplierMap[fluidName])
                 .EUt(128)
     }
     
@@ -120,7 +120,7 @@ ServerEvents.recipes(gtsa => {
                 .inputFluids('gtceu:red_mud 12000')
                 .itemOutputs('3x gtceu:hematite_dust', 'gtceu:bauxite_dust', '2x gtceu:silicon_dioxide_dust', 'gtceu:rutile_dust', '2x gtceu:quicklime_dust', '2x gtceu:sodium_dust')
                 .outputFluids('minecraft:water 9000')
-                .duration(15*20)
+                .duration(17*20)
                 .EUt(30)
     /////////////////////////////////////////////////
     ///                                           ///
@@ -132,33 +132,33 @@ ServerEvents.recipes(gtsa => {
                 .itemInputs("gtceu:aluminium_hydroxide_dust")
                 .inputFluids("gtceu:hydrofluoric_acid 6000")
                 .outputFluids("gtceu:hexafluoroaluminic_acid 1000", "minecraft:water 3000")
-                .duration(20 * 45)
+                .duration(20 * 46)
                 .EUt(32)
 
     gtsa.recipes.gtceu.neutralization('hexafluoroaluminic_acid_neutralization')
                 .inputFluids([ "gtceu:hexafluoroaluminic_acid 1000", "gtceu:sodium_hydroxide 3000" ])
                 .outputFluids([ "gtceu:cryolite 1152", "minecraft:water 2500" ])
-                .duration(20 * 60)
+                .duration(20 * 57.2)
                 .EUt(32)
 
     gtsa.recipes.gtceu.rotary_kiln('coal_tar_rotary_kiln')
                 .itemInputs('16x gtceu:coke_gem')
                 .inputFluids('gtceu:methane 500')
                 .outputFluids('gtceu:coal_tar 500')
-                .duration(20 * 20)
+                .duration(20 * 19)
                 .EUt(128)
 
     gtsa.recipes.gtceu.rotary_kiln('graphite_electrode')
                 .itemInputs([ 'gtceu:steel_rod', '32x gtceu:coke_gem' ])
                 .inputFluids('gtceu:coal_tar 8000')
                 .itemOutputs('gtceu:graphite_electrode')
-                .duration(20 * 120)
+                .duration(20 * 118)
                 .EUt(128)
 
     gtsa.recipes.gtceu.mixer('alumina_cryolite_mixing')
                 .inputFluids("gtceu:alumina 2304", "gtceu:cryolite 2304")
                 .outputFluids("gtceu:alumina_cryolite_mixture 4608")
-                .duration(20 * 50)
+                .duration(20 * 53)
                 .EUt(32)
 
     gtsa.recipes.gtceu.electrolyzer('alumina_cryolite_mixture_electrolysis')
@@ -167,6 +167,6 @@ ServerEvents.recipes(gtsa => {
                 .itemOutputs('16x gtceu:aluminium_dust')
                 .outputFluids('gtceu:cryolite 2304')
                 .outputFluids('gtceu:carbon_dioxide 1000')
-                .duration(20 * 30)
+                .duration(20 * 28)
                 .EUt(32)
 })

@@ -18,6 +18,8 @@ const numToTierMap = {
     14: "max",
 }
 
+const tiers = ["ulv", "lv", "mv", "hv", "ev", "iv", "luv", "zpm", "uv", "uhv", "uev", "uiv", "uxv", "opv", "max"]
+
 const voltageToWireMap = {
     0: "red_alloy",
     1: "tin",
@@ -29,6 +31,41 @@ const voltageToWireMap = {
     7: "vanadium_gallium",
     8: "yttrium_barium_cuprate",
     9: "europium"
+}
+
+const voltageToCableMap = {
+    0: "red_alloy",
+    1: "tin",
+    2: "copper",
+    3: "gold",
+    4: "aluminium",
+    5: "platinum",
+    6: "vanadium_gallium",
+    7: "yttrium_barium_cuprate",
+    8: "europium",
+    9: "red_alloy",
+    10: "red_alloy",
+    11: "red_alloy",
+    12: "red_alloy",
+    13: "red_alloy",
+}
+
+const voltageToCoilBlockMap = {
+    0: "cupronickel",
+    1: "cupronickel",
+    2: "kanthal",
+    3: "nichrome",
+    4: "rtm_alloy",
+    5: "hssg",
+    6: "naquadah",
+    7: "trinium",
+    8: "tritanium",
+    9: "cupronickel",
+    10: "cupronickel",
+    11: "cupronickel",
+    12: "cupronickel",
+    13: "cupronickel",
+    14: "cupronickel",
 }
 
 const voltageToMaterial = {
@@ -55,3 +92,23 @@ const remove = (event, array) => {
 const removeGtceu = (event, array) => {
     remove(event, array.map(item => "gtceu:" + item))
 }
+
+
+
+const circuit = tier => `#gtceu:circuits/${numToTierMap[tier]}`
+const hull = tier => GTCraftingComponents.HULL.get(tier)
+
+const cable = tier => `gtceu:${voltageToCableMap[tier]}_single_cable`
+
+const rotor = tier => `#${GTCraftingComponents.ROTOR.get(tier)}`
+const glass = tier => GTCraftingComponents.PUMP.get(tier)
+const plate = tier => `#${GTCraftingComponents.PLATE.get(tier)}`
+const spring = tier => `#${GTCraftingComponents.SPRING.get(tier)}`
+const coilBlock = tier => `gtceu:${voltageToCoilBlockMap[tier]}_coil_block`
+
+const motor = tier => GTCraftingComponents.MOTOR.get(tier)
+const conveyor = tier => GTCraftingComponents.CONVEYOR.get(tier)
+const pump = tier => GTCraftingComponents.PUMP.get(tier)
+const piston = tier => GTCraftingComponents.PISTON.get(tier)
+const robotArm = tier => GTCraftingComponents.ROBOT_ARM.get(tier)
+
