@@ -44,8 +44,8 @@ ServerEvents.recipes(gtsa => {
         .EUt(480)
 
     gtsa.recipes.gtceu.cstr('chloromixture_making')
-        .inputFluids('gtceu:methane 1000', 'gtceu:chlorine 2000')
-        .outputFluids('gtceu:chlorinated_methane_mixture 1000', 'gtceu:hydrochloric_acid 1000')
-        .duration(14*20)
+        .inputFluids('gtceu:methane 50', 'gtceu:chlorine 100')
+        .outputFluids('gtceu:chlorinated_methane_mixture 50', 'gtceu:hydrochloric_acid 50')
+        .duration(14)
         .EUt(120)
 })
