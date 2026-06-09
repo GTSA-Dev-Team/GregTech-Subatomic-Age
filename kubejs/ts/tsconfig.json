@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ESNext",
+
+    "rootDir": "./src",
+    "outDir": "../",
+
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+
+    "resolveJsonModule": true,
+
+    "paths": {
+      "@pts/*": ["../probe/generated/*"]
+    },
+
+    "typeRoots": [
+      "../probe/generated",
+      "./node_modules/@types"
+    ],
+
+    "declaration": false,
+    "sourceMap": true
+  },
+
+  "include": [
+    "src/**/*.ts",
+    "../probe/generated/**/*.d.ts"
+  ],
+  "exclude": []
+}
