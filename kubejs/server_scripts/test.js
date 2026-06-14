@@ -1,3 +1,11 @@
-ServerEvents.blockLootTables(gt => {
+import { GTRecipeTypes } from "@pts/com/gregtechceu/gtceu/common/data";
+import { ServerEvents } from "@pts/globals";
+import { ResourceLocation } from "@pts/net/minecraft/resources";
+import { Items, ItemStack } from "@pts/net/minecraft/world/item";
+ServerEvents.recipes((event) => {
+    GTRecipeTypes.ALLOY_SMELTER_RECIPES.recipeBuilder("test_recipe_question_mark")
+        .inputItems(new ItemStack(Items.STICK))
+        .outputItems(new ItemStack(Items.STICK))
+        .save(() => null);
 });
 //# sourceMappingURL=test.js.map

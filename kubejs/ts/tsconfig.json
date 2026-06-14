@@ -18,8 +18,8 @@
 
     "typeRoots": [
       "../probe/generated",
-      //"./node_modules/@types"
-      "../../.probe"
+      "./node_modules/@types"
+      //"../../.probe"
     ],
 
     "declaration": false,
@@ -28,8 +28,8 @@
 
   "include": [
     "src/**/*.ts",
-    //"../probe/generated/**/*.d.ts"
-    "../../.probe/**/*.d.ts"
+    "../probe/generated/**/*.d.ts"
+    //"../../.probe/**/*.d.ts"
   ],
   "exclude": []
 }
