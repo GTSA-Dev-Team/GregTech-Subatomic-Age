@@ -15,7 +15,7 @@ ServerEvents.recipes(gtsa => {
         .itemInputs('8x minecraft:iron_ingot')
         .inputFluids('gtceu:oxygen 1000', 'gtceu:carbon_monoxide 2000')
         .itemOutputs('12x gtceu:direct_reduced_iron_ingot')
-        .duration(10*20)
+        .duration(9*20)
         .EUt(64)
 
     gtsa.recipes.gtceu.electric_steel_kiln('dri_to_steel')
@@ -23,6 +23,6 @@ ServerEvents.recipes(gtsa => {
         .itemInputs('gtceu:carbon_dust')
         .outputFluids('gtceu:steel 3456')
         .itemOutputs('8x gtceu:ash_dust')
-        .duration(30*20)
+        .duration(31*20)
         .EUt(64)
 })

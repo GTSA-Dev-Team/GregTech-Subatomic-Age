@@ -33,4 +33,3 @@
 		#Max tick rate for Pattern (Multi) P2P Tunnels
 		#Range: > 1
 		maxRate = 120
-

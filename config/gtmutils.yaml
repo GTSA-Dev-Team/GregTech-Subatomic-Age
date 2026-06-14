@@ -54,7 +54,7 @@ features:
   expandedBuffersEnabled: true
 
   # Whether the Enlarged Stocking Bus/Hatch are enabled. If AE2 is not loaded, this config will not load the machines regardless.
-  enlargedStockingEnabled: false
+  enlargedStockingEnabled: true
 
   # How many rows the Enlarged Stocking Input Bus/Hatch should have, max is 64 rows for 512 slots. (each row is 8 slots in size)
   enlargedStockingSizeRows: 8
@@ -63,5 +63,5 @@ features:
   tagStockingEnabled: true
 
   # Whether the Infinite Spray Can should be enabled.
-  infiniteSprayCanEnabled: false
+  infiniteSprayCanEnabled: true
 

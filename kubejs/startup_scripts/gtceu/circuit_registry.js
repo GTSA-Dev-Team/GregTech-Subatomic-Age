@@ -92,14 +92,14 @@ StartupEvents.registry('item', event => {
    
    
     // Universal Circuits
-    const tiers = ["ulv", "lv", "mv", "hv", "ev", "iv", "luv", "zpm", "uv", "uhv", "uev", "uiv", "uxv", "opv"]
+   const tiers = ["ulv", "lv", "mv", "hv", "ev", "iv", "luv", "zpm", "uv", "uhv", "uev", "uiv", "uxv", "opv"]
     tiers.forEach((universal_circuit) => {
-        event.create(`${universal_circuit}_universal_circuit`)
+        event.create(`gtsac:${universal_circuit}_universal_circuit`)
             .tag(`gtceu:circuits/${universal_circuit}`)
             .tag("gtceu:circuits/universal")
             .displayName(`${universal_circuit.toUpperCase()} Universal Circuit`)
             .tooltip("§7A Universal Circuit")
-            .textureJson({ layer0: `kubejs:item/circuits/universal/${universal_circuit}_universal_circuit` })
+            .textureJson({ layer0: `kubejs:item/circuit/universal/${universal_circuit}_universal_circuit` })
     })
 
 

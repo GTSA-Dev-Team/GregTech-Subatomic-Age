@@ -5,7 +5,7 @@ ServerEvents.recipes(gtsa => {
      'CRC',
  ], { R: "gtceu:lv_robot_arm", C: "#gtceu:circuits/lv", V: "gtceu:steel_rod", H: "gtceu:lv_assembler", P: "gtceu:lv_electric_piston"})
     
-    const tiers = new Map([
+    const tiers1 = new Map([
         ['lv', 0],
         ['mv', 1],
         ['hv', 2],
@@ -48,8 +48,8 @@ ServerEvents.recipes(gtsa => {
             .itemInputs(`8x gtceu:${wire}_double_wire`, `8x gtceu:${foil}_foil`, `gtceu:${frame}_frame`)
             .inputFluids(`gtceu:${fluid} 288`)
             .itemOutputs(`gtceu:${wire}_coil_block`)
-            .duration(30*20 + 200 * tiers.get(voltage) )
-            .EUt(0.94 * 32 * (4 ** tiers.get(voltage)))
+            .duration(30*20 + 200 * tiers1.get(voltage) )
+            .EUt(0.94 * 32 * (4 ** tiers1.get(voltage)))
    }
 
    
@@ -79,8 +79,8 @@ ServerEvents.recipes(gtsa => {
         .itemInputs(`16x ${voltToFineWire[voltage]}`)
         .inputFluids(`gtceu:soldering_alloy 288`)
         .itemOutputs(`gtceu:${voltage}_voltage_coil`)
-        .duration(20 * 10 * (tiers.get(voltage) + 1))
-        .EUt(0.94 * 32 * (4**tiers.get(voltage)))
+        .duration(20 * 10 * (tiers1.get(voltage) + 1))
+        .EUt(0.94 * 32 * (4**tiers1.get(voltage)))
    })
 
    
